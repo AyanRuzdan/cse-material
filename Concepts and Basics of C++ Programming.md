@@ -50,12 +50,12 @@ An example I/O code is:
 #include<iostream> //this is the header inclusion
 using namespace std //this is the namespace
 int main() //this is where the program begins execution from
-{
-int x; //x variable is declared
-cin>>x; //the value of x is taken as input
-cout<<x; //the input value of x is now output on the screen
-return 0; //tells that the program ran with no errors
-}
+	{
+		int x; //x variable is declared
+		cin>>x; //the value of x is taken as input
+		cout<<x; //the input value of x is now output on the screen
+		return 0; //tells that the program ran with no errors
+	}
 ```
 ### Classes and Objects (Overview)
 In C++, rather than creating separate variables and functions, we can also wrap these related data and functions in a single place. This programming paradigm is called **object-oriented programming**.  
@@ -65,9 +65,36 @@ A class is a building block, that leads to OOP. It is a **_user-defined_** data 
 A class is defined by the keyword `class` followed by the class name. A class contains everything within curly braces and is terminated by a semicolon (`;`). For example,  
 ```
 class Car
-{
-//objects inside the class
-};
+	{
+		//objects inside the class
+	};
 ```
 #### Object
 An **object** is an _instance_ of a class. When a class is defined, no memory for object is allocated, but only when it is instantiated.
+We can create and object like this way: `ClassName ObjectName;`. 
+#### Accessing a data member
+Access of a data member solely depends on the access control of the member. If its `public`, then the data member can be directly accessed using the member access (`.`) operator with the class object.
+##### Access Specifiers
+C++ has three access specifiers
+* `public`
+* `private`
+* `protected`
+1. The `public` access specifier allows a class to **show** its member variables and members functions to other functions and objects.
+2. The `private` access specifier allows a class to **hide** its member variables and members functions to other functions and objects. Also known as the **_Default Access Specifier_** for a class.
+3. The `protected` access specifier also works the same as `private`, but its members can be accessed using inheritance.
+##### Demonstration of `public` access
+```
+//To find area of a circle
+#include<bits/stdc++.h>
+using namespace std;
+
+class Circle
+	{
+		public:
+		double radius;
+		double area()
+			{
+				return 3.14*radius*radius;
+			}
+	};
+```
