@@ -3,7 +3,7 @@
  C++ was an extension to C language and was developed by Bjarne Stroustrup at Bell Labs.  
  It is a general purpose language and is mostly used for Competitive Programming these days.
 ### Differences between POP and OOP
-|Features|POP|OOP|  
+|Features|POP|OOP|
 |-|-|-|
 |Divided into|Program is divided into Functions|Program is divided into objects|
 |Importance|Not to data but to sequence|Importance to data and not on procedures and functions|
@@ -134,4 +134,12 @@ int main()
 		return 0;
 	}
 ```
-> The above code will not work and will give error because we are trying to access a `private` member outside of its class, which is not allowed. 
+> The above code will not work and will give error because we are trying to access a `private` member outside of its class, which is not allowed.  
+
+#### Difference between `public` and `private`
+|`public`|`private`|
+|-|-|
+|All class members under `public` are available to everyone|Class members under `private` can be only accessed by functions inside the class|
+|Data members and member functions declared `public` can be accessed by other classes also|Only the member functions or the **_friend function_** are allowed to access the private data members of the class|
+|`public` members can be accessed anywhere using the (`.`) operator|`private` members cannot be accessed outside the class|
+### Structure
