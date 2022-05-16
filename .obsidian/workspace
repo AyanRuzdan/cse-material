@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "319affd90ed3ea0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "f31f9554114d470f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "C++ Basics.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7b2d83f57c3757b",
+    "type": "split",
+    "children": [
+      {
+        "id": "f742eed08e770bb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "849bdc52ad5de271",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f0b1dd5b58ebdff7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2d3438f7bdf64183",
+    "type": "split",
+    "children": [
+      {
+        "id": "83b0ec5f7b7c9d3e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6fa03beeadaf69ad",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "C++ Basics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f31f9554114d470f",
+  "lastOpenFiles": [
+    "C++ Basics.md"
+  ]
+}
