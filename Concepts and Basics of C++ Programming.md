@@ -200,9 +200,9 @@ struct Name{ //structure Name can be anything
 Structure variables are defined either out of class by `structureName varName` or at the end of the structure definition like, 
 ```cpp
 struct Name
-	{
-		type Name1;
-	}structVariable1;
+{
+	type Name1;
+}structVariable1;
 ```
 It is at **this** point that memory is set aside for the variable.
 > In a structure, variables are stored in a contiguous manner in the memory in the order in which they are declared.
