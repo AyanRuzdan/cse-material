@@ -25,19 +25,19 @@ Namespaces can be used initially in the program like `using namespace std` or as
 #include<iostream>
 using namespace std
 int main()
-	{
-		cout << "Hello World!" ;
-		return 0;
-	}
+{
+    cout << "Hello World!" ;
+    return 0;
+}
 ```
 or the same code can be written as, 
 ```cpp
 #include<iostream>
 int main()
-	{
-		std::cout << "Hello World!" ;
-		return 0;
-	}
+{
+    std::cout << "Hello World!" ;
+    return 0;
+}
 ```
 ### Reading and Writing Data
 Two operators are required for this, `cout` and `cin`.
@@ -50,12 +50,12 @@ An example I/O code is:
 #include<iostream> //this is the header inclusion
 using namespace std //this is the namespace
 int main() //this is where the program begins execution from
-	{
-		int x; //x variable is declared
-		cin >> x ; //the value of x is taken as input
-		cout << x ; //the input value of x is now output on the screen
-		return 0; //tells that the program ran with no errors
-	}
+{
+    int x; //x variable is declared
+    cin >> x ; //the value of x is taken as input
+    cout << x ; //the input value of x is now output on the screen
+    return 0; //tells that the program ran with no errors
+}
 ```
 ### Classes and Objects (Overview)
 In C++, rather than creating separate variables and functions, we can also wrap these related data and functions in a single place. This programming paradigm is called **object-oriented programming**.  
@@ -65,9 +65,9 @@ A class is a building block, that leads to OOP. It is a **_user-defined_** data 
 A class is defined by the keyword `class` followed by the class name. A class contains everything within curly braces and is terminated by a semicolon (`;`). For example,  
 ```cpp
 class Car
-	{
-		//objects inside the class
-	};
+{
+    //objects inside the class
+};
 ```
 #### Object
 An **object** is an _instance_ of a class. When a class is defined, no memory for object is allocated, but only when it is instantiated.
@@ -89,23 +89,23 @@ C++ has three access specifiers
 using namespace std;
 
 class Circle
-	{
-		public: //access specifier
-		double radius;
-		double area()
-			{
-				return 3.14 * radius * radius;
-			}
-	};
+{
+    public: //access specifier
+    double radius;
+    double area()
+    {
+        return 3.14 * radius * radius;
+    }
+};
 	
 int main()
-	{
-		Circle obj; //class object
-		obj.radius = 7; //accessing public member outside class using dot operator
-		cout << "Radius is: " << obj.radius << "\n" ;
-		cout << "Area is: " << obj.area() ;
-		return 0;
-	}
+{
+    Circle obj; //class object
+    obj.radius = 7; //accessing public member outside class using dot operator
+    cout << "Radius is: " << obj.radius << "\n" ;
+    cout << "Area is: " << obj.area() ;
+    return 0;
+}
 ```
 #### Demonstration of `private` specifier and its limitation
 ```cpp
@@ -113,26 +113,26 @@ int main()
 using namespace std;
 
 class Circle
-	{
-		private:
-			double radius;
-		public:
-			void area(double r)
-				{
-					radius = r;
-					double area = 3.14 * radius * radius;
-					cout << "Radius: " << radius << endl; //endl can be used in place of "\n"
-					cout << "Area: " << area;
-				}
-	};
+{
+    private:
+        double radius;
+    public:
+        void area(double r)
+        {
+            radius = r;
+            double area = 3.14 * radius * radius;
+            cout << "Radius: " << radius << endl; //endl can be used in place of "\n"
+            cout << "Area: " << area;
+        }
+};
 	
 int main()
-	{
-		Circle obj;
-		obj.radius = 7;
-		obj.area(2);
-		return 0;
-	}
+{
+    Circle obj;
+    obj.radius = 7;
+    obj.area(2);
+    return 0;
+}
 ```
 > The above code will not work and will give error because we are trying to access a `private` member outside of its class, which is not allowed.  
 
