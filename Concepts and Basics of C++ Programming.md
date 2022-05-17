@@ -21,7 +21,7 @@ Header files contain predefined function libraries, which can be used by users f
 >A namespace is designed and used as additional information to differentiate between similar functions, classes and variables etc. with the same name available for different libraries. Using namespace one can define the context in which names are defined. In essence, a namespace defines a scope.  
 
 Namespaces can be used initially in the program like `using namespace std` or as prefix to the identifier with scope resolution operator (`::`) like,  
-```
+```cpp
 #include<iostream>
 using namespace std
 int main()
@@ -31,7 +31,7 @@ int main()
 	}
 ```
 or the same code can be written as, 
-```
+```cpp
 #include<iostream>
 int main()
 	{
@@ -46,7 +46,7 @@ Two operators are required for this, `cout` and `cin`.
 `cin` is also a predefined **object**(remember this) and represents the standard input stream.
 `>>` is called as the _**extraction operator**_.
 An example I/O code is:
-```
+```cpp
 #include<iostream> //this is the header inclusion
 using namespace std //this is the namespace
 int main() //this is where the program begins execution from
@@ -63,7 +63,7 @@ In C++, rather than creating separate variables and functions, we can also wrap 
 A class is a building block, that leads to OOP. It is a **_user-defined_** data type, which holds its own **data members** and **member functions** which can be accessed and used b creating an instance of that class.
 ##### Creating a class
 A class is defined by the keyword `class` followed by the class name. A class contains everything within curly braces and is terminated by a semicolon (`;`). For example,  
-```
+```cpp
 class Car
 	{
 		//objects inside the class
@@ -83,7 +83,7 @@ C++ has three access specifiers
 2. The `private` access specifier allows a class to **hide** its member variables and members functions to other functions and objects. Also known as the **_Default Access Specifier_** for a class.
 3. The `protected` access specifier also works the same as `private`, but its members can be accessed using inheritance.
 ##### Demonstration of `public` access
-```
+```cpp
 //To find area of a circle
 #include<bits/stdc++.h>
 using namespace std;
@@ -108,7 +108,7 @@ int main()
 	}
 ```
 #### Demonstration of `private` specifier and its limitation
-```
+```cpp
 #include<iostream>
 using namespace std;
 
