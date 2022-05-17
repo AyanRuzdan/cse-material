@@ -6,6 +6,7 @@
       {
         "id": "f31f9554114d470f",
         "type": "leaf",
+        "dimension": 61.102603369065854,
         "state": {
           "type": "markdown",
           "state": {
@@ -17,6 +18,7 @@
       {
         "id": "00bac5e4cc66b5d9",
         "type": "leaf",
+        "dimension": 38.89739663093415,
         "state": {
           "type": "markdown",
           "state": {
@@ -98,7 +100,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "00bac5e4cc66b5d9",
+  "active": "f31f9554114d470f",
   "lastOpenFiles": [
     "Concepts and Basics of C++ Programming.md"
   ]

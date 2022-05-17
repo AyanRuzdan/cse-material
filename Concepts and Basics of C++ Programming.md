@@ -38,12 +38,13 @@ int main()
 		std::cout << "Hello World!" ;
 		return 0;
 	}
-```
+```  
+
 ### Reading and Writing Data
-Two operators are required for this, `cout` and `cin`.
-`cout` is a predefined **object**(remember this) and represents the standard output stream.
-`<<` is called as the _**insertion operator**_.
-`cin` is also a predefined **object**(remember this) and represents the standard input stream.
+Two operators are required for this, `cout` and `cin`.  
+`cout` is a predefined **object**(remember this) and represents the standard output stream.  
+`<<` is called as the _**insertion operator**_.  
+`cin` is also a predefined **object**(remember this) and represents the standard input stream.  
 `>>` is called as the _**extraction operator**_.
 An example I/O code is:
 ```
@@ -143,3 +144,4 @@ int main()
 |Data members and member functions declared `public` can be accessed by other classes also|Only the member functions or the **_friend function_** are allowed to access the private data members of the class|
 |`public` members can be accessed anywhere using the (`.`) operator|`private` members cannot be accessed outside the class|
 ### Structure
+Structures are derived data types.  
