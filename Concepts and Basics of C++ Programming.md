@@ -149,6 +149,43 @@ int main()
 |All class members under `public` are available to everyone|Class members under `private` can be only accessed by functions inside the class|
 |Data members and member functions declared `public` can be accessed by other classes also|Only the member functions or the **_friend function_** are allowed to access the private data members of the class|
 |`public` members can be accessed anywhere using the (`.`) operator|`private` members cannot be accessed outside the class|
+#### Methods of Member Function Definition in Class
+There are two ways to define a function in class:
+* Inside the class
+* Outside the class using scope resolution operator. (`::`)  
+
+Function definition inside the class is given as:
+```cpp
+class pqr{
+	private:
+	int x;
+	public:
+	void get_x(){
+		cout<<"Enter the value of x. ";
+		cin>>x;
+	}
+	void display_x(){
+		cout<<"The value of x is: "<<x;
+	}
+};
+```
+Function definition outside the class is given as:
+```cpp
+class pqr{
+	private:
+	int x;
+	public:
+	void get_x();
+	void display_x();
+};
+void pqr::get_x(){
+	cout<<"Enter the value of x.";
+	cin>>x;
+}
+void pqr::display_x(){
+	cout<<"The value of x is: "<<x;
+}
+```
 ### Structure
 Structures are derived data types. It is a group of data items of different data types held together under a single unit. _It is a collection of heteregenous elements._ We make structures in the following manner:  
 ```cpp
