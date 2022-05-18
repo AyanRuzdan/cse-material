@@ -34,7 +34,6 @@ or the same code can be written as,
 ```cpp
 #include<iostream>
 int main()
-<<<<<<< HEAD
 	{
 		std::cout << "Hello World!" ;
 		return 0;
@@ -241,14 +240,57 @@ union books{
 * **Using `struct` keyword**: Sounds a bit weird, but in C++, one can skip the use of the struct keyword. But it is compulsory in C.
 * **Static Members:** Static members are not allowed in C.
 * **Constructors:** C structures cannot have constructors inside them, unlike in C++.
-* **sizeof operator (Very Imp.)** An empty structure in C has **_0_** size, but in C++ an empty structure has size of **_1_**.
+* **sizeof operator (Very Imp.):** An empty structure in C has **_0_** size, but in C++ an empty structure has size of **_1_**.
 * **Access modifier:** C has no access modifier, whereas C++ has three access modifiers.
 ### Enumeration
 **Definition:** An _enumeration_ is a user defined data type consisting of a _set_ of named constant called enumerators.  
 It is declared as `enum TypeName{val1, val2, val3...};`. An example code looks like this: `enum DaysOfTheWeek{sun, mon, tue, wed, thur, fri, sat};` and the order followed is _sun<mon<tue...<sat_.  
 **By default the first enum has a value of _0_.**
-> * *Note:** enum values are supposed to have valid identifier names and must not be enclosed within quotes.
+> * **Note:** enum values are supposed to have valid identifier names and must not be enclosed within quotes.
 > * enum values have an increasing order of _values_ unless explicitly declared in the code.  
 For example, `enum numbers{one=1, twelve=12, thirty=30};` 
 
 To use enum values we declare them using `TypeName varName;` for example `DaysOfWeek Holiday, TestDay, PracticalDay;`. And once an enum variable has been declared, we can associate them with the value of the enum set, like, `Holiday = sun; TestDay=tue; PracticalDay=wed;`
+### Inline Functions
+If a function is inline, the compiler places a _copy_ of the code of that function at each point where the function is called at compile time. In order to reduce overhead costs for function calling, they are instead expanded in line using inline functions. An example of inline function:
+```cpp
+#include<iostream>
+using namespace std;
+inline int Max(int x, int y){
+	return (x>y)?x:y; //checks which value is larger using ternary operator
+}
+int main()
+{
+	cout<<Max(10,20);
+}
+```
+#### Inline Member Functions
+* The `inline` keyword must be used, but it can also be ignored if the function definition is more than 3-5 lines.  
+* A function definition inside a class is by default inline
+* A member function that is defined inside its class member list is defines as **inline member function**.
+* Member function can also be declared outside using the `inline` keyword.  
+Example:
+```cpp
+#include<iostream>
+using namespace std;
+class Calc{
+	int x,y,add; //private by default
+	public:
+	void get(){ //inline member function
+		cin>>x>>y;
+	}
+	public:
+	void sum();
+};
+inline void Calc::sum(){ //inline function outside the class
+	add=x+y;
+	cout<<add;
+}
+int main(){
+	Calc s; //class object
+	cout<<"Inline function program";
+	s.get(); //calling member function from the class body
+	s.sum(); //calling inline function external to class
+	return 0;
+}
+```
