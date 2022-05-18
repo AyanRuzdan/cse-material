@@ -235,3 +235,20 @@ union books{
 |Change in one member value does not affect other members|Change in member value will affect other members|
 |Individual members can be accessed at a time|Only one member can be accessed at a time|
 |Several structure members can be initialised at once|Only the first member can be initialised|
+#### A few differences between C and C++ Structures
+* **Member functions inside structure**: C structures cannot have member functions inside themselves with data members, unlike C++.
+* **Direct Initialization**: We cannot directly initialize data members in C, but we can do that in C++.
+* **Using `struct` keyword**: Sounds a bit weird, but in C++, one can skip the use of the struct keyword. But it is compulsory in C.
+* **Static Members:** Static members are not allowed in C.
+* **Constructors:** C structures cannot have constructors inside them, unlike in C++.
+* **sizeof operator (Very Imp.)** An empty structure in C has **_0_** size, but in C++ an empty structure has size of **_1_**.
+* **Access modifier:** C has no access modifier, whereas C++ has three access modifiers.
+### Enumeration
+**Definition:** An _enumeration_ is a user defined data type consisting of a _set_ of named constant called enumerators.  
+It is declared as `enum TypeName{val1, val2, val3...};`. An example code looks like this: `enum DaysOfTheWeek{sun, mon, tue, wed, thur, fri, sat};` and the order followed is _sun<mon<tue...<sat_.  
+**By default the first enum has a value of _0_.**
+> * *Note:** enum values are supposed to have valid identifier names and must not be enclosed within quotes.
+> * enum values have an increasing order of _values_ unless explicitly declared in the code.  
+For example, `enum numbers{one=1, twelve=12, thirty=30};` 
+
+To use enum values we declare them using `TypeName varName;` for example `DaysOfWeek Holiday, TestDay, PracticalDay;`. And once an enum variable has been declared, we can associate them with the value of the enum set, like, `Holiday = sun; TestDay=tue; PracticalDay=wed;`
