@@ -186,6 +186,7 @@ void pqr::display_x(){
 	cout<<"The value of x is: "<<x;
 }
 ```
+> **Note:** Size of an empty class in C++ is given as 1 byte. 
 ### Structure
 Structures are derived data types. It is a group of data items of different data types held together under a single unit. _It is a collection of heteregenous elements._ We make structures in the following manner:  
 ```cpp
@@ -195,7 +196,7 @@ struct Name{ //structure Name can be anything
 	type Name3;
 };
 ```
->A structure does not **reserve** space in memory. Instead it creates a new data type used to define structure variables.
+>**Note:** A structure does not **reserve** space in memory. Instead it creates a new data type used to define structure variables.
 
 Structure variables are defined either out of class by `structureName varName` or at the end of the structure definition like, 
 ```cpp
@@ -205,7 +206,7 @@ struct Name
 }structVariable1;
 ```
 It is at **this** point that memory is set aside for the variable.
-> In a structure, variables are stored in a contiguous manner in the memory in the order in which they are declared.
+> **Note:** In a structure, variables are stored in a contiguous manner in the memory in the order in which they are declared.
 
 ### Union
 * A union is similar to a structure.
@@ -222,3 +223,15 @@ union books{
 }novel; //don't forget the semicolon
 ```
 >**Note**: A union allocates memory for the variable which requires the most amout of memory.
+
+#### Difference between Structure and Union
+|Structure|Union|
+|-|-|
+|Keyword `struct` is required|Keyword `union` is required|
+|Compiler allocates memory for each member.|Memory is allocated by looking at the largest member.|
+|Size of structure is greater than or sum of member size|Size of union is equal to largest member|
+|Each member has a unique memory location|Memory allocated is shared by individual members of union|
+|Address of each member is in ascending order|Address is same for all members|
+|Change in one member value does not affect other members|Change in member value will affect other members|
+|Individual members can be accessed at a time|Only one member can be accessed at a time|
+|Several structure members can be initialised at once|Only the first member can be initialised|
