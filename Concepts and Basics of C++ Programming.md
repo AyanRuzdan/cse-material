@@ -294,3 +294,18 @@ int main(){
 	return 0;
 }
 ```
+> **Note:** Inline is just a _request_, and not a _command_.
+#### When is an inline function ignored 
+A compiler will ignore inline requests for the following cases.
+* If the function contains a loop.
+* If the function has static variables.
+* If the function is recursive.
+* If the function does not return anything, even when a return statement is specified.
+* If the function contains a switch or goto statement.
+#### Advantages and Disadvantages of Inline Functions
+* Advantage
+  * Function call overhead does not occur.
+  * Also saves overhead of a return call from a function.
+* Disadvantage
+   * Makes the program take up more memory.
+   * Compile time overhead may increase if code is changed somewhere, causing compiler to recompile all calling locations.
