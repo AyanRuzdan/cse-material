@@ -221,4 +221,4 @@ union books{
 	float price;
 }novel; //don't forget the semicolon
 ```
->**Note**: A union allocates memory for the variable which requires more memory.
+>**Note**: A union allocates memory for the variable which requires the most amout of memory.
