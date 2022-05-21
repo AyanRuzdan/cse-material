@@ -63,6 +63,7 @@ int main() //this is where the program begins execution from
     return 0; //tells that the program ran with no errors
 }
 ```
+---
 ### Classes and Objects (Overview)
 In C++, rather than creating separate variables and functions, we can also wrap these related data and functions in a single place. This programming paradigm is called **object-oriented programming**.  
 #### Class
@@ -186,6 +187,7 @@ void pqr::display_x(){
 }
 ```
 > **Note:** Size of an empty class in C++ is given as 1 byte. 
+---
 ### Structure
 Structures are derived data types. It is a group of data items of different data types held together under a single unit. _It is a collection of heteregenous elements._ We make structures in the following manner:  
 ```cpp
@@ -251,6 +253,8 @@ It is declared as `enum TypeName{val1, val2, val3...};`. An example code looks l
 For example, `enum numbers{one=1, twelve=12, thirty=30};` 
 
 To use enum values we declare them using `TypeName varName;` for example `DaysOfWeek Holiday, TestDay, PracticalDay;`. And once an enum variable has been declared, we can associate them with the value of the enum set, like, `Holiday = sun; TestDay=tue; PracticalDay=wed;`
+
+---
 ### Inline Functions
 If a function is inline, the compiler places a _copy_ of the code of that function at each point where the function is called at compile time. In order to reduce overhead costs for function calling, they are instead expanded in line using inline functions. An example of inline function:
 ```cpp
@@ -309,8 +313,8 @@ A compiler will ignore inline requests for the following cases.
 * Disadvantage
    * Makes the program take up more memory.
    * Compile time overhead may increase if code is changed somewhere, causing compiler to recompile all calling locations.
-   
- ### Static Data Members
+---   
+### Static Data Members
  * It is initialised to _**0**_ when first object of its class is created and _**NO**_ other initialisation is permitted.
  * Only _**1**_ copy of that member is created for entire class and is shared by all objects.
  * It is visible only in class, but its lifetime in for entire program.
@@ -388,6 +392,7 @@ int main()
     return 0;
 }
 ```
+---
 ## Codes Provided by my Prof.
 ### Classes & Objects
 #### Basic Class Object
@@ -568,3 +573,4 @@ int main(){
     }
 }
 ```
+---
