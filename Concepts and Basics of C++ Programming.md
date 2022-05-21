@@ -316,3 +316,76 @@ A compiler will ignore inline requests for the following cases.
  * It is visible only in class, but its lifetime in for entire program.
  * Type and scope must be defined _**outside**_ the class definition. It is necessary as static data members are stored separately as compared to class objects.
  * They are also known as _class variables_.
+
+Example code for static data member:
+```cpp
+#include<iostream>
+using namespace std;
+class item{
+	static int count;
+	int number;
+	public:
+	void getdata(int s){
+		number=s;
+		count++;
+	}
+	void getcount(){
+		cout<<count<<" ";
+	}
+};
+int item::count; //definition of static member
+int main(){
+	item p,q,r;
+	cout<<"Count ";
+	p.getcount();
+	q.getcount();
+	r.getcount();
+	p.getdata(12);
+	q.getdata(36);
+	r.getdata(108);
+	cout<<"\nAfter reading ";
+	p.getcount();
+	q.getcount();
+	r.getcount();
+}
+```
+### Static Member Function
+> **Note:** Static member function have access _only_ to static members declared in the _same_ class.
+
+Static member functions can be called using the syntax: `className::functionName`.
+Example code for static member function:
+```cpp
+#include<iostream>
+using namespace std;
+class Test{
+    int code;
+    static int count;
+    public:
+    void setcode(){
+        code=++count;
+    }
+    void showcode()
+    {
+        cout<<"Code: "<<code<<endl;
+    }
+    static void showcount(){
+        cout<<"Count: "<<count<<endl;
+    }
+};
+int Test::count; //definition of static member
+int main()
+{
+    Test t1,t2;
+    t1.setcode();
+    t2.setcode();
+    Test::showcount();
+    Test t3;
+    t3.setcode();
+    Test::showcount();
+    t1.showcode();
+    t2.showcode();
+    t3.showcode();
+    return 0;
+}
+```
+## Codes Provided by my Prof.
