@@ -9,18 +9,18 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Note/Concepts and Basics of C++ Programming.md",
+            "file": "Notes/Concepts and Basics of C++ Programming.md",
             "mode": "source"
           }
         }
       },
       {
-        "id": "f960b0893012765d",
+        "id": "6765998cbca3205a",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Note/Concepts and Basics of C++ Programming.md",
+            "file": "Notes/Inheritance.md",
             "mode": "preview"
           }
         }
@@ -63,8 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "2d3438f7bdf64183",
@@ -80,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Note/Concepts and Basics of C++ Programming.md",
+                "file": "Notes/Inheritance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,8 +97,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f31f9554114d470f",
+  "active": "6765998cbca3205a",
   "lastOpenFiles": [
+    "Notes/Inheritance.md",
+    "Notes/Concepts and Basics of C++ Programming.md",
     "Note/Concepts and Basics of C++ Programming.md",
     "Concepts and Basics of C++ Programming.md"
   ]
