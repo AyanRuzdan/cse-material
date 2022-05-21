@@ -309,3 +309,10 @@ A compiler will ignore inline requests for the following cases.
 * Disadvantage
    * Makes the program take up more memory.
    * Compile time overhead may increase if code is changed somewhere, causing compiler to recompile all calling locations.
+   
+ ### Static Data Members
+ * It is initialised to _**0**_ when first object of its class is created and _**NO**_ other initialisation is permitted.
+ * Only _**1**_ copy of that member is created for entire class and is shared by all objects.
+ * It is visible only in class, but its lifetime in for entire program.
+ * Type and scope must be defined _**outside**_ the class definition. It is necessary as static data members are stored separately as compared to class objects.
+ * They are also known as _class variables_.
