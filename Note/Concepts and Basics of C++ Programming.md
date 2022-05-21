@@ -389,3 +389,107 @@ int main()
 }
 ```
 ## Codes Provided by my Prof.
+#### Basic Class Object
+```cpp
+#include<iostream>
+using namespace std;
+class abc{
+    int x,y;
+    public:
+    void getdata(){
+        cout<<"Enter the values of x and y: ";
+        cin>>x>>y;
+    }
+    void sum(){
+        int z;
+        z=x+y;
+        cout<<"The sum of x and y is: "<<z;
+    }
+};
+int main(){
+    abc obj1;
+    obj1.getdata();
+    obj1.sum();
+}
+```
+#### Basic Class Object and Member Function
+```cpp
+
+```
+#### Arithmetic Operations with the help of Class
+```cpp
+#include<iostream>
+using namespace std;
+class arithmetic{
+    int x,y;
+    public:
+    void getdata(){
+        cout<<"Enter the value of x and y:"<<endl;
+        cin>>x>>y;
+    }
+    void sum(){
+        int z;
+        z=x+y;
+        cout<<"Sum is:"<<z<<endl;
+    }
+    void divide(){
+        int z;
+        z=x/y;
+        cout<<"Integer Division result is:"<<z<<endl;
+    }
+    void multiply(){
+        int z;
+        z=x*y;
+        cout<<"Multiplication result is:"<<z<<endl;
+    }
+    void subtract(){
+        int z;
+        z=x-y;
+        cout<<"Subtraction result is:"<<z<<endl;
+    }
+};
+int main(){
+    arithmetic obj1;
+    obj1.getdata();
+    obj1.sum();
+    obj1.subtract();
+    obj1.multiply();
+    obj1.divide();
+}
+```
+#### Array of Objects
+```cpp
+#include<iostream>
+using namespace std;
+class employee{
+    char name[50];
+    int age;
+    public:
+    void getdata(void);
+    void putdata(void);
+};
+void employee::getdata(void){
+    cout<<"Enter the name of employee: ";
+    cin>>name;
+	cout<<"Enter the age of employee: ";
+	cin>>age;
+}
+void employee::putdata(void){
+    cout<<"Entered name is: "<<name<<endl;
+    cout<<"Entered age is: "<<age;
+}
+const int size=3;
+int main(){
+	employee emp[size];
+	int i;
+	for(i=0;i<3;i++){
+		cout<<"\nEnter details of employee number: "<<i+1<<endl;
+		emp[i].getdata();
+	}
+	for(i=0;i<3;i++){
+		cout<<"\nDetails of the employee number: "<<i+1<<endl;
+		emp[i].putdata();
+	}
+	return 0;
+}
+```

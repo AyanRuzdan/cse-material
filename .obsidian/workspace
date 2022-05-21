@@ -8,11 +8,8 @@
         "type": "leaf",
         "dimension": 48.698315467075034,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Concepts and Basics of C++ Programming.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       },
       {
@@ -20,11 +17,8 @@
         "type": "leaf",
         "dimension": 51.301684532924966,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Concepts and Basics of C++ Programming.md",
-            "mode": "preview"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -82,7 +76,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Concepts and Basics of C++ Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
