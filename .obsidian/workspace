@@ -6,19 +6,23 @@
       {
         "id": "f31f9554114d470f",
         "type": "leaf",
-        "dimension": 48.698315467075034,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Note/Concepts and Basics of C++ Programming.md",
+            "mode": "source"
+          }
         }
       },
       {
-        "id": "00bac5e4cc66b5d9",
+        "id": "f960b0893012765d",
         "type": "leaf",
-        "dimension": 51.301684532924966,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Note/Concepts and Basics of C++ Programming.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -76,6 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Note/Concepts and Basics of C++ Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,6 +100,7 @@
   },
   "active": "f31f9554114d470f",
   "lastOpenFiles": [
+    "Note/Concepts and Basics of C++ Programming.md",
     "Concepts and Basics of C++ Programming.md"
   ]
 }

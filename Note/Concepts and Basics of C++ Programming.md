@@ -389,6 +389,7 @@ int main()
 }
 ```
 ## Codes Provided by my Prof.
+### Classes & Objects
 #### Basic Class Object
 ```cpp
 #include<iostream>
@@ -414,7 +415,26 @@ int main(){
 ```
 #### Basic Class Object and Member Function
 ```cpp
-
+#include<iostream>
+using namespace std;
+class abc{
+    int x,y;
+    public:
+    void getdata(){
+        cout<<"Enter the values of x and y: ";
+        cin>>x>>y;
+    }
+    void sum(){
+        int z;
+        z=x+y;
+        cout<<"The sum of x and y is: "<<z;
+    }
+};
+int main(){
+    abc obj1;
+    obj1.getdata();
+    obj1.sum();
+}
 ```
 #### Arithmetic Operations with the help of Class
 ```cpp
@@ -457,6 +477,30 @@ int main(){
     obj1.divide();
 }
 ```
+#### Defining member function outside of class
+```cpp
+#include<iostream>
+using namespace std;
+class abc{
+    int a,b;
+    public:
+    void getdata();	
+    void showdata();
+};
+void abc::getdata(){
+    cout<<"Enter values of a and b: ";
+    cin>>a>>b;
+}
+void abc::showdata(){
+    cout<<"Values of a and b are: "<<a<<" "<<b;
+}
+int main(){
+    abc obj1;
+    obj1.getdata();
+    obj1.showdata();
+	return 0;
+}
+```
 #### Array of Objects
 ```cpp
 #include<iostream>
@@ -491,5 +535,36 @@ int main(){
 		emp[i].putdata();
 	}
 	return 0;
+}
+```
+### Structure and Union
+#### Array of Structure
+```cpp
+#include<iostream>
+using namespace std;
+struct employee{
+    int id;
+    char name[50];
+    float salary;
+};
+int main(){
+    employee obj[2];
+    int i;
+    cout<<"Enter the details: "<<endl;
+    for(i=0;i<2;i++){
+        cout<<"Enter the name: ";
+        cin.getline(obj[i].name,50);
+        cout<<"Enter the id: ";
+        cin>>obj[i].id;
+        cout<<"Enter the salary: ";
+        cin>>obj[i].salary;
+        cin.ignore();
+    }
+    cout<<"Details are: "<<endl;
+    for(i=0;i<2;i++){
+        cout<<"ID: "<<obj[i].id<<endl;
+        cout<<"Name: "<<obj[i].name<<endl;
+        cout<<"Salary: "<<obj[i].salary<<endl;
+    }
 }
 ```
