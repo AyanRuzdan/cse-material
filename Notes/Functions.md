@@ -11,6 +11,49 @@ Why use function?
 * It helps to avoid to rewrite the same code again and again.
 * Large programs can be reduced into smaller functions.
 * It becomes easier to keep track of flow of program.
+
+### Function Declaration and Definition
+A function is declared by
+```cpp
+returnType funcName(dataType1, dataType2 ... dataTypeN)
+``` 
+A function definition is given by
+```cpp
+returnType funcName(dataType1 parameter1, dataType2 parameter2, ..., dataTypeN parameterN)
+{
+	function Body;
+}
+```
+A function call is given by
+```cpp
+funcName(parameter1, parameter2, ..., parameterN)
+```
+### Function Prototype
+A prototype statement helps the compiler to check the return type and arguments type of the function.
+
+---
+This is what a normal function looks like:
+```cpp
+#include<iostream>
+using namespace std;
+void sum(int, int); //function declaration, don't forget the semicolon
+int main(){
+    int x,y;
+    cout<<"Enter two numbers: ";
+    cin>>x>>y;
+    sum(x,y); //function calling, these are the "actual" arguments
+    return 0;
+}
+void sum(int a, int b){ //function definition, these are the "formal" arguments
+    int c = a + b;
+    cout<<"Sum of the two numbers is: "<<c;
+} 
+```
+The output of this program will be:
+```cpp
+Enter two numbers: 13 19
+Sum of the two numbers is: 32
+```
 ### Default Arguments
 In the function prototype declaration, the default values are provided. Whenever a call is made to function without specifying an argument, the program will automatically assign values to the parameters from the default arguments prototype.
 For example:
@@ -119,3 +162,6 @@ The output will be:
 It is used to attach a null terminating character `\0` at then end of a string. It takes no input and gives output of null character.
 ### ws
 It is used to ignore the leading white space that precedes the first field.
+
+---
+## Function Scope Rules
