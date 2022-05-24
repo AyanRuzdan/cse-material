@@ -30,8 +30,6 @@ funcName(parameter1, parameter2, ..., parameterN)
 ```
 ### Function Prototype
 A prototype statement helps the compiler to check the return type and arguments type of the function.
-
----
 This is what a normal function looks like:
 ```cpp
 #include<iostream>
@@ -188,6 +186,92 @@ int main(){
 > * Parameter & no return value
 > * Parameter & return value
 > * No parameter but return value 
+
+#### Function with no parameter and no return value
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+    void print(); //func declaration
+    cout<<"No parameter and no return value\n";
+    print(); //func calling
+}
+//func definition
+void print(){
+    for(int i=1;i<=10;i++)
+    {
+        cout<<"*";
+    }
+}
+```
+The output will be:
+```
+No parameter and no return value
+**********
+```
+#### Function with parameter but no return value
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+    int a=10,b=20;
+    void mul(int,int);
+    mul(a,b); //actual arguments
+}
+// formal arguments
+void mul(int x, int y){
+    int s;
+    s=x*y;
+    cout<<"Value of mul() is "<<s; 
+}
+```
+The output will be:
+```cpp
+Value of mul() is 200
+```
+#### Function with parameter and return value
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+    int a=12, b=25, c;
+    int max(int,int);
+    c = max(a,b);
+    cout<<"Greatest number is "<<c;
+}
+int max(int x, int y){
+    if(x>y)
+    {
+        return x;
+    }
+    else
+    {
+        return y;
+    }
+}
+```
+The output will be:
+```cpp
+Greatest number is 25
+```
+#### Function without parameter but return value
+```cpp
+#include<iostream>
+using namespace std;
+int main(){
+    int sum();
+    int c=sum(); //actual arguments
+    cout<<"Sum is "<<c; 
+}
+int sum(){
+    int x=1,y=2;
+    return (x+y); //return value
+}
+```
+The output will be:
+```cpp
+Sum is 3
+```
 ## Overloading (A general discussion)
 > **What is overloading?**
 > * Overloading means assigning multiple meanings to a function name or operator symbol.
