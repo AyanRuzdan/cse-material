@@ -124,7 +124,7 @@ The output will be:
 ```
 _______200, where (_) means white space
 ```
-### setfill
+### `setfill`
 It is used to specify a different character to fill the unused field width of the value. The general syntax is `setfill(char w)`. The default fill character is _**white space**_. For example:
 ```cpp
 #include<iostream>
@@ -141,7 +141,7 @@ $$$$$$$$$$$$$$$$$200
 20 total characters
 3 digits and 17 special characters replacing the white spaces that was given by setw(20)
 ```
-### setprecision
+### `setprecision`
 It is used to control the number of digits of an output stream display of a floating point value. The general syntax is `setprecision(int p)`. The default precision count is _6_. For example:
 ```cpp
 #include<iostream>
@@ -183,3 +183,13 @@ int main(){
 	}
 }
 ```
+## Overloading (A general discussion)
+> **What is overloading?**
+> * Overloading means assigning multiple meanings to a function name or operator symbol.
+> * It allows multiple definition of function with same name, but different signatures.
+> 
+> C++ supports:
+> * Function Overloading
+> * Operator Overloading
+> **Why is overloading useful?**
+> 
