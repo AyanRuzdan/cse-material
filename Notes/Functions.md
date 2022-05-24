@@ -183,6 +183,11 @@ int main(){
 	}
 }
 ```
+## Categories of Functions
+> * No parameter & no return value
+> * Parameter & no return value
+> * Parameter & return value
+> * No parameter but return value 
 ## Overloading (A general discussion)
 > **What is overloading?**
 > * Overloading means assigning multiple meanings to a function name or operator symbol.
@@ -191,5 +196,46 @@ int main(){
 > C++ supports:
 > * Function Overloading
 > * Operator Overloading
-> **Why is overloading useful?**
 > 
+> **Why is overloading useful?**
+> *  Function overloading allows functions that perform the same task on object of different types to be given the same name.
+> * Operator overloading provides a convenient notation for manipulating user-defined objects with conventional operators.
+
+## Function Overloading
+It is the process of using the same name for two or more functions. It requires redefinition of a function to use a different function signatures, i.e.,
+* Different _type_ of parameters
+* Different _sequence_ of parameters
+* Different _number_ of parameters
+
+For example:
+```cpp
+#include<iostream>
+using namespace std;
+void sum(int,int);
+void sum(double,double);
+void sum(char,char);
+int main(){
+    int a=10, b=20;
+    double c=7.52, d=8.14;
+    char e='a', f='b' ; 
+    sum(a,b);
+    sum(c,d);
+    sum(e,f);
+    return  0;
+}
+void sum(int x, int y){
+    cout<<"Sum of integers are: "<<x+y<<endl;
+}
+void sum(double x, double y){
+    cout<<"Sum of two floating numbers are: "<<x+y<<endl;
+}
+void sum(char x, char y){
+    cout<<"Sum of characters are: "<<x+y<<endl;
+}
+```
+The output will be:
+```cpp
+Sum of integers are: 30
+Sum of two floating numbers are: 15.66
+Sum of characters are: 195 //here we get an integer sum of their ASCII values i.e. 97+98=195
+```
