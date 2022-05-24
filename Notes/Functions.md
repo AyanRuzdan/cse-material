@@ -165,3 +165,21 @@ It is used to ignore the leading white space that precedes the first field.
 
 ---
 ## Function Scope Rules
+### Local Variables
+Local variables are defined inside the function body or in a compound statement. The **_scope_** of these variables are inside the function where they are defined. For example:
+```cpp
+int sum(int x, int y)
+{
+	int i, j, k; //these three variables have local scope and will be irrelevant outside the function block
+}
+```
+### Global Variables
+Global variables are variables whose scope is valid throughout the entire program. For example:
+```cpp
+int main(){
+	int x; //valid in the entire program
+	{
+		int y; //valid only in block
+	}
+}
+```
