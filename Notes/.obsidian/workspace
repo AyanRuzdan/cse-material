@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Concepts and Basics of C++ Programming.md",
+            "file": "Functions.md",
             "mode": "source",
             "source": true
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Concepts and Basics of C++ Programming.md",
+            "file": "Functions.md",
             "mode": "preview",
             "source": true
           }
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Concepts and Basics of C++ Programming.md",
+                "file": "Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
   },
   "active": "5581db065b6d4722",
   "lastOpenFiles": [
-    "Concepts and Basics of C++ Programming.md",
-    "Functions.md"
+    "Functions.md",
+    "Concepts and Basics of C++ Programming.md"
   ]
 }
