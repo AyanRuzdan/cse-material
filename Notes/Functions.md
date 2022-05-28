@@ -323,3 +323,140 @@ Sum of integers are: 30
 Sum of two floating numbers are: 15.66
 Sum of characters are: 195 //here we get an integer sum of their ASCII values i.e. 97+98=195
 ```
+
+## Friend Function
+Data hiding is really important and a fundamental part of object-oriented programming. It restricts the access of private members outside of the class. Similarly, protected members can be only accessed by derived classes and are not accessible from outside the class. 
+However, C++ provides us a feature which allows us to break this rule. It is called **_friend function_**. 
+Friend function of a class:-
+* Is defined outside the class scope.
+* Is **_NOT_** a member function of the class. **(_Remember this_)**
+* Has the right to access both _public_ and _non-public_ members of the class.
+* Standalone functions and entire classes can be declared as friend of a class.
+* Mostly used when a member function cannot do a specific function.
+
+We declare friend function in the following way:
+```cpp
+class className{
+	friend returnType functionName(arguments)
+};
+```
+Some special things to be paid attention to about a friend function are:
+* It is not in the scope of the class to which it is declared as a friend
+* It _**cannot**_ be called using the object of that class.
+* It is invoked like a normal function, without the help of any object.
+* It cannot access members directly, and uses object name and dot membership e.g. (obj.A)
+* It can be declared anywhere from private to public, its meaning doesn't change.
+* Usually, it has objects as its arguments.
+
+Example code for friend function:
+```cpp
+#include<iostream>
+using namespace std;
+class Test{
+    int a,b;
+    public:
+    void set_value(){
+        a=10;
+        b=20;
+    }
+    friend float average (Test t);
+};
+float average(Test t){
+    return float(t.a+t.b)/2;
+}
+int main()
+{
+    Test x;
+    x.set_value();
+    cout<<"Average: "<<average(x);
+    return 0;
+}
+```
+The output will be:
+```cpp
+Average: 15
+```
+### Adding two members of different classes using friend function
+```cpp
+#include<iostream>
+using namespace std;
+class B; //forward class declaration
+class A{
+    private:
+    int a;
+    public:
+    void init_a(){
+        a=10;
+    }
+    friend int sum(A,B); //forward friend declaration
+}objA; //object of class A
+class B{
+    private:
+    int b;
+    friend int sum(A,B);
+    public:
+    void init_b(){
+        b=20;
+    }
+}objB; //object of class B
+int sum(A objectA, B objectB){ //(className objectName) as arguments
+    int x;
+    x=objectA.a + objectB.b;
+    return x;
+}
+int main(){
+    objA.init_a();
+    objB.init_b();
+    cout<<"Sum: "<<sum(objA,objB);
+    return 0;
+}
+```
+The output will be:
+```cpp
+Sum: 30
+```
+### A function friendly to two classes:
+```cpp
+# include<iostream>
+using namespace std;
+class ABC;
+class XYZ{
+    int x;
+    public:
+    void setvalue(int i){
+        x=i;
+    }
+    friend void max(XYZ, ABC);
+};
+class ABC{ 
+    int a;
+    public:
+    void setvalue(int i){
+        a=i;
+    }
+    friend void max(XYZ, ABC);
+};
+void max(XYZ m, ABC n){
+    if(m.x>= n.a)
+    {
+        cout<<m.x;
+    }
+    else
+    {
+        cout<<n.a;
+    }
+}
+int main()
+{
+    ABC abc;
+    abc.setvalue(10);
+    XYZ xyz;
+    xyz.setvalue(20);
+    max(xyz,abc);
+    return 0;
+}
+```
+The output will be 
+```cpp
+20
+```
