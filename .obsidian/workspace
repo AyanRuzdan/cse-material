@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "6765998cbca3205a",
+        "id": "a85fd973f6bc1eaf",
         "type": "leaf",
-        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
             "file": "Notes/Functions.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "952d343872ebfd8d"
       },
       {
-        "id": "a85fd973f6bc1eaf",
+        "id": "39630324d20abb5d",
         "type": "leaf",
-        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
             "file": "Notes/Functions.md",
             "mode": "preview"
           }
-        }
+        },
+        "group": "952d343872ebfd8d"
       }
     ],
     "direction": "vertical"
@@ -100,7 +100,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6765998cbca3205a",
+  "active": "39630324d20abb5d",
   "lastOpenFiles": [
     "Notes/Functions.md",
     "Notes/Concepts and Basics of C++ Programming.md",

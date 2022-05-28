@@ -1,3 +1,8 @@
 {
-  "lineWrap": true
+  "lineWrap": true,
+  "defaultViewMode": "preview",
+  "showLineNumber": true,
+  "userIgnoreFilters": [
+    "README.md"
+  ]
 }
