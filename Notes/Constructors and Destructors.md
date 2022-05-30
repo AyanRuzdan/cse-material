@@ -209,3 +209,56 @@ Area is 288
 ```
 ---
 ## Destructor
+It is a member function having same name as that of constructor but it is preceded by a tilde(~) symbol, and is executed _automatically_ when object of a class is destroyed.
+
+Some key points regarding destructors:
+> * It doesn't have a return type, not even void. And no arguments either.
+> * There is only one destructor in class. Just one. No overloading.
+> * A compiler will generate a default destructor if not explicitly provided.
+> * It can be used to deallocate memory for object. (**Most important use**)
+>> **Need for destructors:**
+>> * To de-initialize the objects when they are destroyed.
+>> * To clear memory space occupied by a data member.
+
+General syntax for destructor is:
+```cpp
+class className{
+	... //private data
+	public:
+	~className(); //destructor
+};
+```
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class counter{
+	int id;
+	public:
+	counter(int i){
+		id=i;
+		cout<<"Contructor of object with id: "<<id<<endl;
+	}
+	~counter(){
+		cout<<"Destructor with id: "<<id<<endl;
+	}
+};
+int main(){
+	counter c1(1);
+	counter c2(2);
+	counter c3(3);
+	cout<<"End of main\n";
+	return 0;
+}
+```
+The output will be:
+```cpp
+Constructor of object with id: 1
+Constructor of object with id: 2
+Constructor of object with id: 3
+End of main
+Destructor with id: 3
+Destructor with id: 2
+Destructor with id: 1
+```
+> **Note:** One very important thing to note, destructors are called in the opposite order as compared to the order in which their constructors are called.
