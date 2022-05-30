@@ -1,21 +1,17 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 class sample
 {
     int a, b, c;
-
-public:
+    public:
     void setdata();
-
     friend int max(sample obj);
 };
-
-void sample ::setdata()
+void sample::setdata()
 {
     cin >> a >> b >> c;
 }
-
 int max(sample obj)
 {
     if (obj.a > obj.b && obj.a >> obj.c)

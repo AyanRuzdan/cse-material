@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Functions.md",
+            "file": "Constructors and Destructors.md",
             "mode": "source",
             "source": true
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Functions.md",
+            "file": "Constructors and Destructors.md",
             "mode": "preview",
             "source": true
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Functions.md",
+                "file": "Constructors and Destructors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,8 @@
   },
   "active": "5581db065b6d4722",
   "lastOpenFiles": [
-    "Functions.md",
+    "Constructors and Destructors.md",
+    "Functions (Incomplete).md",
     "Concepts and Basics of C++ Programming.md"
   ]
 }
