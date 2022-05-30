@@ -135,3 +135,77 @@ The output will be:
 Area is 360 //12*30 default
 Area is 900 //provided values
 ```
+---
+### Copy Constructor
+A copy constructor creates a new object using an existing object of the same class and initialises each data member of newly created object with corresponding data member and existing object as passed argument.
+> Since it creates a copy of an existing object, it is called a copy constructor.
+
+For example:
+```cpp
+#include<iostream>
+using namespace std;
+class example{
+	int x,y;
+	public:
+	example(int a,int b){
+		x=a;
+		y=b;
+	}
+	example(example &obj){
+		x=obj.x;
+		y=obj.y;
+	}
+	void display(){
+		cout<<"\n Values of x and y are:"<<x<<" "<<y;
+	}
+};
+int main(){
+	example obj1(2,5);
+	obj1.display();
+	example obj2(obj1);//Copy Constructor is called
+	obj2.display();
+	example obj3=obj1;//Second way of calling copy constructor
+	obj3.display();
+	return 0;
+}
+```
+The output will be:
+```cpp
+Values of x and y are: 2 5
+Values of x and y are: 2 5
+Values of x and y are: 2 5
+```
+---
+### Initializer List
+It is placed between the parameter list and opening braces of the body of the constructor.
+> **Note:** When the constructor is declared inside and defined outside the class using scope resolution, then the member initialization list can only be specified within the constructor definition and not its declaration.
+
+An initializer list allows initialization of data members at the time o the creatin which is more efficient as values are assigned before the constructor even starts execution.
+For example 
+```cpp
+rectangle(int a, int b):length(a), breadth(b){...}
+```
+For example:
+```cpp
+#include<iostream>
+using namespace std;
+class Rectangle{
+	int length, breadth;
+	public:
+	Rectangle (int x,int y):length(x),breadth(y){}
+	int area(){
+		return(length*breadth);
+	}
+};
+int main(){
+	Rectangle r(12,24);
+	cout<<"Area is "<<r.area();
+	return 0;
+}
+```
+The output will be:
+```cpp
+Area is 288
+```
+---
+## Destructor
