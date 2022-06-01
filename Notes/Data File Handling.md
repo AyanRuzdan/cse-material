@@ -207,6 +207,7 @@ These are used to move file pointer to any desired location in the file.
 |`seekp()`|Moves put pointer(output) to a specified location|
 |`tellg()`|Gives the current position of the get pointer|
 |`tellp()`|Gives the current position of the put pointer|
+
 Example of file pointer manipulator:
 ```cpp
 #include<bits/stdc++.h>
@@ -241,3 +242,97 @@ Position of get pointer after seek: 6
 Position of put pointer after seek: 6
 World
 ```
+### Specifiying the offset of the pointer
+The arguments used to seek the pointer represent the actual positions in the file.
+* `seekp(offset, refposition);`
+* `seekg(offset, refposition);`
+
+Refposition takes one of the three following values:
+* `ios::beg`, start of the file
+* `ios::cur`, current position of the pointer
+* `ios::end`, end of the file
+
+A few example cases for pointer seeks:
+
+|Seek Call|Action|
+|-|-|
+|`fout.seekg(0, ios::beg)`|Go to start|
+|`fout.seekg(0, ios::cur)`|Stay at the current position|
+|`fout.seekg(0, ios::end)`|Go to end of file|
+|`fout.seekg(m, ios::beg)`|Move to (m+1)th byte in the file|
+|`fout.seekg(m, ios::cur)`|Go forward by m byte(s) from the current position|
+|`fout.seekg(-m, ios::cur)`|Go backward by m byte(s) from the current position|
+|`fout.seekg(-m, ios::end)`|Go backward by m byte(s) from the end|
+
+### Sequential I/O Operations
+* `put()` and `get()` is used to handle single character at a time.
+* `write()` and `read()` functions are used to handle stream of data.
+
+Example for `put()` and `get()`:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	char s[80];
+	cout<<"Enter a string: "; //Input=Return
+	cin.getline(s,80);
+	int len=strlen(s);
+	fstream file;
+	file.open("new.txt", ios::in|ios::out);
+	for(int i=0;i<len;i++)
+	{
+		file.put(s[i]);
+	}
+	file.seekg(0);
+	char ch;
+	while(file)
+	{
+	file.get(ch);
+	cout<<ch;
+	}
+	return 0;
+}
+```
+Note: This program causes the last character to be repeated once.
+Output:
+```cpp
+Returnn
+```
+### `write()` and `read()`
+* `infile.read((char*)&V, sizeof(V));`
+* `outfile.write((char*)&Vm sizeof(V));`
+
+These functions take two arguments, first of address of variable V, second is length of variable in bytes.
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	float height[4]={11.1, 12.5, 14.6, 6.9};
+	ofstream outfile;
+	outfile.open("abc");
+	outfile.write((char*)height, sizeof(height));
+	outfile.close();
+	float q[4];
+	ifstream infile;
+	infile.open("abc");
+	infile.read((char*)q, 32);
+	cout<<q[0]<<" "<<q[1];
+	return 0;
+}
+```
+Output:
+```cpp
+11.1 12.5
+```
+## Reading and Writing Class Object
+The binary input-output read() and write() are designed to read and write from disk file objects. These functions handle entire structures of an object as a single unit.Function `write()` copies a class object from memory byte-by-byte with **no** conversion.
+## Error Handling Function
+|Function|Return Value and Meaning|
+|-|-|
+|`eof()`|Returns true(non-zero) if end of file is encountered, otherwise return false(zero)|
+|`fail()`|Returns true when an input or output operation fails|
+|`bad()`|Returns true if an invalid operation is attempted or any unrecoverable error has occured|
+|`good()`|Returns true if no error has occured|
+
+## Codes provided by my prof.
