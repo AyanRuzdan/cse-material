@@ -91,7 +91,7 @@ int main(){
 	return 0;
 }
 ```
-Content of _new.txt_:
+Contents of _new.txt_:
 ```cpp
 Semper Idem
 ```
@@ -123,11 +123,121 @@ int main(){
 	return 0;
 }
 ```
-Content of _new.txt_: 
+Contents of _new.txt_: 
 ```cpp
 Semper Idem
 ```
 Output:
 ```cpp
 Semper Idem
+```
+### Detecting end-of-file
+In order to keep on reading from a file, one has to make sure that the reading does not start from the end. And in order to check that, we check eof condition. We use:
+```cpp
+while(filein)
+```
+where _filein_ is an `ifstream` object which returns 0 value if any error occurs or end-of-file is encountered. We also use:
+```cpp
+if(fileIn.eof()!=0)
+{
+exit(1);
+}
+```
+Here `eof()` is a member function of class _ios_. It returns _true_ if eof is encountered, and _false_ otherwise.
+## File Modes
+A file mode specifies the _mode_ in which the file will be opened. General form of `open()` with 2 arguments is:
+```cpp
+streamObject.open("filename", mode); //here mode can be any
+```
+Prototype of member functions contain default modes:
+* `ios::in` for ifstream functions meaning open for reading only.
+* `ios::out` for ofstream functions meaning open for writing only.
+A few commonly used file modes are:
+
+|Parameter|Meaning|
+|-------|---------------------|
+|ios:app|Append to end-of-file|
+|ios::ate|Go to e.o.f on opening|
+|ios::binary|Open in binary mode|
+|ios::in|Open file for reading only|
+|ios::nocreate|Error in opening if file does not exist|
+|ios::noreplace|Error in opening if file already exists|
+|ios::out|Open file for writing only|
+|ios::trunc|To delete contents of the file|
+Example for `append` mode:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	char s[50];
+	ofstream fileOut; //file output stream
+	ifstream fileIn; //file input stream
+	fileOut.open("new.txt", ios::app); //open file in append mode
+	fileOut<<", Semper Supra."; //added required text
+	fileOut.close(); //writing operations done, file closed
+	fileIn.open("new.txt",ios::in); //file open in read-only-mode
+	fileIn.getline(s,50); //get the first 50 characters in s-array
+	cout<<s<<endl; //print the 50 characters from the file
+	return 0;
+}
+```
+Contents of _new.txt_ before append:
+```cpp
+Semper Idem
+```
+Contents after append:
+```cpp
+Semper Idem, Semper Supra.
+```
+### File pointers
+Each file has two associated pointers to it, known as file pointers.
+* Input Pointer/Get Pointer
+* Output Pointer/Put Pointer
+### Default File Actions
+* In read only mode, the input pointer is automatically set at the beginning.
+* In write only mode, the existing contents are deleted and output pointer is set at the beginning.
+* In append mode, the output pointer moves to the end of file.
+
+## File Manipulators
+These are used to move file pointer to any desired location in the file.
+
+|Manipulator|Function|
+|--------|------------------------------------------------|
+|`seekg()`|Moves get pointer(input) to a specified location|
+|`seekp()`|Moves put pointer(output) to a specified location|
+|`tellg()`|Gives the current position of the get pointer|
+|`tellp()`|Gives the current position of the put pointer|
+Example of file pointer manipulator:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	char s[30];
+	ofstream fileout;
+	fstream file;
+	fileout.open("hello",ios::out);
+	fileout<<"Hello World";
+	fileout.close();
+	file.open("hello",ios::in|ios::out);
+	cout<<"Position of get pointer: "<<file.tellg()<<endl;
+	cout<<"Position of put pointer: "<<file.tellp()<<endl;
+	file.seekp(6); //put pointer seeked
+	file.seekg(6); //get pointer moved
+	cout<<"Position of get pointer after seek: "<<file.tellg()<<endl;
+	cout<<"Position of put pointer after seek: "<<file.tellp()<<endl;
+	file>>s;
+	cout<<s;
+}
+```
+Contents of file _hello_:
+```cpp
+Hello World
+```
+Output of program:
+```cpp
+Position of get pointer: 0
+Position of put pointer: 0
+Position of get pointer after seek: 6
+Position of put pointer after seek: 6
+World
 ```
