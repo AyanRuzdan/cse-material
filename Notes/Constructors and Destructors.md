@@ -105,7 +105,7 @@ rectangle::rectangle(float h, float w){
 }
 ```
 ---
-### Default Constructor
+### Constructor with default arguments
 Just like functions, constructors can also have default arguments. In this case, if we don't pass values, then the constructor makes us of the default values provided.
 For example:
 ```cpp
@@ -262,3 +262,234 @@ Destructor with id: 2
 Destructor with id: 1
 ```
 > **Note:** One very important thing to note, destructors are called in the opposite order as compared to the order in which their constructors are called.
+
+---
+## Codes provided by my Prof.
+### Constructor Overloading
+```cpp
+#include<iostream>
+using namespace std;
+class abc_overloading
+{
+	int x,y;
+	public:
+	abc_overloading() {
+		x=2;
+		y=3;
+	}
+	abc_overloading(int a,int b){
+		x=a;
+		y=b;
+	}
+	void display(){
+		cout<<"Values of x and y are:"<<x<<" "<<y<<endl;
+	}
+};
+int main(){
+	abc_overloading obj1;
+	obj1.display();
+	abc_overloading obj2(4,5);
+	obj2.display();
+	return 0;
+}
+```
+Output:
+```cpp
+Values of x and y are:2 3
+Values of x and y are:4 5
+```
+### Constructor with Default Arguments
+```cpp
+#include<iostream>
+using namespace std;
+class Student
+{
+	int roll_no;
+	int marks;
+	public:
+	Student(){
+		roll_no=0;
+		marks=0;
+	}
+	Student(int r,int m=0){
+		roll_no=r;
+		marks=m;
+	}
+	void show_data(){
+	cout<<"Roll no=:"<<roll_no;
+	cout<<"\tMarks="<<marks<<endl;
+	}
+};
+int main(){
+	Student s1;
+	s1.show_data();
+	Student s2(3);
+	s2.show_data();
+	Student s3(5,98);
+	s3.show_data();
+	return 0;
+}
+```
+Output:
+```cpp
+Roll no=:0      Marks=0
+Roll no=:3      Marks=0
+Roll no=:5      Marks=98
+```
+### Copy Constructor
+```cpp
+#include<iostream>
+using namespace std;
+class example{
+	int x,y;
+	public:
+	example(int a,int b){
+		x=a;
+		y=b;
+	}
+	example(example &obj){
+		x=obj.x;
+		y=obj.y;
+	}
+	void display(){
+		cout<<"\n Values of x and y are:"<<x<<" "<<y;
+	}
+};
+int main(){
+	example obj1(2,5);
+	obj1.display();
+	example obj2(obj1);//Copy Constructor is called
+	obj2.display();
+	example obj3=obj1;//Second way of calling copy constructor
+	obj3.display();
+	return 0;
+}
+```
+Output:
+```cpp
+Values of x and y are:2 5
+Values of x and y are:2 5
+Values of x and y are:2 5
+```
+### Default Constructor (different from constr. with def. args.)
+```cpp
+#include <iostream>
+using namespace std;
+class abc_default{
+	int x, y;
+	public:
+	abc_default(){
+		x = 2;
+		y = 3;
+		cout <<"Data members are initialized\n";
+	}
+	void display(){
+		cout <<"Values of x and y are: "<< x << " " << y;
+	}
+};
+int main()
+{
+	abc_default obj1;
+	obj1.display();
+	return 0;
+}
+```
+Output:
+```cpp
+Data members are initialized
+Values of x and y are:2 3
+```
+### Destructor (Example 1)
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class Sample{
+	private:
+	static int num_objects;
+	static int num_objects_destroyed;
+	public:
+	Sample(){
+		num_objects++;
+	}
+	~Sample(){
+	num_objects_destroyed++;
+	}
+	void show_data(){
+	cout<<"Number of objects created:"<<num_objects<<endl;
+	cout<<"Number of objects destroyed:"<<num_objects_destroyed<<endl;
+	cout<<"Number of objects active:"<<num_objects-num_objects_destroyed<<endl;
+	}
+};
+	int Sample::num_objects=0;
+	int Sample::num_objects_destroyed=0;
+	void my_func(){
+	Sample s8,s9;
+	s9.show_data();
+	}
+int main(){
+	Sample s1,s2,s3;
+	{
+		s1.show_data();//Created:3,Destroyed:0,Active:3
+		Sample s4;
+		{
+			Sample s5;
+			s5.show_data();//Created:5,Destroyed:0,Active:5
+		}
+	}
+	s3.show_data();//Created:5,Destroyed:2,Active:3//Leaving local scope
+	my_func();//Created:7,Destroyed:2,Active:5
+	s2.show_data();//Created:7,Destroyed:4,Active:3//Leaving function scope
+	return 0;
+}
+```
+Output:
+```cpp
+Number of objects created:3
+Number of objects destroyed:0
+Number of objects active:3
+Number of objects created:5
+Number of objects destroyed:0
+Number of objects active:5
+Number of objects created:5
+Number of objects destroyed:2
+Number of objects active:3
+Number of objects created:7
+Number of objects destroyed:2
+Number of objects active:5
+Number of objects created:7
+Number of objects destroyed:4
+Number of objects active:3
+```
+### Destructor (Example 2)
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class String{
+	private:
+	char *s;
+	int size;
+	public:
+	String(char*); // constructor
+	~String(); // destructor
+};
+	String::String(char *c){
+	size = strlen(c);
+	s = new char[size+1];
+	strcpy(s,c);
+	cout<<"String is: "<<s<<endl;
+	}
+	String::~String(){
+	delete []s;
+	cout<<"Memory freed which was allocated dynamically(Avoiding memory leak)";
+	}
+int main(){
+	String obj1("Hello");
+	return 0;
+} //it is unethical to convert string to char*, but the code will work anyway
+```
+Output:
+```cpp
+String is: Hello
+Memory freed which was allocated dynamically(Avoiding memory leak)
+```
+---

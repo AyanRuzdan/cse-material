@@ -6,6 +6,7 @@
       {
         "id": "5581db065b6d4722",
         "type": "leaf",
+        "dimension": 49.57081545064378,
         "state": {
           "type": "markdown",
           "state": {
@@ -19,6 +20,7 @@
       {
         "id": "79360aabec792a97",
         "type": "leaf",
+        "dimension": 50.42918454935622,
         "state": {
           "type": "markdown",
           "state": {
@@ -105,7 +107,7 @@
   "active": "5581db065b6d4722",
   "lastOpenFiles": [
     "Constructors and Destructors.md",
-    "Functions (Incomplete).md",
-    "Concepts and Basics of C++ Programming.md"
+    "Concepts and Basics of C++ Programming.md",
+    "Functions (Incomplete).md"
   ]
 }
