@@ -1,2 +1,2 @@
-Go to [[Index]]
+Go to [[DSA/Index]]
 # Queues
