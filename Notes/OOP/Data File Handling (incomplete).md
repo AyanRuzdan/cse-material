@@ -336,3 +336,164 @@ The binary input-output read() and write() are designed to read and write from d
 |`good()`|Returns true if no error has occured|
 
 ## Codes provided by my prof.
+### Comparison of two files character by character
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	fstream file1, file2;
+	char ch1, ch2;
+	char fname1[40], fname2[40];
+	cout<<"Enter name of first file: ";
+	cin.getline(fname1,20);
+	cout<<"Enter name of second file: ";
+	cin.getline(fname2,20);
+	file1.open(fname1,ios::in);
+	file2.open(fname2,ios::in);
+	if(!file1||!file2)
+	{
+		cout<<"\n File could not be opened.\n";
+		exit(1);
+	}
+	ch1 = file1.get();
+	ch2 = file2.get();
+	while ((ch1 != EOF) && (ch2 != EOF) && (ch1 == ch2))
+	{
+		ch1 = file1.get();
+		ch2 = file2.get();
+	}
+	if (ch1 == ch2)
+	cout<<"Files are identical.\n";
+	else if (ch1 != ch2)
+	cout<<"Files are not identical";
+	file1.close();
+	file2.close();
+	return 0;
+}
+```
+Contents of _file1.txt_
+```cpp
+Lorem Ipsum
+```
+Contents of _file2.txt_
+```cpp
+Lorem Ipsum
+```
+Contents of _file3.txt_
+```cpp
+Cogito Ergo
+```
+Output(s):
+```cpp
+Enter name of first file: file1.txt
+Enter name of second file: file2.txt
+Files are identical.
+---
+Enter name of first file: file1.txt
+Enter name of second file: file3.txt
+Files are not identical.
+```
+## Overwriting data from one file to another
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	fstream obj1;
+	obj1.open("Destination.txt",ios::out);
+	fstream obj2;
+	obj2.open("Source.txt",ios::in);
+	char ch;
+	if(!obj1||!obj2)
+	{
+		cout<<"\n File could not be opened";
+		exit(1);
+	}
+	ch=obj2.get();
+	while(ch!=EOF)
+	{
+		obj1.put(ch);
+		ch=obj2.get();
+	}
+	while(obj2)
+	{
+		obj1.put(ch);
+		ch=obj2.get();
+	}
+	while(obj2.eof()==0)
+	{
+		obj1.put(ch);
+		ch=obj2.get();
+	}
+	cout<<"\n Data copied from one file into another";
+	return 0;
+}
+```
+Contents of _Source.txt_
+```cpp
+Cogito Ergo
+```
+Contents of _Destination.txt_
+```cpp
+Lorem Ipsum
+```
+Contents of _Destination.txt_ after overwrite
+```cpp
+Cogito Ergo
+```
+Output(s):
+```cpp
+//if file does not exist
+File could not be opened
+//if overwrite is successful
+Data copied from one file to another
+```
+## Counting number of lines, characters and spaces
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	fstream s;
+	int lines=1,spaces=0,chars=0;
+	s.open("Lines.txt",ios::in);
+	char ch;
+	if(!s)
+	{
+		cout<<"\n File could not be opened";
+		exit(1);
+	}
+	ch=s.get();
+	while(s.eof()==0)
+	{
+		chars++;
+		if(ch=='\n')
+		{
+			lines++;
+		}
+		else if(ch==' ')
+		{
+			spaces++;
+		}
+		ch=s.get();
+	}
+	cout<<"Lines: "<<lines<<endl;
+	cout<<"Spaces: "<<spaces<<endl;
+	cout<<"Chars: "<<chars<<endl;
+	return 0;
+}
+```
+Contents of _Lines.txt_
+```txt
+Ad astra,
+per aspera.
+Through hardships, 
+to the stars.
+```
+Output:
+```txt
+Lines: 4
+Spaces: 6
+Chars: 55
+```
