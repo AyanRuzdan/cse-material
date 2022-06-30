@@ -336,7 +336,7 @@ The binary input-output read() and write() are designed to read and write from d
 |`good()`|Returns true if no error has occured|
 
 ## Codes provided by my prof.
-### Comparison of two files character by character
+### 1. Comparison of two files character by character
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -394,7 +394,7 @@ Enter name of first file: file1.txt
 Enter name of second file: file3.txt
 Files are not identical.
 ```
-## Overwriting data from one file to another
+### 2. Overwriting data from one file to another
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -449,7 +449,7 @@ File could not be opened
 //if overwrite is successful
 Data copied from one file to another
 ```
-## Counting number of lines, characters and spaces
+### 3. Counting number of lines, characters and spaces
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -497,3 +497,4 @@ Lines: 4
 Spaces: 6
 Chars: 55
 ```
+### 4.  
