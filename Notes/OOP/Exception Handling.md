@@ -21,3 +21,59 @@ There are specialised keywords in C++ for this purpose:
 * `try`: It represents the block of code that can throw an exception.
 * `catch`: Represents the block of code that is executed when a particular exception is thrown.
 * `throw`: Used to throw an exception. Also used to list the exceptions that a function throws, but doesn't handle itself.
+**_try block_**: A block of statements which may generate exceptions. 
+When an exception is detected, it is thrown using a _`throw`_ statement in the try block.
+A **_catch block_** defined by the keyword _`catch`_ catches the exception thrown by the throw statement in the try block and handles it accordingly.
+> **Note:** The catch block that catches the/an exception must immediately follow the try block that throws the exception.
+
+General syntax for exception handling:
+```cpp
+try
+{
+	throw exception; //exception detection and throw
+}
+catch(type arg)
+{
+// exception handling code
+}
+```
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"Enter the values of a & b: ";
+    cin>>a>>b;
+    int x=a-b;
+    try
+    {
+        if(x!=0)
+        {
+            cout<<"Result is a-b: "<<x<<endl;
+        }
+        else
+        {
+            throw(x);
+        }
+    }
+    catch(int i)
+    {
+        cout<<"Exception caught: (a-b)="<<x<<endl;
+    }
+    cout<<"End of main";
+    return 0;
+}
+```
+Output:
+```cpp
+//if there is no exception
+Enter the values of a & b: 24 10
+Result is a-b: 14
+End of main
+//if exception exists
+Enter the values of a & b: 7 7
+Exception caught: (a-b)=0
+End of main
+```
