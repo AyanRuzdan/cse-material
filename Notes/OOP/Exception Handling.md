@@ -10,7 +10,7 @@ These are the type of exceptions for which error handling could be written under
 Errors that are caused by events beyond the control of the program like keyboard interrupts, disk failure, hardware malfunctioning are called asynchronous exceptions.
 
 > **Note:** Exception handling in C++ is designed to handle only synchronous exceptions.
-
+---
 ### Exception Handling Mechanism
 C++ provides an exception handling mechanism for dealing with exceptions raised during the program execution. It follows the following steps to deal with the exception:
 1. Find the problem (_hit_)
@@ -21,6 +21,7 @@ There are specialised keywords in C++ for this purpose:
 * `try`: It represents the block of code that can throw an exception.
 * `catch`: Represents the block of code that is executed when a particular exception is thrown.
 * `throw`: Used to throw an exception. Also used to list the exceptions that a function throws, but doesn't handle itself.
+
 **_try block_**: A block of statements which may generate exceptions. 
 When an exception is detected, it is thrown using a _`throw`_ statement in the try block.
 A **_catch block_** defined by the keyword _`catch`_ catches the exception thrown by the throw statement in the try block and handles it accordingly.
@@ -166,4 +167,187 @@ Result: -3
 Inside the function
 Exception Caught
 ```
+---
 ### Multiple Catch Statements
+* A single try statement can have many catch statements.
+* Execution of a particular catch block depens on the type of exception thrown by the throw keyword.
+* Multiple catch blocks are used when we have to catch a specific type of exception out of many possible type of exceptions.
+* The catch block that matches with the type of exception thrown will be executed, while the rest of the catch blocks will be skipped.
+General syntax:
+```cpp
+try
+{
+    //try block
+}
+catch(type1 arg)
+{
+    //catch block 1
+}
+catch(type2 arg)
+{
+    //catch block 2
+}
+...
+...
+...
+catch(typeN arg)
+{
+    //catch block N
+}
+```
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+void test(int x)
+{
+    try
+    {
+        if(x==1) throw x;
+        else if(x==0) throw 'x';
+        else if(x==-1) throw 1.0;
+        cout<<"End of try\n";
+    }
+    catch(char c)
+    {
+        cout<<"Caught a character\n";
+    }
+    catch(int m)
+    {
+        cout<<"Caught an integer\n";
+    }
+    catch(double d)
+    {
+        cout<<"Caught a double\n";
+    }
+    cout<<"End of try-catch system\n";
+}
+int main()
+{
+    cout<<"Testing multiple catches\n";
+    cout<<"x==1\n";
+    test(1);
+    cout<<"x==0\n";
+    test(0);
+    cout<<"x==-1\n";
+    test(-1);
+    cout<<"x==2\n";
+    test(2);
+    return 0;
+}
+```
+Output:
+```cpp
+Testing multiple catches
+x==1
+Caught an integer
+End of try-catch system
+x==0
+Caught a character
+End of try-catch system
+x==-1
+Caught a double
+End of try-catch system
+x==2
+End of try
+End of try-catch system
+```
+---
+### Catching all exceptions
+In some situations we may not be able to predict all possible type of exceptions and therefore may not be able to design independent catch handlers to catch them.
+In such situations we can force a catch statement to catch all exceptions instead of a certain type alone; also known as _generic catch handler_
+Catch all (or generic catch handler) should always be the last catch handler out of all available catch handlers.
+General syntax:
+```cpp
+catch(...) //those 3 dots are actual syntax, see example
+{
+//all exceptions & statements for processing
+}
+```
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+void test(int x)
+{
+    try
+    {
+        if(x==0) throw x;
+        if(x==-1) throw 'x';
+        if(x==1) throw 1.0;
+    }
+    catch(...)
+    {
+        cout<<"Caught an exception\n";
+    }
+}
+int main()
+{
+    cout<<"Testing generic catch\n";
+    test(-1);
+    test(0);
+    test(1);
+    return 0;
+}
+```
+Output:
+```cpp
+Testing generic catch
+Caught an exception
+Caught an exception
+Caught an exception
+```
+---
+### Catching class type as an exception
+We can also throw class types or user defined types from try block and design a suitable catch block for the same with an argument of class type.
+For example:
+```cpp
+#include<bits/stdc++.h>
+#include<conio.h>
+using namespace std;
+class error
+{
+    int err_code;
+    char *err_desc;
+    public:
+    error(int c, char *d)
+    {
+        err_code=c;
+        err_desc=new char[strlen (d)];
+        strcpy(err_desc, d);
+    }
+    void err_display(void)
+    {
+        cout<<"Error code: "<<err_code<<" Error description: "<< err_desc;
+    }
+}; 
+int main()
+{
+    try
+    {
+        cout<<"Press any key:\n";
+        getch();
+        throw error(99, "test exception");
+    }
+    catch(error e)
+    {
+        cout<<"Exception caught successfully\n";
+        e.err_display();
+    }
+    return 0;
+}
+```
+Output:
+```cpp
+Press any key:
+Exception caught successfully
+Error code: 99 Error description: test exception
+```
+---
+### Rethrowing an exception
+If a catch block cannot handle the particular exception it has caught, then we can rethrow the exception to the next catch block for further handling.
+Rethrowing causes the current exception to be thrown to the next enclosing `try/catch` sequence and is caught by a `catch` statement given after that enclosing `try` block. 
+In such situations we can invoke `throw` directly, like 
+```cpp
+throw;
+```
