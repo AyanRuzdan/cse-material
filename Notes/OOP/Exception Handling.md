@@ -351,3 +351,169 @@ In such situations we can invoke `throw` directly, like
 ```cpp
 throw;
 ```
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+void divide(double x, double y)
+{
+    cout<<"Inside function\n";
+    try
+    {
+        if(y==0.0)
+        throw y; //first throw
+        else
+        cout<<"Division: "<<x/y<<endl;
+    }
+    catch(double)
+    {
+        cout<<"Caught double inside function\n";
+        throw; //rethrow, goes to the main function catch
+    }
+}
+int main()
+{
+    cout<<"Inside main()\n";
+    try
+    {
+        divide(10.5,2.0);
+        divide(20.0,0.0);
+    }
+    catch(double)
+    {
+        cout<<"Caught double inside main()\n";
+    }
+    cout<<"End of main()\n";
+    return 0;
+}
+```
+Output:
+```cpp
+Inside main()
+Inside function
+Division: 5.25
+Inside function
+Caught double inside function
+Caught double inside main()
+End of main()
+```
+---
+### Key points with respect to Exception Handling
+1. Implicit type conversion does not happen for primitive types. For example, in the following program, 'b' is not implicitly converted to int.
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    try
+    {
+        throw 'b';
+    }
+    catch(int x)
+    {
+        cout<<"Caught"<<x;
+    }
+    catch(...)
+    {
+        cout<<"Default Exception\n";
+    }
+    return 0;
+}
+```
+The output will be
+```cpp
+Default Exception
+```
+and not
+```cpp
+Caught x
+```
+2. If an exception is thrown and not caught anywhere, the program terminates abnormally, for example, in the following program an int is thrown, but there is not catch block to catch an int.
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    try
+    {
+        throw 10;
+    }
+    catch(char a)
+    {
+        cout<<"Caught";
+    }
+    return 0;
+}
+```
+Output:
+```cpp
+terminate called after throwing an instance of 'int'
+```
+3. In C++, the try-catch block can be nested
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    try
+    {
+        try
+        {
+            throw 20;
+        }
+        catch(int n)
+        {
+            cout<<"Handled partially\n";
+            throw; //rethrow
+        }
+    }
+    catch(int n)
+    {
+        cout<<"Handled remaining part";
+    }
+    return 0;
+}
+```
+Output:
+```cpp
+Handled partially
+Handled remaining part
+```
+4. If there are statements after throw, and exception has been thrown, then those statements will not execite, as control will be shited to catch block.
+5. When an ecxeption is thrown, all objects created inside the enclosing try block are destructed before the control is transferred to catch block.
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class Test
+{
+    public:
+    Test()
+    {
+        cout<<"Constructor\n";
+    }
+    ~Test()
+    {
+        cout<<"Destructor\n";
+    }
+};
+int main()
+{
+    try
+    {
+        Test t1;
+        throw 10;
+    }
+    catch(int i)
+    {
+        cout<<"Caught "<<i<<endl;
+    }
+    return 0;
+}
+```
+Output:
+```cpp
+Constructor
+Destructor
+Caught 10
+```
+---
