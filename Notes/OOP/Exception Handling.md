@@ -37,7 +37,7 @@ catch(type arg)
 // exception handling code
 }
 ```
-For example:
+For example #1:
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -77,3 +77,93 @@ Enter the values of a & b: 7 7
 Exception caught: (a-b)=0
 End of main
 ```
+Example #2:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a[5]={3,1,4,1,6};
+    try
+    {
+        int i=0;
+        while(1)
+        {
+            cout<<a[i]<<" ";
+            i++;
+            if(i==5)
+            throw i;
+        }
+    }
+    catch(int j)
+    {
+        cout<<"\nArray is out of bounds at index "<<j;
+    }
+    return 0;
+}
+```
+Output:
+```cpp
+3 1 4 1 6 
+Array is out of bounds at index 5
+```
+### Throw outside of try block
+A user defined function can also throw an exception if its body contains such lines of code which may behave abnormally on giving certain set of inputs.
+In that case, throw keyword can be used inside the body of user defined function and it will be written for the condition which may cause the exception.
+This is the case where throw keyword is used outside of try block, i.e. function definition.
+User defined function will be called inside try block, and if it throws the exception, then suitable catch block will handle the exception.
+```cpp
+type function(arg_list) //function with exception
+{
+throw(object); //throws exception
+}
+try
+{
+//function invoke inside try
+}
+catch(type arg) //exception catching
+{
+//exception handling
+}
+```
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+void divide(int x, int y, int z)
+{
+    cout<<"Inside the function\n";
+    if((x-y)!=0)
+    {
+        int r=z/(x-y);
+        cout<<"Result: "<<r<<endl;
+    }
+    else
+    {
+        throw(x-y);
+    }
+}
+int main()
+{
+    try
+    {
+        cout<<"Inside try block\n";
+        divide(10,20,30);
+        divide(10,10,20);
+    }
+    catch(int i)
+    {
+        cout<<"Exception Caught\n";
+    }
+    return 0;
+}
+```
+Output:
+```cpp
+Inside try block
+Inside the function
+Result: -3
+Inside the function
+Exception Caught
+```
+### Multiple Catch Statements
