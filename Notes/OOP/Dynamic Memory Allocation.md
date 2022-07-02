@@ -237,3 +237,122 @@ int main()
 It is a type of pointer which is pointing towards such a memory location which has been already deleted or deallocated.
 This way the pointer may point to a free memory and result in unpredictable behaviour in later stages.
 It is better to assign a NULL value to the pointer once the memory has been deallocated.
+Example of dangling pointer:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int *pvalue=new int;
+    *pvalue=23;
+    cout<<"Address where pointer was pointing before deletion: "<<pvalue<<endl;
+    delete pvalue;
+    cout<<"Address where pointer is pointing after deletion: "<<pvalue<<endl;
+    pvalue=NULL;
+    cout<<"Current address after NULL assignment: "<<pvalue;
+    return 0;
+}
+```
+Output:
+```cpp
+Address where pointer was pointing before deletion: 0x5626cca31eb0
+Address where pointer is pointing after deletion: 0x5626cca31eb0
+Current address after NULL assignment: 0
+```
+---
+## DMA inside a class
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class Array
+{
+    int *arr,size;
+    public:
+    void get_data(int n)
+    {
+        size=n;
+        arr=new int[size];
+        for(int i=0;i<size;i++)
+        {
+            cin>>*(arr+i);
+        }
+    }
+    int get_sum()
+    {
+        int sum=0;
+        for(int i=0;i<size;i++)
+        {
+            sum+=*(arr+i);
+        }
+        return sum;
+    }
+    void display_data()
+    {
+        for(int i=0;i<size;i++)
+        {
+            cout<<*(arr+i)<<" ";
+        }
+        cout<<endl;
+        cout<<"Sum of elements: "<<get_sum()<<endl;
+    }
+    ~Array()
+    {
+        delete []arr;
+        cout<<"Memory deallocated.\n";
+    }
+};
+int main()
+{
+    Array a;
+    int n;
+    cout<<"Enter number of elements: ";
+    cin>>n;
+    a.get_data(n);
+    a.display_data();
+    return 0;
+}
+```
+Output:
+```cpp
+Enter number of elements: 5
+3 1 4 1 6
+3 1 4 1 6 
+Sum of elements: 15
+Memory deallocated.
+```
+---
+## Dynamic Constructor
+If we allocated memory inside the definition of any constructor, then that type of constructor is known as dynamic constructor.
+For example:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class example1
+{
+    const char *ptr;
+    public:
+    example1()
+    {
+        ptr = new char[8];
+        ptr="Dynamic";
+    }
+    void show()
+    {
+        cout<<ptr<<endl;
+    }
+};
+int main()
+{
+    example1 *ptr = new example1();
+    ptr->show();
+}
+```
+Output:
+```cpp
+Dynamic
+```
+---
+## Virtual Destructor
+We already know that the order of exeution of destructor in an inherited class is:
+1. Derived class destructor
+2. Base class destructor
