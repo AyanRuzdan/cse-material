@@ -15,6 +15,7 @@ int x;
 float y=12.345;
 x=y; //float is converted to int
 ```
+---
 ### Basic to Class
 It is done by the use of a constructor with one parameter. <br>
 This constructor must be a member function of the class, and its parameters must of basic data type, which are to be converted.
@@ -54,7 +55,7 @@ Basic to Class Type Conversion
 6 : Hour(s)
 59 : Minutes
 ```
-
+---
 ### Class to Basic
 We cannot use a constructor in this type of conversion. So we are supposed to define an _overloaded casting operator_ which can be usd to convert class type to basic type. It is known as conversion function.
 The casting operator function should satisfy the following conditions:
@@ -96,3 +97,4 @@ Enter hours: 6
 Enter minutes: 12
 Total minutes: 372
 ```
+---
