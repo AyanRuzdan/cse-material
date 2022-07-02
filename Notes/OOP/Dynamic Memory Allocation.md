@@ -356,3 +356,90 @@ Dynamic
 We already know that the order of exeution of destructor in an inherited class is:
 1. Derived class destructor
 2. Base class destructor
+When an object of the derived class has been allocated memory dynamically and a base class pointer is pointing towards it, then on deleting a derived class object using a pointer to a base class that has a non-virtual destructor results in undefined behaviour, i.e. destructor for derived class does not get called.
+In order to correct this situation, the base class should be defined with a virtual destructor which will make sure the derived class destructor is also called along with base class constructor in a correct sequence.
+Looking at the code, this is the problem with the code:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class Base
+{
+    public:
+    Base()
+    {
+        cout<<"Constructing Base\n";
+    }
+    ~Base()
+    {
+        cout<<"Destructing Base\n";
+    }
+};
+class Derived1:public Base
+{
+    public:
+    Derived1()
+    {
+        cout<<"Constructing Derived\n";
+    }
+    ~Derived1()
+    {
+        cout<<"Destructing Derived\n";
+    }
+};
+int main()
+{
+    Base *b = new Derived1;
+    delete b;
+    return 0;
+}
+```
+Output:
+```cpp
+Constructing Base
+Constructing Derived
+Destructing Base
+```
+Here we see that `Destructing Derived` is not called, even though it looks like it was supposed to. In order to fix that we use:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class Base
+{
+    public:
+    Base()
+    {
+        cout<<"Constructing Base\n";
+    }
+    virtual ~Base() //add virtual keyword
+    {
+        cout<<"Destructing Base\n";
+    }
+};
+class Derived1:public Base
+{
+    public:
+    Derived1()
+    {
+        cout<<"Constructing Derived\n";
+    }
+    ~Derived1()
+    {
+        cout<<"Destructing Derived\n";
+    }
+};
+int main()
+{
+    Base *b = new Derived1;
+    delete b;
+    return 0;
+}
+```
+Output:
+```cpp
+Constructing Base
+Constructing Derived
+Destructing Derived
+Destructing Base
+```
+---
+## Difference between new and malloc()
