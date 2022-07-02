@@ -195,4 +195,45 @@ Creating array of size: 5
 Enter array elements: 1 3 5 8 12
 Sum of elements of the array is: 29
 ```
+---
 ### Memory leak
+> * A memory leak may occur when the programmer may forget to dellocate a memory.
+> * In this situation the system will assume memory is still under use.
+> * If it keeps on happening the at one time the system may run out of memory and system crash may occur.
+> * Solution: Always deallocate/delete the memory once its not required.
+
+Example mistake where memory leak may occur:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+void mem_leak()
+{
+    int *ptr = new int[10];
+}
+int main()
+{
+    mem_leak();
+    return 0;
+}
+```
+Fix for the above given code:
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+void mem_leak()
+{
+    int *ptr = new int[10];
+    //deallocate using delete
+    delete []ptr;
+}
+int main()
+{
+    mem_leak();
+    return 0;
+}
+```
+---
+## Dangling Pointer
+It is a type of pointer which is pointing towards such a memory location which has been already deleted or deallocated.
+This way the pointer may point to a free memory and result in unpredictable behaviour in later stages.
+It is better to assign a NULL value to the pointer once the memory has been deallocated.
