@@ -5,7 +5,7 @@ Bubble sort is the simplest sorting algorithm that works by repeatedly swapping 
 ```cpp
 //let the array be
 {5,1,4,2,8}
-//after first pass we shift 5 to its position by repeated swapping
+//after FIRST PASS we shift 5 to its position by repeated swapping
 {1,5,4,2,8} //swapped 1 & 5
 {1,4,5,2,8} //swapped 4 & 5
 {1,4,2,5,8} //swapped 2 & 5
