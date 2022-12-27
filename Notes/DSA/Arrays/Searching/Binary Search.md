@@ -9,7 +9,7 @@ Basics steps to perform Binary Search:
 * Repeatedly check from the second point until the value is found or the interval is empty.
 > **There are two approaches for Binary Search: Iterative and Recursive**
 
-**Iterative (Simple) Approach**:
+## **Iterative (Simple) Approach**:
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -50,7 +50,7 @@ int main()
 }
 ```
 ---
-**Recursive Approach**:
+## **Recursive Approach**:
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
