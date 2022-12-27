@@ -6,3 +6,4 @@
 5. [[Hash Tables]]
 6. [[Dynamic Programming]]
 7. [[Graph]]
+8. [[Trees]]
