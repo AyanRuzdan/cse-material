@@ -1,4 +1,5 @@
 The merge sort algorithm is a sorting algorithm that is based on the **Divide and Conquer** paradigm. The array is initially divided into two equal halves and then they are combined in a sorted manner.
+**Time Complexity** : O(Nlog(N))
 ## Working
 It is a recursive algorithm that continuosly splits the array in half unitl it cannot be further divided.
 > ```txt
