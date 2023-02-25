@@ -36,6 +36,7 @@ INSERTION_SORT(A)
 At the beginning of each iteration of the `for` loop, which is indexed by j, the subarray consisting of elements `A[1...j-1]` constitutes the currently sorted hand, and the remaining subarray `A[j+1...n]` corresponds to the pile of cards still on the table. In fact elements `A[1...j-1]` are the elements *originally* in positions 1 through *j-1*, but now in sorted order. We state these properties of `A[1...j-1]` formally as a ***loop invariant***:<br>
 At the start of each iteration of the `for` loop of lines 1-8, the subarray `A[1...j-1]` consists of the elements originally in `A[1...j-1]`, but in sorted order.<br>
 We use loop invariants to help us understand why an algorithm is correct. We must show three things about a loop invariant:
-> **Initialization:** If it is true prior to the first iteration of the loop.
-> **Maintenance:** If it is true before an iteration of the loop, it remains true before the next iteration.
+> **Initialization:** If it is true prior to the first iteration of the loop. <br>
+> **Maintenance:** If it is true before an iteration of the loop, it remains true before the next iteration. <br>
 > **Termination:** When the loop terminates, the invariant gives us a useful property that helps show that the algorithm is correct.
+
