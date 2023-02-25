@@ -28,7 +28,6 @@ void quickSort(int arr[], int low, int high, int n)
 {
     if (low < high)
     {
-        printArray(arr, n);
         int pi = partition(arr, low, high);
         quickSort(arr, low, pi - 1, n);
         quickSort(arr, pi + 1, high, n);
@@ -37,13 +36,13 @@ void quickSort(int arr[], int low, int high, int n)
 
 int main()
 {
-    int n=10;
-    // cout << "Enter size of array: ";
-    // cin >> n;
-    int arr[n] = {10,9,8,7,6,5,4,3,2,1};
-    // cout << "Enter array elements: ";
-    // for (int i = 0; i < n; i++)
-    //     cin >> arr[i];
+    int n;
+    cout << "Enter size of array: ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter array elements: ";
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
     quickSort(arr, 0, n - 1, n);
     printArray(arr, n);
     return 0;
