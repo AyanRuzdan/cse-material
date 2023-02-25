@@ -1,7 +1,5 @@
 # The Role of Algorithms in Computing
 
-^229144
-
 ## Algorithms
 An **algorithm** is any well-defined computational procedure that takes some value, or a set of values, as **input** and produces some value, or a set of values, as **output**. <br>
 It can be viewed as a tool for solving a well-specifed ***computational problem***. <br>
