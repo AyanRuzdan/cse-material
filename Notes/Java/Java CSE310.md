@@ -38,4 +38,6 @@
 4. Working with for-each loop
 ---
 ## Arrays and Enums
-1. Fundamentals about A
+1. Fundamentals about Arrays
+2. Multi-dimensional Arrays
+3. Array Access
