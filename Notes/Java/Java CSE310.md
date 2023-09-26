@@ -100,3 +100,9 @@
 7. Using `finally`
 8. Usage of `throw`
 9. Usage of `throws`
+10. Handling multiple exceptions using multi-catch
+11. Autoclose resources with try-with resources statement
+12. Creating custom exceptions
+13. Testing invariants by using assertions
+---
+## I/O Fundamentals
