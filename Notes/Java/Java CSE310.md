@@ -106,3 +106,21 @@
 13. Testing invariants by using assertions
 ---
 ## I/O Fundamentals
+1. Basics of input and output in Java
+2. Read and write data from console
+3. Using streams to read files
+4. Using streams to write files
+5. Writing objects using serialization
+6. Reading objects using serialization
+---
+# Unit 6
+## Collections and Generics
+1. Creating a custom generic clas
+2. Using the type inference diamond to create an object
+3. Using bounded types
+4. Wild Cards
+5. Creating a collection using generics
+6. Implementing an ArrayList
+7. Implementing a TreeSet using Comparable and Comparator interfaces
+8. Implementing a Hashmap
+9. Implementing a Deque
