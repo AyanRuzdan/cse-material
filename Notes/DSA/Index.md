@@ -1,4 +1,3 @@
-# Index
 1. [[Arrays]]
 2. [[Linked Lists]]
 3. [[Stacks]]
@@ -7,3 +6,4 @@
 6. [[Dynamic Programming]]
 7. [[Graph]]
 8. [[Trees]]
+9. [[Java CSE310]]
