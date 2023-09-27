@@ -1,5 +1,5 @@
 [syllabus](file:\\C:\Users\ayanr\OneDrive\Desktop\Java_syllabus.pdf)
-# Unit 1
+# [[Unit 1]]
 ## Introduction to Java
 1. History and Features of Java
 2. Java Program Structure
@@ -30,7 +30,7 @@
 1. Using `if/else` constructs
 2. Using `switch-case` statements
 ---
-# Unit 2
+# [[Unit 2]]
 ## Loops
 1. Working with `for` loop
 2. Working with `while` loop
@@ -55,7 +55,7 @@
 ## String Class
 1. Constructor and methods of String and String Builder class
 ---
-# Unit 3
+# [[Unit 3]]
 ## Inheritance and Polymorphism
 1. Inheritance
 2. Method overriding
@@ -74,7 +74,7 @@
 5. Default Method
 6. Using Swing Component to demonstrate interface
 ---
-# Unit 4
+# [[Unit 4]]
 ## Functional Interface and Lambda Expressions
 1. Using Lambda Expressions
 2. Implementing Threads using Lambda Expressions
@@ -89,7 +89,7 @@
 ## Utility Classes
 1. Working with Dates
 ---
-# Unit 5
+# [[Unit 5]]
 ## Exceptions and Assertions
 1. Exceptions
 2. Exception class hierarchy
@@ -113,7 +113,7 @@
 5. Writing objects using serialization
 6. Reading objects using serialization
 ---
-# Unit 6
+# [[Unit 6]]
 ## Collections and Generics
 1. Creating a custom generic clas
 2. Using the type inference diamond to create an object
