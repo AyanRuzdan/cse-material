@@ -1,4 +1,3 @@
-[syllabus](file:\\C:\Users\ayanr\OneDrive\Desktop\Java_syllabus.pdf)
 # [[Unit 1]]
 ## Introduction to Java
 1. History and Features of Java
