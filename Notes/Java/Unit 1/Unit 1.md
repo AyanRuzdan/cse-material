@@ -1,4 +1,4 @@
-## [[Introduction to Java]]
+## [[1.1. Introduction to Java]]
 1. History and Features of Java
 2. Java Program Structure
 3. Writing simple Java class and main() method
