@@ -28,4 +28,17 @@ Developed by James Golsing in 1995. Firstly called **Greentalk** with file exten
 |Java SE 18|2022|
 ---
 # Features of Java
-Primary objective of Java was to be portable and simple
+Primary objective of Java was to be portable and simple.
+There are a list of features of Java:
+1. **Simple:** Easy to learn and syntax is similar to C++
+2. **Object Oriented:** Java organizes the software as a combination of different types of objects that incorporate both data and behaviour
+3. Portable
+4. Platform Independent
+5. Secured
+6. Robust
+7. Architecture Neutral
+8. Interpreted
+9. High Performance
+10. Multithreaded
+11. Distributed
+12. Dynamic
