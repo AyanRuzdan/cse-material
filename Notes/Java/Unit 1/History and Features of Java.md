@@ -32,13 +32,13 @@ Primary objective of Java was to be portable and simple.
 There are a list of features of Java:
 1. **Simple:** Easy to learn and syntax is similar to C++
 2. **Object Oriented:** Java organizes the software as a combination of different types of objects that incorporate both data and behaviour
-3. Portable
+3. **Portable:** We can carry and run the bytecode on any platform anywhere.
 4. **Platform Independent:** It is write once, run anywhere. Java code is compiled by the compiler and converted into bytecode. This bytecode is platform-independent and can run on multiple platforms.
 5. **Secured:** Java is best known for security. It has no explicit pointer and Java programs run inside a virtual machine sandbox
 6. **Robust:** It has strong memory management. Lack of pointers avoids security problems. It has automatic garbage collection. It also has exception handling and type checking mechanism.
 7. **Architecture Neutral:** It is so because there are no implementation dependent features, for example size of primitive types is fixed.
 8. Interpreted
-9. High Performance
-10. Multithreaded
-11. Distributed
-12. Dynamic
+9. **High Performance:** It is faster than traditional languages because it is *closer* to native code. It is a bit slower than compiled language because it is an interpreted language.
+10. **Multithreaded:** We can write multi-threading programs in Java.
+11. **Distributed:** It allows the user to create distributed applications. It allows the user to access files by calling the methods from any machine on the internet.
+12. **Dynamic:** It supports the dynamic loading of classes. It means classes are loaded on demand. It also supports dynamic compilation and automatic garbage collection/memory management.
