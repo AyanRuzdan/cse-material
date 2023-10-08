@@ -33,10 +33,10 @@ There are a list of features of Java:
 1. **Simple:** Easy to learn and syntax is similar to C++
 2. **Object Oriented:** Java organizes the software as a combination of different types of objects that incorporate both data and behaviour
 3. Portable
-4. Platform Independent
-5. Secured
-6. Robust
-7. Architecture Neutral
+4. **Platform Independent:** It is write once, run anywhere. Java code is compiled by the compiler and converted into bytecode. This bytecode is platform-independent and can run on multiple platforms.
+5. **Secured:** Java is best known for security. It has no explicit pointer and Java programs run inside a virtual machine sandbox
+6. **Robust:** It has strong memory management. Lack of pointers avoids security problems. It has automatic garbage collection. It also has exception handling and type checking mechanism.
+7. **Architecture Neutral:** It is so because there are no implementation dependent features, for example size of primitive types is fixed.
 8. Interpreted
 9. High Performance
 10. Multithreaded
