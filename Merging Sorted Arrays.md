@@ -37,3 +37,9 @@ int main()
     return 0;
 }
 ```
+The time complexity for the naive approach is O((m+n)log(m+n)), because of element insertion and sorting after that.
+The second method is much better and has the time complexity. It actually uses the approach used for merge sort.
+> * Create an array `arr3[]` of size `n1+n2`.
+> * Simultaneously traverse `arr1[]` and `arr2[]`.
+> 	* Pick smaller of current elements in `arr1[]` and `arr2[]`, copy the smaller element to next position in `arr3[]` and move ahead in `arr3[]` and the array whose element is picked.
+> * If there are remaining elements in `arr1[]` or `arr2[]`, copy them also in `arr3[]`.
