@@ -1,4 +1,5 @@
 Major topics to cover:
+- [[Introduction to Linked List]]
 - [[Traversal of Singly LL]]
 - [[Insertion in Singly LL]]
 - [[Deletion in Singly LL]]
