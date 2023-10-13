@@ -1,4 +1,3 @@
-# Arrays
 Major Topics to cover:
 1. [[Sorting]]
 2. [[Strings]]
