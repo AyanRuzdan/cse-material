@@ -1,4 +1,4 @@
-# The Role of Algorithms in Computing
+# 1. The Role of Algorithms in Computing
 
 ## Algorithms
 An **algorithm** is any well-defined computational procedure that takes some value, or a set of values, as **input** and produces some value, or a set of values, as **output**. <br>
@@ -11,7 +11,7 @@ A ***data structure*** is a way to store an organize data in order to facilitate
 ## Algorithms as a technology
 ### Efficiency
 Different algorithms devised to solve the same problem often differe dramatically in their efficieny. These differences can be much more significant than differences due to hardware and software.
-# Getting Started
+# 2. Getting Started
 ## Insertion Sort
 > Input: A sequence of n numbers {a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>,...,a<sub>n</sub>}
 > Output: A permutation (reordering) {a'<sub>1</sub>,a'<sub>2</sub>,a'<sub>3</sub>,a'<sub>4</sub>,...a'<sub>n</sub>} of the input sequence such that a'<sub>1</sub>&le;a'<sub>2</sub>&le;a'<sub>3</sub>&le;...&le;a'<sub>n</sub>
@@ -38,3 +38,8 @@ We use loop invariants to help us understand why an algorithm is correct. We mus
 > **Maintenance:** If it is true before an iteration of the loop, it remains true before the next iteration. <br>
 > **Termination:** When the loop terminates, the invariant gives us a useful property that helps show that the algorithm is correct.
 
+When the first two properties hold, the loop invariant is true prior to every iteration of the loop. Here, showing that the invariant holds before the first iteration corresponds to the **base case**, and showing that the invariant holds from iteration to iteration corresponds to the **inductive step**.
+Let's see how the three properties work for insertion sort.
+> **Initialization**: We start by showing that the loop invariant holds before the first loop iteration, when j = 2. The subarray `A[1...j-1]`, therefore, consists of just the single element `A[1]`, which is in fact the original element in `A[1]`. Moreover, this subarray is already sorted, which shows that the loop invariant holds true prior to the iteration of the first loop.
+> **Maintenance**: Informally, the body of the `for` loop works by moving `A[j-1], A[j-2], A[j-3]...` and so on by one position to the right until it finds the proper position for `A[j]` (lines 4-7), at which point it inserts the value of `A[j` (line 8). The subarray `A[1...j]` the consists of the elements originally in `A[1...j]`, but in sorted order. Incrementing *j* for the next iteration of the `for` loop then preserves the loop invariant.
+> **Termination**: Finally, we examine what happens when the loop terminates. The condition causing the `for` loop to terminat is that `j > A.length = n`. Because each loop iteration increases *j* by 1, we must have j = n+1 at that time. Substituting `n+1` for j in the wording of the loop invariant, we have that the subarray `A[1...n]` consists of the elements originally in `A[1...n]`, but in sorted order.
