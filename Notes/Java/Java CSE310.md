@@ -1,11 +1,11 @@
 # Syllabus
 # [[Unit 1]]
-## Introduction to Java
-1. History and Features of Java
-2. Java Program Structure
-3. Writing simple Java class and main() method
-4. Command-line arguments
-5. Understanding JDK, JRE and JVM
+## [[1.1. Introduction to Java]]
+1. [[1.1.1 History and Features of Java]]
+2. [[1.1.2. Java Program Structure]]
+3. [[1.1.3. Writing simple Java class and main() method]]
+4. [[1.1.4. Command-line arguments]]
+5. [[1.1.5. Understanding JDK, JRE and JVM]]
 ---
 ## Data In the Cart
 1. Using primitive data types
