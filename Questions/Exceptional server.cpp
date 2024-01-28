@@ -1,4 +1,4 @@
-//Problem Statement: https://www.hackerrank.com/challenges/exceptional-server/problem?isFullScreen=true
+// Problem Statement: https://www.hackerrank.com/challenges/exceptional-server/problem?isFullScreen=true
 #include <iostream>
 #include <exception>
 #include <string>
@@ -7,50 +7,64 @@
 #include <cmath>
 using namespace std;
 
-class Server {
+class Server
+{
 private:
 	static int load;
+
 public:
-	static int compute(long long A, long long B) {
+	static int compute(long long A, long long B)
+	{
 		load += 1;
-		if(A < 0) {
+		if (A < 0)
+		{
 			throw std::invalid_argument("A is negative");
 		}
 		vector<int> v(A, 0);
 		int real = -1, cmplx = sqrt(-1);
-		if(B == 0) throw 0;
-		real = (A/B)*real;
+		if (B == 0)
+			throw 0;
+		real = (A / B) * real;
 		int ans = v.at(B);
-		return real + A - B*ans;
+		return real + A - B * ans;
 	}
-	static int getLoad() {
+	static int getLoad()
+	{
 		return load;
 	}
 };
 int Server::load = 0;
 
-int main() {
-	int T; cin >> T;
-	while(T--) {
+int main()
+{
+	int T;
+	cin >> T;
+	while (T--)
+	{
 		long long A, B;
 		cin >> A >> B;
-    
-        //main code
-        Server server;
-        try{
-            cout<<server.compute(A, B)<<endl;;
-        }
-        catch (bad_alloc& err){
-            cout<<"Not enough memory"<<endl;
-        }
-        catch (invalid_argument& err){
-            cout<<"Exception: "<<err.what()<<endl;
-        }
-        catch (exception& err){
-            cout<<"Exception: "<<err.what()<<endl;
-        }
-        catch(...){
-            cout<<"Other Exception"<<endl;
-        }
-        
+
+		// main code
+		Server server;
+		try
+		{
+			cout << server.compute(A, B) << endl;
+			;
+		}
+		catch (bad_alloc &err)
+		{
+			cout << "Not enough memory" << endl;
+		}
+		catch (invalid_argument &err)
+		{
+			cout << "Exception: " << err.what() << endl;
+		}
+		catch (exception &err)
+		{
+			cout << "Exception: " << err.what() << endl;
+		}
+		catch (...)
+		{
+			cout << "Other Exception" << endl;
+		}
 	}
