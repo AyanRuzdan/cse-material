@@ -28,7 +28,6 @@ public:
     }
 };
 ```
-Tags: [[Sets]], [[Arrays]]
 
 ## Approach 2
 Pick element one by one and check if it exists in the hashset, if it exists then return true, else add it to the set. Return false if all elements are unique, which happens at the end of the loop.
@@ -48,3 +47,4 @@ public:
     }
 };
 ```
+Tags: [[Sets]], [[Arrays]]
