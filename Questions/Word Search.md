@@ -7,7 +7,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 
  ![img](https://assets.leetcode.com/uploads/2020/11/04/word2.jpg)
 
-Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+Input: board = [ ["A","B","C","E"], ["S","F","C","S"], ["A","D","E","E"] ], word = "ABCCED"
 Output: true
 
 # Approach
