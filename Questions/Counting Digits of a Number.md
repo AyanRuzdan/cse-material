@@ -32,3 +32,5 @@ int digitCountRecur(int n)
 }
 ```
 > **Note:** Special case is already covered in the base case of the recursion.
+
+Tags: [[Math]], [[Recursion]]
