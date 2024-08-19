@@ -67,4 +67,4 @@ class Solution:
 Length of row \* length of column \* 4<sup>length of word</sup> \
 *O(m\*n\*4<sup>k</sup>)*
 
-Tags: [[Matrix]], [[Graph]], [[DFS]], [[BFS]], [[Backtracking]]
+Tags: [[Matrix]], [[Graphs]], [[DFS]], [[BFS]], [[Backtracking]]

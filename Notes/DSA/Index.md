@@ -4,6 +4,6 @@
 4. [[Queues]]
 5. [[Hash Tables]]
 6. [[Dynamic Programming]]
-7. [[Graph]]
+7. [[Graphs]]
 8. [[Trees]]
 9. [[Java CSE310]]
