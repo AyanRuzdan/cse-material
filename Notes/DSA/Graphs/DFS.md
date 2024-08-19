@@ -5,7 +5,7 @@ For example for the given graph, one possible DFS traversal can be
 **1 2 0 3 4**
 The algorithm starts from a given source and explores all reachable vertices from *a* given source. It is similar to [[Preorder Tree Traversal]], where we visit the root, then recur for its children.
 
-```
+```python
 func addEdge(adjList, s, e){
 	adj[s].add(e)
 	adj[e].add(s)
@@ -14,7 +14,7 @@ func DFSRecur(adjList, visited, s){
 	visited[s] = true
 	print(s)
 	for each vertex V in adj[s]{
-		if V not visited{
+		if V is not visited{
 			DFS(adjList, visited, i)
 			}
 	}
