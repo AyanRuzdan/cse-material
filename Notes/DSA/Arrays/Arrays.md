@@ -5,3 +5,4 @@ Major Topics to cover:
 4. [[Static Arrays]]
 5. [[Dynamic Arrays]]
 6. [[Searching]]
+7. [[Two Pointers]]

@@ -1,3 +1,4 @@
+Go to [[Index]]
 Major topics to cover:
 - [[Introduction to Linked List]]
 - [[Traversal of Singly LL]]

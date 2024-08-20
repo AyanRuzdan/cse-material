@@ -1,4 +1,5 @@
 ## Question Statement
+
 You are given the heads of two sorted linked lists `list1` and `list2`.
 
 Merge the two lists into one **sorted** list. The list should be made by splicing together the nodes of the first two lists.
@@ -6,6 +7,7 @@ Merge the two lists into one **sorted** list. The list should be made by splic
 Return _the head of the merged linked list_.
 
 ## Examples
+
 **Examples 1:**
 > **Input:** list1 = [1,2,4], list2 = [1,3,4]
 > **Output:** [1,1,2,3,4,4]
@@ -19,11 +21,14 @@ Return _the head of the merged linked list_.
 > **Output:** [0]
 
 ## Approach
+
 - The code first checks if either of the linked lists are empty. If either linked list is empty, the code returns the other linked list.
 - Otherwise, the code compares the heads of the two linked lists and returns the head of the linked list with the smaller value. The code also stores the head of the linked list with the smaller value in a temporary variable called `temp`.
 - The code then enters a while loop. The while loop continues to iterate while both linked lists are not empty. Inside the while loop, the code checks if the head of the first linked list is smaller than the head of the second linked list. If it is, the code appends the head of the first linked list to the merged linked list and moves the head of the first linked list forward. Otherwise, the code appends the head of the second linked list to the merged linked list and moves the head of the second linked list forward. The code also updates the current pointer of the merged linked list to point to the next node.
 - After the while loop terminates, the code checks if the first linked list is empty. If it is, the code appends the second linked list to the merged linked list. Otherwise, the code appends the first linked list to the merged linked list. The code then returns the head of the merged linked list.
+
 ## Code
+
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -71,4 +76,5 @@ public:
     }
 };
 ```
+
 Tags: [[Linked Lists]]
