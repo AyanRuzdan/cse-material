@@ -1,10 +1,12 @@
 ## Question Statement
+
 Given an array of strings `strs`, group **the anagrams** together. You can return the answer in **any order**.
 
 ## Examples
+
 **Example 1:**
 **Input:** strs = {"eat","tea","tan","ate","nat","bat"}
-**Output:** {{"bat"}, {"nat","tan"}, {"ate","eat","tea"}} 
+**Output:** {{"bat"}, {"nat","tan"}, {"ate","eat","tea"}}
 
 **Example 2:**
 **Input:** strs = {""}
@@ -15,9 +17,11 @@ Given an array of strings `strs`, group **the anagrams** together. You can re
 **Output:** {{"a"}}
 
 ## Approach
+
 Make a map of string and list of strings. Pick each string, sort it and add the given string to the key of the sorted string. Then in order to return the answer make a list of list, and add the values from the map.
 
 ## Code
+
 ```cpp
 class Solution {
 public:
@@ -36,4 +40,5 @@ public:
     }
 };
 ```
+
 Tags: [[Maps]], [[Strings]]
