@@ -11,7 +11,7 @@ Insertion sort is a sorting algorithm that works similar to the way we sort play
 {11, 5, 12, 13, 6} //11 and 5 are not sorted and will be swapped
 {5, 11, 12, 13, 6} //13 and 6 are not sorted and will be swapped
 {5, 11, 12, 6, 13} //12 and 6 are not sorted and will be swapped
-{5, 11, 6, 12, 13} //11 and 6 are not sortede and will be swapped
+{5, 11, 6, 12, 13} //11 and 6 are not sorted and will be swapped
 {5, 6, 11, 12, 13} //5 and 6 are already sorted and need not be sorted
 ```
 ## Approach
