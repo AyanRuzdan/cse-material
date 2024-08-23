@@ -1,5 +1,5 @@
 # Binary Search
-**Time Complexity: O(logn)**
+**Time Complexity: $O(logn)$**
 Binary Search is a searching algorithm used in a sorted/monotonic array by repeatedly dividing the search interval in half.
 Basics steps to perform Binary Search:
 * Begin with the mid element of the whole array as a search key.
