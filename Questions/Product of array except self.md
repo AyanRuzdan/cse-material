@@ -21,10 +21,21 @@ Without Division in O(n) : make the prefix and suffix product arrays and add a 1
 Pre: [1,2,3,4] ==> [1,2,6,24] ==> [1,1,2,6]
 Suffix: [1,2,3,4] ==> [24,24,12,4] ==> [24,12,4,1]
 Now to get the desired output multiply the corresponding elements of pre and suff.
-
+[1,1,2,6] * [24,12,4,1] = [24,12,8,6]
 ## Code
 
-```Python3
+```python
+nums = [1,2,3,4]
+n=len(nums)
+pre=[1]*n
+suff=[1]*n
+for i in range(n-1):
+    pre[i+1]=pre[i]*nums[i]
+    suff[n-1-(i+1)]=suff[n-1-i]*nums[n-1-i]
+arr=[]    
+for i in range(n):
+    arr.append(pre[i]*suff[i])
+print(arr)
 
 ```
 
