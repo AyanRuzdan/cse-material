@@ -2,8 +2,8 @@
 
 **Approach:** Keep on dividing the number by 10 as long as the number is not zero. Increment counter in every iteration.
 **Special Case:** If the number itself is 0 then print 1.
-**Time Complexity:** O(log n)
-**Space Complexity:** 0(1)
+**Time Complexity:** $O(log n)$
+**Space Complexity:** $0(1)$
 Code:
 
 ```cpp
@@ -24,8 +24,8 @@ int digitCount(int n)
 ## Recursive Solution
 
 **Approach:** If number by 10 equals 0 then return 1, else return 1 + fun(n/10)
-**Time Complexity:** 0(log n)
-**Space Complexity** 0(log n), due to function call stack
+**Time Complexity:** $0(log n)$
+**Space Complexity** $0(log n)$, due to function call stack
 Code:
 
 ```cpp

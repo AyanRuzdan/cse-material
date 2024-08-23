@@ -24,7 +24,8 @@ public:
     }
 };
 ```
-
+Time Complexity: $O(nlogn)$
+Space Complexity: $O(1)$
 ## Approach 2
 Pick character one by one and increase frequency in the map. Do it for both the strings. Then iterate on the map and compare, return false if match not found.
 
@@ -49,4 +50,6 @@ public:
     }
 };
 ```
+Time Complexity: $O(n)$
+Space Complexity: $O(n)$
 Tags: [[Sets]], [[Strings]], [[Maps]]

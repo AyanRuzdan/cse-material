@@ -37,7 +37,7 @@ int main()
     return 0;
 }
 ```
-The time complexity for the naive approach is O((m+n)log(m+n)), because of element insertion and sorting after that.
+The time complexity for the naïve approach is $O((m+n)log(m+n))$, because of element insertion and sorting after that.
 The second method is much better and has the time complexity. It actually uses the approach used for merge sort.
 > * Create an array `arr3[]` of size `n1+n2`.
 > * Simultaneously traverse `arr1[]` and `arr2[]`.
@@ -85,4 +85,4 @@ int main()
     return 0;
 }
 ```
-This method has the time complexity of O(n1+n2) and also the same space complexity.
+This method has the time complexity of $O(max(n1,n2))$ and also the same space complexity.

@@ -22,6 +22,6 @@ Node *insertAtHead(Node *head, int val)
 }
 ```
 
-Time Complexity: O(1)
-Space Complexity: O(1)
+Time Complexity: $O(1)$
+Space Complexity: $O(1)$
 Tags: [[Linked Lists]]

@@ -1,5 +1,5 @@
 # Insertion Sort
-**Time Complexity: O(n<sup>2</sup>)**
+**Time Complexity: $O(n^2)$**
 Insertion sort is a sorting algorithm that works similar to the way we sort playing cards in our hands. The array is virtually split into a sorted and unsorted part. Values from the unsorted part are picked up and placed at the correct position in the sorted part.
 ```cpp
 {12, 11, 13, 5, 6} //initial position

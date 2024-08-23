@@ -50,4 +50,4 @@ Node *insertAtPosition(Node *last, int data, int pos)
     return last;
 }
 ```
-The time complexity for the specified algorithm is O(n), as we need to traverse the linked list only once. As for space complexity we are taking very less space for variables, hence O(1).
+The time complexity for the specified algorithm is $O(n)$, as we need to traverse the linked list only once. As for space complexity we are taking very less space for variables, hence $O(1)$.

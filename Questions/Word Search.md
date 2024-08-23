@@ -65,6 +65,5 @@ class Solution:
 
 # Time Complexity
 Length of row \* length of column \* 4<sup>length of word</sup> \
-*O(m\*n\*4<sup>k</sup>)*
-
+*$O(m \cdot n \cdot 4^k)$*
 Tags: [[Matrix]], [[Graphs]], [[DFS]], [[BFS]], [[Backtracking]]
