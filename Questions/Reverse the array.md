@@ -11,3 +11,17 @@ Example 2:
 > Output: nums = [10,9,8,6,7]
 
 ## Approach 1
+
+**Two-pointer approach**: Take the left pointer as `m+1` and right pointer as `n-1` where `n` is the size of the array. Then iterate with the condition `left <= right` and swap `arr[left]` and `arr[right]`. Increment left and decrement right with each swap.
+
+## Code
+```cpp
+void reverseArray(vector<int>& v, int m){
+	int left = m + 1, right = v.size() - 1;
+	while(left <= right)
+		swap(v[left++],v[right--]);
+}
+```
+Time Complexity: $O(n)$
+Space Complexity: $O(1)$
+Tags: [[Arrays]], [[Two Pointers]]
