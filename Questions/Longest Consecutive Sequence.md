@@ -18,28 +18,28 @@ You must write an algorithm that runs in `O(n)` time.
 
 ## Code
 ```cpp
-class Solution {
-public:
-    int longestConsecutive(vector<int>& nums) {
-        // Create a set that contains all the numbers
-        unordered_set<int> myset(nums.begin(), nums.end());
-        // global var to contain the final result
-        int longest = 0;
-        // iterate over the set
-        for (auto x : myset) {
-            // check if predecessor of a given number, and call it a left boundary
-            if (myset.find(x - 1) == myset.end()) {
-                // create length variable
-                int length = 1;
-                // iterate for numbers in a sequence
-                while (myset.find(x + length) != myset.end())
-                // if number exists, then increment length
-                    length++;
-                // update value for answer
-                longest = max(longest, length);
-            }
-        }
-        return longest;
-    }
-};
+int longestConsecutive(vector<int>& nums) {
+	// Create a set that contains all the numbers
+	unordered_set<int> myset(nums.begin(), nums.end());
+	// global var to contain the final result
+	int longest = 0;
+	// iterate over the set
+	for (auto x : myset) {
+		// check if predecessor of a given number, and call it a left boundary
+		if (myset.find(x - 1) == myset.end()) {
+			// create length variable
+			int length = 1;
+			// iterate for numbers in a sequence
+			while (myset.find(x + length) != myset.end())
+			// if number exists, then increment length
+				length++;
+			// update value for answer
+			longest = max(longest, length);
+		}
+	}
+	return longest;
 ```
+
+Time Complexity: $O(n)$
+Space Complexity: $O(n)$, as we are containing a set that contains the numbers
+Tags: [[Arrays]], [[Sets]]
