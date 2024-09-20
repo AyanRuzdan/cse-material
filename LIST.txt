@@ -1,0 +1,72 @@
+README
+Hash Tables
+Index
+Maps
+Math
+Queues
+Recursion
+Sets
+Stacks
+Trees
+Arrays
+Two Pointers
+Merging Sorted Arrays
+Merging
+Binary Search
+Linear Search
+Searching
+Bubble Sort
+Insertion Sort
+Merge Sort
+Quick Sort
+Selection Sort
+Sorting
+Strings
+Foundations
+0-1 Knapsack
+Dynamic Programming
+BFS
+DFS (Adjacency List)
+DFS (Matrix)
+DFS
+Graphs
+Circular LL
+Deletion at a given position of Circular LL
+Deletion at beginning of Circular LL
+Deletion in Circular LL
+Deletion in Doubly LL
+Deletion in Singly LL
+Doubly LL
+Grounded LL
+Insertion at a end of DLL
+Insertion at a given position in Circular LL
+Insertion at a given position in DLL
+Insertion at beginning of Circular LL
+Insertion at beginning of DLL
+Insertion in Circular LL
+Insertion in DLL
+Insertion in Singly LL
+Introduction to Linked List
+Linked Lists
+Traversal of Circular LL
+Traversal of DLL
+Traversal of Doubly LL
+Traversal of Singly LL
+Add Two numbers
+Contains Duplicate
+Counting Digits of a Number
+Find Pairs with a given sum in a DLL
+Generate Parentheses
+Group Anagrams
+Longest Consecutive Sequence
+Merge Two Sorted Lists
+Palindrome Number
+Product of array except self
+Reverse the array
+Rotate Image
+Top K Frequent Elements
+Two Sum
+Valid Anagram
+Valid Parentheses
+Word Search
+1787. Turn for MEGA
