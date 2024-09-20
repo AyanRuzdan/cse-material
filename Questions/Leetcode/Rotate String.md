@@ -28,3 +28,4 @@ bool rotateString(string s, string goal) {
 ```
 ## Knuth-Morris-Pratt (KMP)
 I don't want to do this.
+Tags: [[Strings]]
