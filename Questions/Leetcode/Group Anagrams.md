@@ -4,17 +4,17 @@ Given an array of strings `strs`, group **the anagrams** together. You can re
 
 ## Examples
 
-**Example 1:**
-**Input:** strs = {"eat","tea","tan","ate","nat","bat"}
-**Output:** {{"bat"}, {"nat","tan"}, {"ate","eat","tea"}}
+Example 1:
+>Input: strs = {"eat","tea","tan","ate","nat","bat"}
+>Output: {{"bat"}, {"nat","tan"}, {"ate","eat","tea"}}
 
-**Example 2:**
-**Input:** strs = {""}
-**Output:** {{""}}
+Example 2:
+>Input: strs = {""}
+>Output: {{""}}
 
-**Example 3:**
-**Input:** strs = {"a"}
-**Output:** {{"a"}}
+Example 3:
+>Input: strs = {"a"}
+>Output: {{"a"}}
 
 ## Approach
 
