@@ -19,4 +19,8 @@ Return _the maximum profit you can achieve from this transaction_. If you canno
 
 ## Approach
 
-Start with initializing two pointers
+Start with initializing two pointers, left and right both to 0. If value at right pointer is greater than value at left pointer, then selling point is found. Calculate maximum profit from the difference and previously calculated max value. If selling point is not found, move left pointer to where the right pointer is. Move right pointer forward every iteration. Return max profit at the end.
+
+## Code
+
+Tags: [[Top Interview 150]], [[Arrays]], [[Two Pointers]]
