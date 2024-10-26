@@ -1,7 +1,3 @@
-Here's a comprehensive list that includes data structures, algorithms, and must-do questions:
-
----
-
 ### **Data Structures**
 
 #### **1. Arrays**
@@ -164,5 +160,3 @@ Here's a comprehensive list that includes data structures, algorithms, and must-
      - Closest Pair of Points
 
 ---
-
-This comprehensive list covers a wide range of data structures, algorithms, and essential questions to help solidify your understanding. Let me know if you want to add or modify anything!
