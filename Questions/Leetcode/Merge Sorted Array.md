@@ -24,7 +24,9 @@ Example 3:
 
 ## Approach
 
+Start from the end of `nums1`, as long as elements of `nums1` are lesser than `nums2` we push it into `nums1`, else push elements of `nums1` into itself. 
 ## Code
+
 ```cpp
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         int i = m - 1;
@@ -39,4 +41,5 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         }
     }
 ```
+
 Tags: [[Top Interview 150]], [[Arrays]]
