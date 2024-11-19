@@ -13,4 +13,28 @@ Return _the maximum amount of water a container can store_.
 >**Output:** 1
 
 ## Approach
-
+The total amount of water is calculated by the product of the distance between the bars (given by right pointer - left pointer) and the height of the water contained between the bars (given by max(h\[left\], h\[right\]. In order to get maximum water content, we need to find high bars and max width. Here we use two pointers, for every left bar that is smaller than the right bar, we increment left in hope of finding a taller bar, similarly the right pointer is moved towards the left to find a taller bar. In every iteration the volume of water is calculated and is updated with the max value. At the end of the iteration the maximum water volume is returned.
+## Code
+```cpp
+class Solution
+{
+public:
+    int maxArea(vector<int> &heights)
+    {
+        int res = 0;
+        int n = heights.size(), left = 0, right = n - 1;
+        while (left < right)
+        {
+            res = max(res, (right - left) * min(heights[left], heights[right]));
+            if (heights[left] <= heights[right])
+                left++;
+            else if (heights[left] >= heights[right])
+                right--;
+            int area = (right - left) * min(heights[left], heights[right]);
+            res = max(res, area);
+        }
+        return res;
+    }
+};
+```
+Tags: [[Two Pointers]], [[Arrays]], [[Math]]
