@@ -55,9 +55,9 @@ Suffix:
 {24,12,4,1} // modified suffix product array by adding 1 to the end and removing first product
 ```
 Now to get the desired output multiply the corresponding elements of *prefix* and *suffix* product arrays.
-> 	 {01,01,2,6}
->    $\times$   {24,12,4,1}
->    =    {24,12,8,6}
+   `{01,01,2,6}
+ $\times$`{24,12,4,1}`
+= `{24,12,8,6}`
 ## Code
 Python:
 ```python
