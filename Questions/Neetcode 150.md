@@ -12,3 +12,5 @@
 # Two Pointers
 1. [[Valid Palindrome]]
 2. [[Two Sum II - Input Array Is Sorted]]
+3. [[3Sum]] (Not done)
+4. [[Container with Most Water]]
