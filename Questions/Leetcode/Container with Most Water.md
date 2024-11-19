@@ -30,8 +30,6 @@ public:
                 left++;
             else if (heights[left] >= heights[right])
                 right--;
-            int area = (right - left) * min(heights[left], heights[right]);
-            res = max(res, area);
         }
         return res;
     }
