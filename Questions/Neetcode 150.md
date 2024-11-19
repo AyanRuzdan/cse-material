@@ -6,3 +6,5 @@
 5. [[Top K Frequent Elements]]
 6. [[Encode and Decode Strings]] (Not done)
 7. [[Product of array except self]]
+8. [[Valid Sudoku]] (Not done)
+9. [[Longest Consecutive Sequence]]
