@@ -11,4 +11,32 @@ Given `n` non-negative integers representing an elevation map where the width 
 >**Input:** height = [4,2,0,3,2,5]
 >**Output:** 9
 
-## Approach
+## Approach 1 (Two Pointer)
+The two pointer approach works with dynamically maintaining the largest left and right pointers, and simultaneously calculating the amount of water contained between the current position and the calculated left and right maximums. See in Code.
+
+## Code
+```cpp
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        if (height.empty())
+            return 0;
+        int left = 0, right = height.size() - 1;
+        int lMax = height[left], rMax = height[right];
+        int res = 0;
+        while (left < right) {
+            if (lMax < rMax) {
+                left++;
+                lMax = max(lMax, height[left]);
+                res += lMax - height[left];
+            } else {
+                right--;
+                rMax = max(rMax, height[right]);
+                res += rMax - height[right];
+            }
+        }
+        return res;
+    }
+};
+```
+Tags: [[Arrays]], [[Two Pointers]]

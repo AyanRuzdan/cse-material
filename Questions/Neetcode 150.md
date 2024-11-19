@@ -8,10 +8,11 @@
 7. [[Product of array except self]]
 8. [[Valid Sudoku]] (Not done)
 9. [[Longest Consecutive Sequence]]
-
 # Two Pointers
 1. [[Valid Palindrome]]
 2. [[Two Sum II - Input Array Is Sorted]]
 3. [[3Sum]] (Not done)
 4. [[Container with Most Water]]
-5. [[Trapping Rain Water]]
+5. [[Trapping Rain Water]] (Revisit)
+# Sliding Window
+1. [[Best Time to Buy and Sell Stock]]
