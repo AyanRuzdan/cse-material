@@ -8,3 +8,7 @@
 7. [[Product of array except self]]
 8. [[Valid Sudoku]] (Not done)
 9. [[Longest Consecutive Sequence]]
+
+# Two Pointers
+1. [[Valid Palindrome]]
+2. [[Two Sum II - Input Array Is Sorted]]
