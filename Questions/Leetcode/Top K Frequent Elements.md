@@ -43,18 +43,21 @@ In this approach we can make use of a max-heap to find the elements with the lar
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
-        unordered_map<int, int> mp;
-        for(auto item:nums) mp[item]++;
-        priority_queue<pair<int, int>> pq;
+        unordered_map<int, int> mp; // map to contain frequency of elements
+        for(auto item:nums) mp[item]++; // find frequency
+        priority_queue<pair<int, int>> pq; // max heap to contain frequency pair
         for(auto item:mp){
             pq.push({item.second, item.first});
+            // insert frequency pair in the heap, frequency first
         }
-        vector<int> res;
-        while(k--){
+        vector<int> res; // resultant vector
+        while(k--){ // need to find top k values only
             res.push_back(pq.top().second);
-            pq.pop();
+            // insert the element from the top of the heap's 
+            // pair into the resultant vector
+            pq.pop(); // move on to the next most frequent element
         }
-        return res;
+        return res; // return resultant vector
     }
 };
 
