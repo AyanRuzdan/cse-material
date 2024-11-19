@@ -10,7 +10,7 @@ Given an integer array `nums` and an integer `k`, return _the_ `k` _most fr
 **Input:** nums = [1], k = 1
 **Output:** [1]
 
-## Approach
+## Approach 1
 Make a hashmap to store the frequencies of all the elements. Then perform bucket sort and store the elements according to frequency. Finally start from the end of the bucket and insert values from the bucket in the resultant list.
 
 ## Code
@@ -37,4 +37,27 @@ public:
     }
 };
 ```
-Tags: [[Arrays]], [[Sorting]], [[Maps]]
+## Approach 2
+In this approach we can make use of a max-heap to find the elements with the largest frequency. First make a frequency map using an unordered or ordered map. Then push pair of frequency and element into the heap. Then for `k` times, fetch the top of the heap. Push the answer into a resultant vector and output accordingly. 
+```cpp
+class Solution {
+public:
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        unordered_map<int, int> mp;
+        for(auto item:nums) mp[item]++;
+        priority_queue<pair<int, int>> pq;
+        for(auto item:mp){
+            pq.push({item.second, item.first});
+        }
+        vector<int> res;
+        while(k--){
+            res.push_back(pq.top().second);
+            pq.pop();
+        }
+        return res;
+    }
+};
+
+```
+
+Tags: [[Arrays]], [[Sorting]], [[Maps]], [[Heaps]]
