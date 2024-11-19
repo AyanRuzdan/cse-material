@@ -53,5 +53,22 @@ public:
     }
 };
 ```
+## Approach 3
 
-Tags: [[Sets]], [[Arrays]]
+Sort the array, if any two adjacent elements are the same, then the duplicates exist, otherwise if all elements are unique, then no two adjacent elements will be the same even after sorting.
+**Edge case: If the array is empty, then the test case won't work.**
+## Code
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < nums.size() - 1; i++)
+            if (nums[i] == nums[i + 1])
+                return true;
+        return false;
+    }
+};
+```
+
+Tags: [[Sets]], [[Arrays]], [[Sorting]]
