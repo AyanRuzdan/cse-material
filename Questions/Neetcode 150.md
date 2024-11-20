@@ -18,3 +18,4 @@
 1. [[Best Time to Buy and Sell Stock]]
 2. [[Longest Substring Without Repeating Characters]] (Revisit)
 3. [[Longest Repeating Character Replacement]]
+4. [[Permutation in String]]

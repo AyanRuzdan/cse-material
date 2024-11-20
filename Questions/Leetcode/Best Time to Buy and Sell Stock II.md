@@ -1,9 +1,8 @@
 ## Question Statement
-
 You are given an integer array `prices` where `prices[i]` is the price of a given stock on the `ith` day.
 On each day, you may decide to buy and/or sell the stock. You can only hold **at most one** share of the stock at any time. However, you can buy it then immediately sell it on the **same day**.
 Find and return _the **maximum** profit you can achieve_.
-
+## Example
 **Example 1:**
 >**Input:** prices = [7,1,5,3,6,4]
 >**Output:** 7
@@ -25,11 +24,9 @@ Find and return _the **maximum** profit you can achieve_.
 >**Explanation:** There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
 
 ## Approach
-
 Make a profit resultant and initialize with 0. Iterate over the list of prices, every time a pair is found that is a valid buy-sell pair, add the profit to the global profit.
 
 ## Code
-
 ```cpp
 int maxProfit(vector<int>& prices) {
         int profit = 0;
