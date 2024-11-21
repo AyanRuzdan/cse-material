@@ -27,3 +27,27 @@ You must implement a solution with `O(1)` time complexity for each function.
 
 ## Approach
 Implement two stacks, keep a standard stack, and a minstack to contain the smallest element so that the query is completed in constant time. 
+## Code
+```cpp
+class MinStack {
+public:
+    stack<int> st;
+    stack<int> minstack;
+    MinStack() {}
+    void push(int val) {
+        st.push(val);
+        if (minstack.empty() || minstack.top() >= val) {
+            minstack.push(val);
+        }
+    }
+    void pop() {
+        if (getMin() == st.top()) {
+            minstack.pop();
+        }
+        st.pop();
+    }
+    int top() { return st.top(); }
+    int getMin() { return minstack.top(); }
+};
+```
+Tags: [[Stacks]]
