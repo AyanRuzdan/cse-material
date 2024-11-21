@@ -24,3 +24,4 @@
 # Stack
 1. [[Valid Parentheses]]
 2. [[Min Stack]]
+3. [[Evaluate Reverse Polish Notification]]
