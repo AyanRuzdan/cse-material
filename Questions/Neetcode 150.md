@@ -23,4 +23,4 @@
 6. [[Sliding Window Maximum]] (Not done)
 # Stack
 1. [[Valid Parentheses]]
-2. 
+2. [[Min Stack]]
