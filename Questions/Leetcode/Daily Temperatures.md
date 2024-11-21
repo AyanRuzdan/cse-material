@@ -12,3 +12,9 @@ Given an array of integers `temperatures` represents the daily temperatures, r
 **Example 3:**
 >**Input:** temperatures = [30,60,90]
 >**Output:** [1,1,0]
+
+## Approach
+## Code
+```cpp
+
+```
