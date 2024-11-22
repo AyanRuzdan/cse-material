@@ -14,7 +14,25 @@ Given an array of integers `temperatures` represents the daily temperatures, r
 >**Output:** [1,1,0]
 
 ## Approach
+For this problem we use a monotonically decreasing stack. We need to traverse the temperature array, and maintain a stack of temp and corresponding index. In the stack if the element in the array is greater than the top of the stack, then that element is processed/popped and it's index and current array index is subtracted and added to the resultant array. A while loop is implemented to process all temperatures smaller than the current temperature, and in order to make sure that we have only smaller temperatures in the stock, we maintain it so that it is always a monotonically decreasing stack. 
 ## Code
 ```cpp
+class Solution {
+public:
+    vector<int> dailyTemperatures(vector<int>& temperatures) {
+        vector<int> res(temperatures.size(), 0);
+        stack<pair<int, int>> st;
+        for (int i = 0; i < temperatures.size(); i++) {
+            int t = temperatures[i];
+            while (!st.empty() && t > st.top().first) {
+                auto pair = st.top();
+                st.pop();
+                res[pair.second] = i - pair.second;
+            }
+            st.push({t, i});
+        }
+        return res;
+    }
+};
 
 ```
