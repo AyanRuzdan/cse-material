@@ -26,6 +26,6 @@
 2. [[Min Stack]]
 3. [[Evaluate Reverse Polish Notation]]
 4. [[Generate Parentheses]] (Revisit / Uses recursion stack)
-5. [[Daily Temperatures]]
-6. [[Car Fleet]]
-7. [[Largest Rectangle in Histogram]]
+5. [[Daily Temperatures]] (Not done)
+6. [[Car Fleet]] (Not done)
+7. [[Largest Rectangle in Histogram]] (Not done)
