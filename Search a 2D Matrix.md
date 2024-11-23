@@ -16,3 +16,24 @@ You must write a solution in `O(log(m * n))` time complexity.
 
 ## Approach 1 (One Pass Binary Search)
 In order to have a one pass binary search, fix the left pointer at the start of the matrix and the right pointer at the last element of the matrix. In order to find the target element we need to find row and column indices using the formula `row = mid/cols` and `col = mid%cols` where `cols` is the number of cols in the original matrix.
+## Code
+```cpp
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int rows = matrix.size(), cols = matrix[0].size();
+        int low = 0, high = rows * cols - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (matrix[mid / cols][mid % cols] == target)
+                return true;
+            else if (matrix[mid / cols][mid % cols] > target)
+                high = mid - 1;
+            else
+                low = mid + 1;
+        }
+        return false;
+    }
+};
+```
+Tags: [[Binary Search]]. [[Matrix]]
