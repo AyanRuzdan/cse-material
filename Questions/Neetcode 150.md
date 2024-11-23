@@ -31,3 +31,4 @@
 7. [[Largest Rectangle in Histogram]] (Not done)
 # Binary Search
 1. [[Binary Search]]
+2. [[Search a 2D Matrix]]
