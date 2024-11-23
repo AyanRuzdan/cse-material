@@ -29,3 +29,5 @@
 5. [[Daily Temperatures]] (Not done)
 6. [[Car Fleet]] (Not done)
 7. [[Largest Rectangle in Histogram]] (Not done)
+# Binary Search
+1. [[Binary search]]
