@@ -33,7 +33,7 @@
 1. [[Binary Search]]
 2. [[Search a 2D Matrix]]
 3. [[Koko Eating Bananas]]
-4. [[Find Minimum In Rotated Sorted Array]]
-5. [[Search In Rotated Sorted Array]] (Not added)
+4. [[Find Minimum In Rotated Sorted Array]] (Not added)
+5. [[Search In Rotated Sorted Array]] 
 6. [[Time Based Key Value Store]]
 7. [[Median of Two Sorted Arrays]]
