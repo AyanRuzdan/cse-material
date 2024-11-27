@@ -11,7 +11,7 @@
 # Two Pointers
 1. [[Valid Palindrome]]
 2. [[Two Sum II - Input Array Is Sorted]]
-3. [[3Sum]] (Not done)
+3. [[3Sum]]
 4. [[Container with Most Water]]
 5. [[Trapping Rain Water]] (Revisit)
 # Sliding Window
@@ -25,8 +25,8 @@
 1. [[Valid Parentheses]]
 2. [[Min Stack]]
 3. [[Evaluate Reverse Polish Notation]]
-4. [[Generate Parentheses]] (Revisit / Uses recursion stack)
-5. [[Daily Temperatures]] (Not done)
+4. [[Generate Parentheses]]
+5. [[Daily Temperatures]]
 6. [[Car Fleet]] (Not done)
 7. [[Largest Rectangle in Histogram]] (Not done)
 # Binary Search
