@@ -23,3 +23,45 @@ Notice that the solution set must not contain duplicate triplets.
 >**Output:** [[0,0,0]]
 >**Explanation:** The only possible triplet sums up to 0.
 
+## Approach
+The approach for three-sum is actually quite the same as two-sum, because the target here is always fixed. The problem states that we are not supposed to have same triplets again, which is why sorting the array to skip over same values becomes easy. Once the input is sorted, we can use the approach for [[Two Sum II - Input Array Is Sorted]], where we can use two pointers to reduce the total sum until it actually becomes 0. An outer $O(n)$ loop is necessary to traverse over all elements atleast once, meanwhile the inner loop works on the two pointer approach. We also specify methods to skip over same values so that we do not end up with redundant triplets.
+## Code
+```cpp
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        // sorting is okay because the expected
+        // time complexity is O(n^2) anyway
+        vector<vector<int>> res;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] > 0)
+            // if we have a positive number we cannot reduce it to zero
+                break;
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue; // skip over same values
+            int left = i + 1, right = nums.size() - 1; // THE TWO POINTERS
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+                // necessary to do overflow and underflow checks
+                // before adding triplets to the result
+                if (sum > 0) {
+                    right--; // reduce the sum
+                } else if (sum < 0) {
+                    left++; // increase the sum
+                } else {
+                    res.push_back({nums[i], nums[left], nums[right]});
+                    // add the triplet and find for other triplets
+                    // by closing in the pointers
+                    left++;
+                    right--;
+                    while (left < right && nums[left] == nums[left - 1]) {
+                        left++; // skip over same values
+                    }
+                }
+            }
+        }
+        return res;
+    }
+};
+```
