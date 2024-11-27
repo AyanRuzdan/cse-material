@@ -11,77 +11,30 @@ tags: [excalidraw]
 
 ---
 
-# Text Elements
+# Excalidraw Data
+## Text Elements
 Open a document in another pane and click it to get started.
 
 For the best experience enable 'Open in adjacent pane'
 in Excalidraw settings under 'Links and Transclusion'. ^4mylk7KK
 
 %%
-# Drawing
-```json
-{
-	"type": "excalidraw",
-	"version": 2,
-	"source": "https://excalidraw.com",
-	"elements": [
-		{
-			"type": "text",
-			"version": 1,
-			"versionNonce": 423577018,
-			"isDeleted": false,
-			"id": "4mylk7KK",
-			"fillStyle": "hachure",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": 0,
-			"y": 0,
-			"strokeColor": "white",
-			"backgroundColor": "transparent",
-			"width": 703,
-			"height": 96,
-			"seed": 4429,
-			"groupIds": [],
-			"strokeSharpness": "sharp",
-			"boundElements": [],
-			"updated": 1650784785611,
-			"link": null,
-			"locked": false,
-			"fontSize": 20,
-			"fontFamily": 3,
-			"text": "Open a document in another pane and click it to get started.\n\nFor the best experience enable 'Open in adjacent pane'\nin Excalidraw settings under 'Links and Transclusion'.",
-			"rawText": "Open a document in another pane and click it to get started.\n\nFor the best experience enable 'Open in adjacent pane'\nin Excalidraw settings under 'Links and Transclusion'.",
-			"baseline": 91,
-			"textAlign": "center",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "Open a document in another pane and click it to get started.\n\nFor the best experience enable 'Open in adjacent pane'\nin Excalidraw settings under 'Links and Transclusion'."
-		}
-	],
-	"appState": {
-		"theme": "dark",
-		"viewBackgroundColor": "hsl(208, 80%, 23%)",
-		"currentItemStrokeColor": "#000000",
-		"currentItemBackgroundColor": "transparent",
-		"currentItemFillStyle": "hachure",
-		"currentItemStrokeWidth": 2,
-		"currentItemStrokeStyle": "solid",
-		"currentItemRoughness": 1,
-		"currentItemOpacity": 100,
-		"currentItemFontFamily": 1,
-		"currentItemFontSize": 16,
-		"currentItemTextAlign": "left",
-		"currentItemStrokeSharpness": "sharp",
-		"currentItemStartArrowhead": null,
-		"currentItemEndArrowhead": "arrow",
-		"currentItemLinearStrokeSharpness": "round",
-		"gridSize": null,
-		"colorPalette": {}
-	},
-	"files": {}
-}
+## Drawing
+```compressed-json
+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=
 ```
 %%

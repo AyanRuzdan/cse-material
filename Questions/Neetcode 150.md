@@ -4,9 +4,9 @@
 3. [[Two Sum]]
 4. [[Group Anagrams]]
 5. [[Top K Frequent Elements]]
-6. [[Encode and Decode Strings]] (Not done)
+6. [[Encode and Decode Strings]]
 7. [[Product of array except self]]
-8. [[Valid Sudoku]] (Not done)
+8. [[Valid Sudoku]]
 9. [[Longest Consecutive Sequence]]
 # Two Pointers
 1. [[Valid Palindrome]]
