@@ -41,23 +41,24 @@ This problem does not focus on the solvability of the sudoku, but only it's curr
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-        map<int, set<char>> rows, cols;
-        map<pair<int, int>, set<char>> squares;
-        for (int r = 0; r < 9; r++) {
-            for (int c = 0; c < 9; c++) {
-                if (board[r][c] == '.')
+        map<int, set<char>> rows, cols; // map for rows and cols
+        map<pair<int, int>, set<char>> squares; // map for subsquares
+        for (int r = 0; r < 9; r++) { // 9 rows, O(1)
+            for (int c = 0; c < 9; c++) { // 9 cols, O(1)
+                if (board[r][c] == '.') // non-integer, skip
                     continue;
-                pair<int, int> coord = {r / 3, c / 3};
-                char ele = board[r][c];
+                pair<int, int> coord = {r / 3, c / 3}; // index to sub square index
+                char ele = board[r][c]; // better than writing variable again
                 if (rows[r].count(ele) || cols[c].count(ele) ||
-                    squares[coord].count(ele))
-                    return false;
-                rows[r].insert(ele);
-                cols[c].insert(ele);
-                squares[coord].insert(ele);
+                    squares[coord].count(ele)) // check for uniqueness in 
+                    // each row, col and subsquare
+                    return false; // if not, return validity as false
+                rows[r].insert(ele); // if not then add in row
+                cols[c].insert(ele); // col
+                squares[coord].insert(ele); // and subsquare
             }
         }
-        return true;
+        return true; // no invalidity found after traversal of sudoku
     }
 };
 ```
