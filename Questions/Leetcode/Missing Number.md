@@ -31,3 +31,21 @@ int missingNumber(vector<int>& nums) {
 ```
 ## Approach 2(Sort and search for inconsistency)
 If the list is sorted, then there will be a place where two numbers after sorting will differ by 1. There are edge cases involved if the missing number is at the end or at the beginning. In order to work around this edge case, we can match index with the numbers, and find the missing number that way.
+### Code
+```cpp
+int missingNumber(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        if (nums[0] != 0)
+            return 0;
+        if (nums[n - 1] != n)
+            return n;
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums[i] != i) {
+                return i;
+            }
+        }
+        return 0;
+    }
+```
+Tags: [[Math]],[[Arrays]],[[Sorting]]
