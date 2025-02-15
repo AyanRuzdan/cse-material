@@ -29,4 +29,5 @@ int missingNumber(vector<int>& nums) {
        return sum - accumulate(nums.begin(), nums.end(), 0); // accumulate is used to find the sum of a list, with starting value as 0 
     }
 ```
-## Approach 2(Sort and search for)
+## Approach 2(Sort and search for inconsistency)
+If the list is sorted, then there will be a place where two numbers after sorting will differ by 1. There are edge cases involved if the missing number is at the end or at the beginning. In order to work around this edge case, we can match index with the numbers, and find the missing number that way.
