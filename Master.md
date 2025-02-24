@@ -164,3 +164,5 @@ while(x == y){
 }
 ```
 The Allman style is much preferred when using nested statements, as the indentation shows hierarchy in a much better way
+
+---
