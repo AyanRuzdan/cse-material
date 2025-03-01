@@ -225,3 +225,28 @@ The Allman style is much preferred when using nested statements, as the indentat
 - Object files are then created
 - Object files are linked together
 - Executable file is created
+### G++ Proprocessor Function
+- Runs all specific preprocessor directives
+- Most popular preprocessor functions
+	- `#include <library> // include`
+	- `#include "specificfile.h"`
+	- `#define LIMIT 100 // MACRO`
+	- `#define AREA(L,W) L*W`
+- `#include <X>` inserts file X into the current file
+	- `#include "myobject.h"` inserts the entire text from the file `myobject.h` into the file calling the `#include`
+### C++ Compiler
+- Use GNU C Compiler gcc(g++), clang for Linux
+- Use mingw, msys for Windows
+### C++ Compiling
+- For a program written in new1.cpp
+- Compile out code into an executable
+	- `g++ new1.cpp`
+	- Produces executable file: `a.out`
+- To specify the output executable name:
+	- `g++ new1.cpp -o new1`
+	- Then run  `./new1'
+- View the result of pre-processing with `-E` into an Assembly file
+	- `g++ -E new1.cpp > new1.s`
+- Compile to an object file with `-c`
+	- `g++ -c new1.cpp`
+	- Produces object file `new1.o`
