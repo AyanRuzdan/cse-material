@@ -191,4 +191,37 @@ while(x == y){
 
 The Allman style is much preferred when using nested statements, as the indentation shows hierarchy in a much better way
 
----
+### C++ Standard Library
+- Collection of classes and functions available
+- Example functionality
+	- Strings/IO/Streams/Files
+	- Generic Containers (vector, set, map)
+	- Container Functionality (fill, copy, erase)
+	- Algos (sort, min/max)
+- Must `#include` in your cpp program
+- Referenced via the std:: namespace
+- Namespaces encapsulate code
+	- `namespace dave {int ivar = 10; }`
+	- Outside usage: `dave::ivar`
+- Standard library examples
+	- `std::string, std::vector, std::map`
+### C++ Source Code
+- Program code written in .cpp files
+	- Example: main.cpp
+	- Also named .c, .cpp, better to use .cpp
+	- Used for function/class **definitions**
+- Header files written in .h files
+	- Example: math.h, myclass.h
+	- Used for function/class **declarations**
+### C++ Compilation Process
+- C++ programs are compiled into binary executebale files, run directly by CPU
+- No VM like Java
+- No interpreter like Python
+- This results in faster execution, but at the price of lower level programming
+- Many compilers exists, ranging per OS
+- **Source code -> Pre-processor -> Expanded source file -> Object file (.o) -> Linker -> Executable File**
+- Source & Header files are run through pre-processor
+- Pre-processor output is run through the C++ compiler (syntactic error)
+- Object files are then created
+- Object files are linked together
+- Executable file is created
