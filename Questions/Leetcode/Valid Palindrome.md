@@ -20,7 +20,7 @@ Given a string `s`, return `true` _if it is a **palindrome**, or_ `false` 
 >**Explanation:** s is an empty string "" after removing non-alphanumeric characters.
 >Since an empty string reads the same forward and backward, it is a palindrome.
 
-## Approach
+## Approach 1
 To verify that a given string is a palindrome, it is best to use two pointers that run from both the left and right end of the string. In this question there are both whitespaces and special symbols, so if we encounter them we can just skip, but the characters are *alnum*, then we need to check if they are the same or not.
 
 ## Code
