@@ -2,4 +2,6 @@
 .obsidian/
 .trash/
 .cph/
+*.py
+*.csv
 samples
