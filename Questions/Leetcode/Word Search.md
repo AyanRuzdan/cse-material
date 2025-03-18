@@ -62,7 +62,36 @@ class Solution:
                     return True
         return False
 ```
-
+```cpp
+class Solution {
+public:
+    bool dfs(int row, int col, vector<vector<char>>& board, string word) {
+        if (word.empty())
+            return true;
+        if (row >= board.size() || row < 0 || col >= board[0].size() || col < 0)
+            return false;
+        char c = board[row][col];
+        if (c != word.front())
+            return false;
+        board[row][col] = '#';
+        word = word.substr(1);
+        bool res =
+            dfs(row + 1, col, board, word) || dfs(row - 1, col, board, word) ||
+            dfs(row, col + 1, board, word) || dfs(row, col - 1, board, word);
+        board[row][col] = c;
+        return res;
+    }
+    bool exist(vector<vector<char>>& board, string word) {
+        for (int i = 0; i < board.size(); i++) {
+            for (int j = 0; j < board[i].size(); j++) {
+                if (dfs(i, j, board, word))
+                    return true;
+            }
+        }
+        return false;
+    }
+};
+```
 # Time Complexity
 Length of row \* length of column \* 4<sup>length of word</sup> \
 *$O(m \cdot n \cdot 4^k)$*
