@@ -11,3 +11,7 @@ Makes a virtual environment of name `env`
 ```bash
 pip install django
 ```
+## Create new project
+```bash
+django-admin startproject project_name
+```
