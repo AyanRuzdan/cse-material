@@ -1,118 +1,34 @@
 File Path,Size (Bytes)
-C:\Users\ayanr\OneDrive\Repos\cse-material\Django.md,227
-C:\Users\ayanr\OneDrive\Repos\cse-material\KAN-DO.md,4254
-C:\Users\ayanr\OneDrive\Repos\cse-material\Master.md,8177
-C:\Users\ayanr\OneDrive\Repos\cse-material\README.md,267
+C:\Users\ayanr\OneDrive\Repos\cse-material\Reverse Integer.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Backtracking.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Hash Tables.md,33
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Index.md,187
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Maps.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Math.md,45
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Queues.md,29
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Recursion.md,74
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Sets.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Stacks.md,28
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Trees.md,1901
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Arrays.md,147
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Two Pointers.md,98
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Merging\Merging Sorted Arrays.md,3257
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Merging\Merging.md,61
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Searching\Binary Search.md,2934
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Searching\Linear Search.md,885
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Searching\Searching.md,53
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Sorting\Bubble Sort.md,1684
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Sorting\Heap Sort.md,1582
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Sorting\Insertion Sort.md,1776
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Sorting\Merge Sort.md,2522
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Sorting\Quick Sort.md,2702
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Sorting\Selection Sort.md,2214
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Arrays\Sorting\Sorting.md,164
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\CLRS\Foundations.md,5185
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Dynamic Programming\0-1 Knapsack.md,1623
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Dynamic Programming\Dynamic Programming.md,62
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Graphs\BFS.md,79
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Graphs\DFS (Adjacency List).md,979
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Graphs\DFS (Matrix).md,1567
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Graphs\DFS.md,79
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Graphs\Graphs.md,124
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Circular LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Deletion at a given position of Circular LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Deletion at beginning of Circular LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Deletion in Circular LL.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Deletion in Doubly LL.md,13
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Deletion in Singly LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Doubly LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Grounded LL.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion at a end of DLL.md,13
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion at a given position in Circular LL.md,2421
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion at a given position in DLL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion at beginning of Circular LL.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion at beginning of DLL.md,842
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion in Circular LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion in DLL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Insertion in Singly LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Introduction to Linked List.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Linked Lists.md,2880
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Traversal of Circular LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Traversal of DLL.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Traversal of Doubly LL.md,446
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Linked Lists\Traversal of Singly LL.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Notes\DSA\Strings\Strings.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Neetcode 150.md,1206
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\3Sum.md,3075
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Add Two numbers.md,2238
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Best Time to Buy and Sell Stock II.md,1586
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Best Time to Buy and Sell Stock.md,1763
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Car Fleet.md,3047
+C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Armstrong Number.md,0
+C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\GCD.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Combination Sum III.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Combination Sum.md,2296
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Container with Most Water.md,2012
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Contains Duplicate.md,1968
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Counting Digits of a Number.md,922
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Daily Temperatures.md,2201
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Encode and Decode Strings.md,2313
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Evaluate Reverse Polish Notation.md,3425
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Find Minimum In Rotated Sorted Array.md,1949
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Find Pairs with a given sum in a DLL.md,2036
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Generate Parentheses.md,1565
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Group Anagrams.md,1076
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\H-index.md,1718
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Jump Game II.md,1769
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Jump Game.md,1059
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Koko Eating Bananas.md,1927
 C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Letter Combinations of a Phone Number.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Longest Consecutive Sequence.md,1846
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Longest Repeating Character Replacement.md,2086
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Longest Substring Without Repeating Characters.md,1697
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Merge Sorted Array.md,1993
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Merge Two Sorted Lists.md,3073
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Min Stack.md,1562
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Minimum Time Visiting All Points.md,2404
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Missing Number.md,2098
 C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Move Zeroes.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Number of Islands.md,2630
+C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\N-Queens.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Palindrome Number.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Palindrome Partitioning.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Permutation in String.md,1871
-"C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Pow(x,n).md",1588
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Product of array except self.md,2655
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Reverse the array.md,809
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Rotate Image.md,1276
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Rotate String.md,1108
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Search a 2D Matrix.md,1725
+C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Rat in a Maze.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Sort Array by Increasing Frequency.md,0
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Spiral Matrix.md,1951
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Subsets.md,2435
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Top K Frequent Elements.md,2519
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Trapping Rain Water.md,1551
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Two Sum II - Input Array Is Sorted.md,2133
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Two Sum.md,1364
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Valid Anagram.md,1392
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Valid Palindrome.md,2157
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Valid Parentheses.md,1900
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Valid Sudoku.md,3284
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Word Search.md,3196
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Misc\Count Digits.md,1530
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Misc\Reverse the Array.md,691
-C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Misc\Sum of Max and Min.md,1109
+C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Leetcode\Sudoku Solver.md,0
 C:\Users\ayanr\OneDrive\Repos\cse-material\Questions\Misc\Tower of Hanoi.md,0

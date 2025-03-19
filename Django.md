@@ -28,4 +28,4 @@ In order to relink the changes made in `settings.py` run `python manage.py migra
 ```bash
 python manage.py startapp app_name
 ```
-> Apps can be removed by simpy deleting their folders
+> Apps can be removed by simply deleting their folders
