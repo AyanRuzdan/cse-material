@@ -69,3 +69,5 @@ urlpatterns = [
     path("home/", views.home_view),
 ]
 ```
+## Django Templates
+
