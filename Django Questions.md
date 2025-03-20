@@ -48,14 +48,31 @@ Here the `base.html` looks like
   </body>
 </html>
 ```
-### **2. Book Review Website**
+# **2. Book Review Website**
 
 > You are developing a book review website where users can visit a book’s detail page using a dynamic URL like `/book/harry-potter/`.
 > 
 > - You need to create a view and URL pattern to display the book title dynamically.
 > - Create a URL pattern that captures the book name.
 > - Write a view function that takes the book name from the URL and displays it on the page.
-
+## `urls.py`
+Add this `urlpattern` to `urls.py`
+```python
+from q2.views import q2_view
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('q2/book/<str:book_name>', q2_view)
+]
+```
+## `views.py`
+The book name is to be rendered in a formatted output
+```python
+from django.shortcuts import render
+def q2_view(request, book_name):
+	book_name = book_name.replace('-',' ').title()
+	context = {'book_name':book_name}
+	return render(request, 'q2.html', context)
+```
 [base.html](###base.html)
 ### **3. Student Portal**
 
