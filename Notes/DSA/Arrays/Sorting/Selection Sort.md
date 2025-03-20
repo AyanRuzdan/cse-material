@@ -3,7 +3,6 @@
 The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending sort order) from the unsorted part and putting it at the beginning. The algorithm contains two subarrays:
 * Already sorted subarray
 * Remaining unsorted subarray
-
 In every iteration, the minimum element (considering ascending sort order) from the unsorted subarray is picked and moved to the sorted subarray.
 For example if there is an integer array = {64, 25, 12, 22, 11}, then the sorting order would be
 ```cpp
@@ -13,7 +12,6 @@ For example if there is an integer array = {64, 25, 12, 22, 11}, then the sortin
 {11, 12, 22, 25, 64} //25 gets swapped with 22
 {11, 12, 22, 25, 64} //As 25 is less than 64, no swap is required
 ```
-
 ## Approach
 * Initialize minimum value(`min_index`) to first index.
 * Traverse the array to find the minimum element.
@@ -45,32 +43,5 @@ void selectionSort(int arr[], int n)
         // with the first element
         swap(arr[min_idx], arr[i]);
     }
-}
-
-// Function to print an array
-void printArray(int arr[], int size)
-{
-    int i;
-    for (i = 0; i < size; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}
-
-// Driver program to test above functions
-int main()
-{
-    cout << "Enter array size: ";
-    int n;
-    cin >> n;
-    cout << "Enter array elements: ";
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    selectionSort(arr, n);
-    cout << "Sorted array: ";
-    printArray(arr, n);
-    return 0;
 }
 ```
