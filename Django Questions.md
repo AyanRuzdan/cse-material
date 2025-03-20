@@ -1,7 +1,8 @@
-### **1. Blog Post URL Pattern**
+# **1. Blog Post URL Pattern**
 
 > You are building a blog website where each blog post should be accessible via a unique URL like `/post/5/`, where `5` is the post ID. How would you define the URL pattern and the corresponding view?
-#### Answer
+## Answer
+### `urls.py`
 Add these changes to `urls.py` of the main project
 ```python
 from q1.views import q1_view
@@ -23,6 +24,28 @@ def q1_view(request, post_id):
 ```
 Defining a context is necessary to pass on the `post_id` as `context`
 The template 'q1.html' is to be made to render in the view
+```html
+{% extends 'base.html' %}
+    {% block content %}
+        This is post id:
+        <h1>{{post_id}}</h1>
+    {% endblock %}
+```
+##### `base.html`
+Here the `base.html` looks like
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}My Project{% endblock %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="content" class="container">{% block content %}{% endblock %}</div>
+  </body>
+</html>
+```
 ### **2. Book Review Website**
 
 > You are developing a book review website where users can visit a book’s detail page using a dynamic URL like `/book/harry-potter/`.
@@ -30,6 +53,7 @@ The template 'q1.html' is to be made to render in the view
 > - You need to create a view and URL pattern to display the book title dynamically.
 > - Create a URL pattern that captures the book name.
 > - Write a view function that takes the book name from the URL and displays it on the page.
+[base.html](####Answer)
 
 ### **3. Student Portal**
 
