@@ -17,8 +17,8 @@ It is a recursive algorithm that continuously splits the array in half until it 
 ```cpp
 void merge(vector<int>& arr, int low, int mid, int high){
 	vector<int> temp;
-	int left = low;
-	int right = mid + 1;
+	int left = low; // low se mid tak pehla array
+	int right = mid + 1; // mid+1 se high tak doosra array
 	while(left <= mid && right <= high){
 		if(arr[left] <= arr[right])
 			temp.push_back(arr[left++]);
