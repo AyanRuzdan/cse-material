@@ -15,50 +15,26 @@ It is a recursive algorithm that continuously splits the array in half until it 
  ```
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
+void merge(vector<int>& arr, int low, int mid, int high){
+	vector<int> temp;
+	int left = low;
+	int right = mid + 1;
+	while(left <= mid && right <= high){
+		if(arr[left] <= arr[right])
+			temp.push_back(arr[left++]);
+		else
+			temp.push_back(arr[right++]);
+	}
+	// either of them will exhaust, so one loop for each, no matter
+	while(left <= mid)
+		temp.push_back(arr[left++]);
 
-void merge(int arr[], int left, int mid, int right)
-{
-    auto subArrOne = mid - left + 1;
-    auto subArrTwo = right - mid;
-
-    auto *leftArr = new int[subArrOne];
-    auto *rightArr = new int[subArrTwo];
-
-    for (int i = 0; i < subArrOne; i++)
-        leftArr[i] = arr[left + i];
-    for (int i = 0; i < subArrTwo; i++)
-        rightArr[i] = arr[mid + 1 + i];
-    auto indexSubArrOne = 0, indexSubArrTwo = 0;
-    int indexMergedArr = left;
-    while (indexSubArrOne < subArrOne && indexSubArrTwo < subArrTwo)
-    {
-        if (leftArr[indexSubArrOne] <= rightArr[indexSubArrTwo])
-        {
-            arr[indexMergedArr] = leftArr[indexSubArrOne];
-            indexSubArrOne++;
-        }
-        else
-        {
-            arr[indexMergedArr] = rightArr[indexSubArrTwo];
-            indexSubArrTwo++;
-        }
-        indexMergedArr++;
-    }
-    while (indexSubArrOne < subArrOne)
-    {
-        arr[indexMergedArr] = leftArr[indexSubArrOne];
-        indexSubArrOne++;
-        indexMergedArr++;
-    }
-    while (indexSubArrTwo < subArrTwo)
-    {
-        arr[indexMergedArr] = rightArr[indexSubArrTwo];
-        indexSubArrTwo++;
-        indexMergedArr++;
-    }
-}
+	while(right <= high)
+		temp.push_back(arr[right++]);
+	// copy elements back into the original array
+	for(int i = low; i <= high; i++)
+		arr[i] = temp[i - low];
+}	
 
 void mergeSort(int arr[], int begin, int end)
 {
@@ -68,27 +44,6 @@ void mergeSort(int arr[], int begin, int end)
     mergeSort(arr, begin, mid);
     mergeSort(arr, mid + 1, end);
     merge(arr, begin, mid, end);
-}
-
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-}
-
-int main()
-{
-    int n;
-    cout << "Enter size of array: ";
-    cin >> n;
-    int arr[n];
-    cout << "Enter array elements: ";
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
-    mergeSort(arr, 0, n - 1);
-    cout << "The sorted array: ";
-    printArray(arr, n);
-    return 0;
 }
 ```
 Tags: [[Sorting]], [[Merging]]
