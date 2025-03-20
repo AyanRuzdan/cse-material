@@ -15,7 +15,14 @@ from django.http import HttpResponse
 def q1_view(request, post_id):
 ```
 Something better would be to render a webpage
-
+```python
+from django.shortcuts import render
+def q1_view(request, post_id):
+    context = {'post_id': post_id}
+    return render(request, "q1.html", context)
+```
+Defining a context is necessary to pass on the `post_id` as `context`
+The template 'q1.html' is to be made to render in the view
 ### **2. Book Review Website**
 
 > You are developing a book review website where users can visit a book’s detail page using a dynamic URL like `/book/harry-potter/`.
