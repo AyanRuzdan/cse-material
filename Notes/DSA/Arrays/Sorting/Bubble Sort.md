@@ -67,3 +67,4 @@ int main()
     printArray(arr, n);
 }
 ```
+## Approach 2 (Optimized Bubble Sort)
