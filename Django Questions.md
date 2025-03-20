@@ -65,7 +65,7 @@ urlpatterns = [
 ]
 ```
 ## `views.py`
-The book name is to be rendered in a formatted output
+The book name is to be rendered in a formatted output. The name of the book is formatted before it is sent to be rendered.
 ```python
 from django.shortcuts import render
 def q2_view(request, book_name):
@@ -73,8 +73,16 @@ def q2_view(request, book_name):
 	context = {'book_name':book_name}
 	return render(request, 'q2.html', context)
 ```
+### `q2.html`
+```html
+{% extends 'base.html' %}
+    {% block content %}
+        <h1>The name of today's book is {{book_name}}.</h1>
+    {% endblock %}
+```
+### `base.html`
 [base.html](###base.html)
-### **3. Student Portal**
+# **3. Student Portal**
 
 > You are building a student portal where each student has a profile page accessible via `/student/102/`, where `102` is the student ID.
 > 
