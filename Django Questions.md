@@ -10,6 +10,7 @@ urlpatterns = [
 path('q1/post/<int:post_id>', q1_view),
 ]
 ```
+### `views.py`
 In the app file make changes to the `views.py`
 ```python
 from django.http import HttpResponse
@@ -22,6 +23,7 @@ def q1_view(request, post_id):
     context = {'post_id': post_id}
     return render(request, "q1.html", context)
 ```
+### `q1.html`
 Defining a context is necessary to pass on the `post_id` as `context`
 The template 'q1.html' is to be made to render in the view
 ```html
@@ -31,7 +33,7 @@ The template 'q1.html' is to be made to render in the view
         <h1>{{post_id}}</h1>
     {% endblock %}
 ```
-##### `base.html`
+### `base.html`
 Here the `base.html` looks like
 ```html
 <!DOCTYPE html>
@@ -53,8 +55,8 @@ Here the `base.html` looks like
 > - You need to create a view and URL pattern to display the book title dynamically.
 > - Create a URL pattern that captures the book name.
 > - Write a view function that takes the book name from the URL and displays it on the page.
-[base.html](####Answer)
 
+[base.html](###base.html)
 ### **3. Student Portal**
 
 > You are building a student portal where each student has a profile page accessible via `/student/102/`, where `102` is the student ID.
