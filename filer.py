@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from datetime import datetime
 
+
 def get_files_in_directory(output_csv):
     directory = os.getcwd()  # Scan the current working directory (GitHub Actions workspace)
     file_data = []
@@ -11,8 +12,11 @@ def get_files_in_directory(output_csv):
             if file.endswith(".md"):
                 file_path = os.path.join(root, file)
                 file_size = os.path.getsize(file_path)
+                x = file_path.split("/")
+                z = x[5:]
+                z = "/".join(z)
                 if file_size == 0:
-                    file_data.append([file_path, file_size])
+                    file_data.append([z[:-3], file_size])
 
     # Create a new DataFrame with the file data
     df = pd.DataFrame(file_data, columns=["File Path", "Size (Bytes)"])
@@ -24,7 +28,9 @@ def get_files_in_directory(output_csv):
 
     # Save the updated CSV (overwrite mode)
     df.to_csv(output_csv, index=False, encoding='utf-8')
-    print(f"CSV file saved at: {output_csv} with {len(file_data)} new entries. Timestamp updated.")
+    print(
+        f"CSV file saved at: {output_csv} with {len(file_data)} new entries. Timestamp updated.")
+
 
 # Example usage
 output_csv_file = "file_list.csv"
