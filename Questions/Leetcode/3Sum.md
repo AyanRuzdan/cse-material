@@ -5,7 +5,7 @@ Notice that the solution set must not contain duplicate triplets.
 ## Example
 **Example 1:**
 >**Input:** nums = [-1,0,1,2,-1,-4]
->**Output:** [ [-1,-1,2],[-1,0,1]]
+>**Output:** \[[-1,-1,2],[-1,0,1]]
 >**Explanation:**
 >nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
 >nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
@@ -20,11 +20,11 @@ Notice that the solution set must not contain duplicate triplets.
 
 **Example 3:**
 >**Input:** nums = [0,0,0]
->**Output:** [[0,0,0]]
+>**Output:** \[[0,0,0]]
 >**Explanation:** The only possible triplet sums up to 0.
 
 ## Approach
-The approach for three-sum is actually quite the same as two-sum, because the target here is always fixed. The problem states that we are not supposed to have same triplets again, which is why sorting the array to skip over same values becomes easy. Once the input is sorted, we can use the approach for [[Two Sum II - Input Array Is Sorted]], where we can use two pointers to reduce the total sum until it actually becomes 0. An outer $O(n)$ loop is necessary to traverse over all elements atleast once, meanwhile the inner loop works on the two pointer approach. We also specify methods to skip over same values so that we do not end up with redundant triplets.
+The approach for three-sum is actually quite the same as two-sum, because the target here is always fixed. The problem states that we are not supposed to have same triplets again, which is why sorting the array to skip over same values becomes easy. Once the input is sorted, we can use the approach for [[Two Sum II - Input Array Is Sorted]], where we can use two pointers to reduce the total sum until it actually becomes 0. An outer $O(n)$ loop is necessary to traverse over all elements at least once, meanwhile the inner loop works on the two pointer approach. We also specify methods to skip over same values so that we do not end up with redundant triplets.
 ## Code
 ```cpp
 class Solution {
@@ -65,3 +65,4 @@ public:
     }
 };
 ```
+Tags: [[Arrays]], [[Two Pointers]], [[Sorting]]

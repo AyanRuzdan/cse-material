@@ -20,7 +20,7 @@ You can move according to these rules:
 >Total time = 7 seconds
 
 >Example 2:
->Input: points = [[3,2],[-2,2]]
+>Input: points = \[[3,2],[-2,2]]
 >Output: 5
 
 ## Approach
