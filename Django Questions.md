@@ -1,8 +1,7 @@
 # **1. Blog Post URL Pattern**
 
 > You are building a blog website where each blog post should be accessible via a unique URL like `/post/5/`, where `5` is the post ID. How would you define the URL pattern and the corresponding view?
-## Answer
-### `urls.py`
+## `urls.py`
 Add these changes to `urls.py` of the main project
 ```python
 from q1.views import q1_view
@@ -10,7 +9,7 @@ urlpatterns = [
 path('q1/post/<int:post_id>', q1_view),
 ]
 ```
-### `views.py`
+## `views.py`
 In the app file make changes to the `views.py`
 ```python
 from django.http import HttpResponse
@@ -23,7 +22,7 @@ def q1_view(request, post_id):
     context = {'post_id': post_id}
     return render(request, "q1.html", context)
 ```
-### `q1.html`
+## `q1.html`
 Defining a context is necessary to pass on the `post_id` as `context`
 The template 'q1.html' is to be made to render in the view
 ```html
@@ -33,7 +32,7 @@ The template 'q1.html' is to be made to render in the view
         <h1>{{post_id}}</h1>
     {% endblock %}
 ```
-### `base.html`
+## `base.html`
 Here the `base.html` looks like
 ```html
 <!DOCTYPE html>
@@ -73,22 +72,46 @@ def q2_view(request, book_name):
 	context = {'book_name':book_name}
 	return render(request, 'q2.html', context)
 ```
-### `q2.html`
+## `q2.html`
 ```html
 {% extends 'base.html' %}
     {% block content %}
         <h1>The name of today's book is {{book_name}}.</h1>
     {% endblock %}
 ```
-### `base.html`
-[base.html](###base.html)
+## `base.html`
+[base.html](#base.html)
 # **3. Student Portal**
 
 > You are building a student portal where each student has a profile page accessible via `/student/102/`, where `102` is the student ID.
 > 
 > - Create a URL pattern that captures the student ID.
 > - Write a view function that extracts the ID and displays a custom message.
-
+## `urls.py`
+```python
+from django.contrib import admin
+from django.urls import path
+from q3.views import q3_view
+urlpatterns = [
+	path('q3/student/<int:student_id>',q3_view)
+]
+```
+## `views.py`
+```python
+from django.shortcuts import render
+def q3_view(request, student_id):
+	context = {'student_id': student_id}
+    return render(request, 'q3.html', context)
+```
+## `q3.html`
+```html
+{% extends 'base.html' %}
+{% block content %}
+The current student's ID is {{student_id}}
+{% endblock %}
+```
+## `base.html`
+[base.html](#base.html)
 ### **4. Template Inheritance**
 
 > You want to introduce an intermediate template (`content_base.html`) between `base.html` and `about.html`. The structure should be:
