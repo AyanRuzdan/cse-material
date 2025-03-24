@@ -112,14 +112,44 @@ The current student's ID is {{student_id}}
 ```
 ## `base.html`
 [base.html](#base.html)
-### **4. Template Inheritance**
+# **4. Template Inheritance**
 
 > You want to introduce an intermediate template (`content_base.html`) between `base.html` and `about.html`. The structure should be:
 > 
 > - `base.html` (contains overall structure)
 > - `content_base.html` (adds a `{% block page_title %}` inside an `<h2>` tag and `{% block page_content %}` for the main content)
 > - `about.html` (extends `content_base.html`, overrides `{% block page_title %}` with `"About Us"`, and `{% block page_content %}` with `"This is the About Us page."`)
-
+## `base.html`
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}My Project{% endblock %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    Welcome to q4 base
+    <div id="content" class="container">{% block content %}{% endblock %}</div>
+  </body>
+</html>
+```
+## `content_base.html`
+```html
+{% extends 'base.html' %} {% block content %}
+<div class="mt-4">
+  <h2 class="text-center">{% block page_title %}Default Title{% endblock %}</h2>
+  <div class="mt-3">{% block page_content %}Default content{% endblock %}</div>
+</div>
+{% endblock %}
+```
+## `about.html`
+```html
+{% extends 'content_base.html' %} {% block page_title %}About Us{% endblock %}
+{% block page_content %}
+<p class="lead text-center">This is the About Us page.</p>
+{% endblock %}
+```
 ### **5. Food Ordering Website**
 
 > Design a food ordering website using Django where users can:
