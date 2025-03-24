@@ -39,4 +39,5 @@ public:
     }
 };
 ```
+## Approach 2 (Left and right sweep vectors)
 Tags: [[Arrays]], [[Two Pointers]]
