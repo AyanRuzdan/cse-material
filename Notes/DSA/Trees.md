@@ -6,7 +6,7 @@
 [[Binary Tree Basics]]
 [[Binary Tree Properties]]
 [[Height of a Binary Tree]]
-[[Diameter of a Binary Tree]]
+[[Diameter of Binary Tree]]
 [[Balanced Binary Tree (Check if Balanced)]]
 [[Introduction to BST]]
 [[Inserting a Node in a BST]]
