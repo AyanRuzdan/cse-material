@@ -3,28 +3,41 @@ import pandas as pd
 from datetime import datetime
 
 
-def get_files_in_directory(output_csv):
+def get_files_in_directory():
     directory = os.getcwd()
-    file_data = []
+    notes_data = []
+    questions_data = []
 
     for root, _, files in os.walk(directory):
         for file in files:
             if file.endswith(".md"):
                 file_path = os.path.join(root, file)
                 file_size = os.path.getsize(file_path)
-                x = file_path.split("/")
-                z = x[5:]
-                z = "/".join(z)
-                if file_size == 0:
-                    file_data.append([z[:-3], file_size])
-    df = pd.DataFrame(file_data, columns=["File Path", "Size (Bytes)"])
+                relative_path = os.path.relpath(file_path, directory)
+                if "Notes" in relative_path:
+                    notes_data.append([relative_path[:-3], file_size])
+                elif "Questions" in relative_path:
+                    questions_data.append([relative_path[:-3], file_size])
+
+    # Create DataFrames
+    notes_df = pd.DataFrame(notes_data, columns=["File Path", "Size (Bytes)"])
+    questions_df = pd.DataFrame(questions_data, columns=[
+                                "File Path", "Size (Bytes)"])
+
+    # Append timestamp
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     timestamp_df = pd.DataFrame([[timestamp]], columns=["Timestamp"])
-    df = pd.concat([df, timestamp_df], ignore_index=True)
-    df.to_csv(output_csv, index=False, encoding='utf-8')
+
+    notes_df = pd.concat([notes_df, timestamp_df], ignore_index=True)
+    questions_df = pd.concat([questions_df, timestamp_df], ignore_index=True)
+
+    # Save to separate CSV files
+    notes_df.to_csv("notes.csv", index=False, encoding='utf-8')
+    questions_df.to_csv("questions.csv", index=False, encoding='utf-8')
+
     print(
-        f"CSV file saved at: {output_csv} with {len(file_data)} new entries. Timestamp updated.")
+        f"CSV files saved: notes.csv ({len(notes_data)} entries), questions.csv ({len(questions_data)} entries). Timestamp updated."
+    )
 
 
-output_csv_file = "file_list.csv"
-get_files_in_directory(output_csv_file)
+get_files_in_directory()
