@@ -32,9 +32,9 @@ def get_files_in_directory():
     questions_df = pd.concat([questions_df, timestamp_df], ignore_index=True)
 
     # Save to separate CSV files
-    notes_df.sort_values(by=['File Path','Size (Bytes)']).to_csv(
+    notes_df.sort_values(by=['Size (Bytes)','File Path']).to_csv(
         "notes.csv", index=False, encoding='utf-8')
-    questions_df.sort_values(by='Size (Bytes)').to_csv(
+    questions_df.sort_values(by=['Size (Bytes)','File Path']).to_csv(
         "questions.csv", index=False, encoding='utf-8')
 
     print(
