@@ -34,7 +34,7 @@ public:
                 maxProfit = max(maxProfit, profit);
             } else
                 left = right;
-            right++;
+            right++; // right pointer has to move anyway
         }
         return maxProfit;
     }
