@@ -14,11 +14,10 @@ def get_files_in_directory():
                 file_path = os.path.join(root, file)
                 file_size = os.path.getsize(file_path)
                 relative_path = os.path.relpath(file_path, directory)
-                if file_size < 1000:
-                    if "Notes" in relative_path:
-                        notes_data.append([relative_path[:-3], file_size])
-                    elif "Questions" in relative_path:
-                        questions_data.append([relative_path[:-3], file_size])
+                if "Notes" in relative_path:
+                    notes_data.append([relative_path[:-3], file_size])
+                elif "Questions" in relative_path:
+                    questions_data.append([relative_path[:-3], file_size])
 
     # Create DataFrames
     notes_df = pd.DataFrame(notes_data, columns=["File Path", "Size (Bytes)"])
