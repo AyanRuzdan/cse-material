@@ -17,9 +17,9 @@ Example 2:
 
 ## Approach
 
-We see that when we encounter an island, no matter how small it is i.e. one cell, we can start searching on it's neighbours to check if their neighbours are islands or not. In the given code, first we check if the grid is valid or not. Matrix DFS is iterative on the upper level. In the entire grid we iterate over every cell and check if it is an island or not, if it is an island cell then we increment the island count and initiate the DFS function with the parameter of the grid and the indeces at which the island was found. In the DFS function, first we check for boundary condition and circular check so that we don't get stuck in an island loop. If that situation is encountered, we return. Otherwise we turn the island into a water cell and then call DFS on all four directions. 
+We see that when we encounter an island, no matter how small it is i.e. one cell, we can start searching on it's neighbors to check if their neighbors are islands or not. In the given code, first we check if the grid is valid or not. Matrix DFS is iterative on the upper level. In the entire grid we iterate over every cell and check if it is an island or not, if it is an island cell then we increment the island count and initiate the DFS function with the parameter of the grid and the indices at which the island was found. In the DFS function, first we check for boundary condition and circular check so that we don't get stuck in an island loop. If that situation is encountered, we return. Otherwise we turn the island into a water cell and then call DFS on all four directions. 
 ### Why do we convert island to water in the recursive function?
-In order to prevent getting stuck in a loop, as we do not use a visited set we simply set the visited island cell to a water cell so that we do not touch it in later recursive calls.
+In order to prevent getting stuck in a loop, as we do not use a visited set we simply set the visited island cell to a water cell so that we do not touch it in later recursive calls. Also conversion of an island to water is required so that in the for loop, each island cell found satisfies the island count, and we need not find the rest of the island again. So in reality, what we have remaining is just one cell of island from each island, the rest of the island is gone.
 
 ## Code
 
