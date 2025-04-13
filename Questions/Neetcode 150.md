@@ -20,7 +20,7 @@
 3. [[Longest Repeating Character Replacement]]
 4. [[Permutation in String]]
 5. [[Minimum Window Substring]] (Done on 9/12/24; Not added)
-6. [[Sliding Window Maximum]] (Not done)
+6. [[Sliding Window Maximum]]
 # Stack
 1. [[Valid Parentheses]]
 2. [[Min Stack]]
