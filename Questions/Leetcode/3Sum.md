@@ -65,4 +65,28 @@ public:
     }
 };
 ```
+
+```python
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        nums.sort() # very critical
+        for i, n in enumerate(nums):
+            if(n > 0): # first element is positive, can't reduce sum to zero
+                break
+            if(i > 0 and n == nums[i-1]): # to avoid duplicates
+                continue
+            l, r = i + 1, len(nums) - 1
+            while l < r:
+                curSum = n + nums[l] + nums[r]
+                if curSum > 0:
+                    r -= 1
+                elif curSum < 0:
+                    l += 1
+                else:
+                    res.append([n, nums[l], nums[r]])
+                    l += 1
+                    while (l < r) and nums[l] == nums[l-1]: # avoid duplicates
+                        l += 1
+        return res
+```
 Tags: [[Arrays]], [[Two Pointers]], [[Sorting]]
