@@ -21,5 +21,26 @@ A binary search tree is **balanced** if the depth of the two subtrees of every
 First put the tree into a sorted list using inorder traversal, then make a balanced AVL tree by recursively splitting the list in half. See code.
 ## Code
 ```cpp
-
+void inor(TreeNode* root, vector<int>& inorder) {
+        if (root == nullptr)
+            return;
+        inor(root->left, inorder);
+        inorder.push_back(root->val);
+        inor(root->right, inorder);
+    }
+    TreeNode* avl(vector<int>& inor, int left, int right) {
+        if (left > right)
+            return NULL;
+        int mid = (left + right) / 2;
+        TreeNode* lefty = avl(inor, left, mid - 1);
+        TreeNode* righty = avl(inor, mid + 1, right);
+        return new TreeNode(inor[mid], lefty, righty);
+    }
+    TreeNode* balanceBST(TreeNode* root) {
+        vector<int> inorder;
+        inor(root, inorder);
+        int n = inorder.size();
+        return avl(inorder, 0, n - 1);
+    }
 ```
+Tags: [[Binary Search Tree]], [[Recursion]]
