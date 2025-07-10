@@ -10,7 +10,7 @@
 [[Balanced Binary Tree (Check if Balanced)]]
 [[Introduction to BST]]
 [[Inserting a Node in a BST]]
-[[Deleting a Node in a BST]]
+[[Deletion in a BST]]
 [[Searching in a BST]]
 [[Lowest Common Ancestor in a BST]]
 [[In-order Successor/Predecessor in BST]]
