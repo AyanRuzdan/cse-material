@@ -30,7 +30,9 @@ bool canAttendMeetings(vector<Interval>& intervals) {
         return res.size() == intervals.size();
     }
 ```
-As the return type of this question is a boolean value, we can simply check conflicts using the original interval list without simulating the merging and maintaining a resultant vector. After sorting using a custom comparator we iterate over the original list of intervals and compare adjacent intervals for conflicts, if at any place any conflict is found, i.e. `interval[i-1].end > interval[i].start`, we r
+As the return type of this question is a boolean value, we can simply check conflicts using the original interval list without simulating the merging and maintaining a resultant vector. After sorting using a custom comparator we iterate over the original list of intervals and compare adjacent intervals for conflicts, if at any place any conflict is found, i.e. `interval[i-1].end > interval[i].start`, we return a false value. If no conflict is found we finally return true.
+Time Complexity: $O(nlogn)$
+Space Complexity: $O(n)$, for final resultant vector
 ### Without using extra space
 ```cpp
 bool canAttendMeetings(vector<Interval>& intervals) {
@@ -42,3 +44,6 @@ bool canAttendMeetings(vector<Interval>& intervals) {
         return true;
     }
 ```
+Time Complexity: $O(nlogn)$
+Space Complexity: $O(1)$
+Tags: [[Custom Comparator]], [[Arrays]], [[Sorting]]
