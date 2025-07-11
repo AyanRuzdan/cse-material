@@ -14,8 +14,8 @@ Given an array of meeting time interval objects consisting of start and end time
 >**Note:**
 >(0,8),(8,10) is not considered a conflict at 8
 ## Approach
-The approach here lies the same as the one we use for [[Merge Intervals]], where the intervals are initially sorted and then the start and end timings of adjacent intervals are compared. Here the question demands if the final intervals after merging will be th
-## With extra space
+The approach here lies the same as the one we use for [[Merge Intervals]], where the intervals are initially sorted and then the start and end timings of adjacent intervals are compared. Here the question demands if the final intervals after merging will be the same in count as initial intervals, i.e. we wish to know if all available intervals are non-conflicting. Using extra space we can make a new list of intervals containing all intervals after merge, as it is given that we only need a bool resultant, this approach is not optimal in terms of space. Once the intervals are sorted, we can iterate over the intervals, and compare the front of the incoming interval with the interval already present at the top/back of the resultant list. Finally we return if the size of the list of intervals present initially is the same as the number of intervals in the final list.
+### With extra space
 ```cpp
 bool canAttendMeetings(vector<Interval>& intervals) {
         vector<Interval> res;
@@ -30,7 +30,8 @@ bool canAttendMeetings(vector<Interval>& intervals) {
         return res.size() == intervals.size();
     }
 ```
-## Without using extra space
+As the return type of this question is a boolean value, we can simply check conflicts using the original interval list without simulating the merging and maintaining a resultant vector. After sorting using a custom comparator we iterate over the original list of intervals and compare adjacent intervals for conflicts, if at any place any conflict is found, i.e. `interval[i-1].end > interval[i].start`, we r
+### Without using extra space
 ```cpp
 bool canAttendMeetings(vector<Interval>& intervals) {
         vector<Interval> res;
