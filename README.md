@@ -3,4 +3,4 @@
 > Set up this repository in Obsidian to get graph view and links to other files
 
 Padhle bhai
-![img](https://static0.gamerantimages.com/wordpress/wp-content/uploads/2019/08/Devil-May-Cry-Vergil.jpg)
+![img](https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/refs/heads/master/C%2B%2B/Frieren_And_Fern_Reading_The_C%2B%2B_Programming_Language.png)
