@@ -28,6 +28,8 @@ public:
             mp[s[right]]++;
             maxFreq = max(maxFreq, mp[s[right]]);
             while ((right - left + 1) - maxFreq > k) {
+            // window size minus maxFreq gives non-frequent elements count
+            // those many changes can be made
                 mp[s[left]]--;
                 left++;
             }
