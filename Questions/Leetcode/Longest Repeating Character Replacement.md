@@ -15,7 +15,7 @@ Return _the length of the longest substring containing the same letter you can 
 >There may exists other ways to achieve this answer too.
 
 ## Approach
-In order to get the same letter in the required substring, all non-frequent characters can be replaced with the most frequent character. And then the replacements can be compared with the `k` value to check if the window is valid or not. We can apply the two pointer approach to maintain windows and keep the frequency of elements. We also need to maintain a `maxFreq` variable to keep track of the most frequent element in the given substring. If the condition for `k` is not satisfied, then we can shift the left pointer and update the frequency map accordingly. To give the result we can maintain the max of the current window length, and window lengths encountered in previous iterations.
+In order to get the same letter in the required substring, all non-frequent characters can be replaced with the most frequent character. And then the replacements can be compared with the `k` value to check if the window is valid or not. We can apply the two pointer approach to maintain windows and keep the frequency of elements. We also need to maintain a `maxFreq` variable to keep track of the most frequent element in the given substring. If the condition for `k` is not satisfied, then we can shift the left pointer and update the frequency map accordingly. To give the result we can maintain the max of the current window length, and window lengths encountered in previous iterations. Basically for every window that contains changeable k non-frequent characters, find the length of the maximum window, as most frequent characters can be many.
 ## Code
 ```cpp
 class Solution {
