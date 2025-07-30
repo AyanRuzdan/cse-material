@@ -40,3 +40,4 @@ public:
     }
 };
 ```
+Tags: [[Stack]]
