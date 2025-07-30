@@ -5,7 +5,7 @@
 5. [[Hash Tables]]
 6. [[Dynamic Programming]]
 7. [[Graphs]]
-8. [[Trees]]
+8. [[Binary Trees]]
 9. [[Math]]
 10. [[Recursion]]
 11. [[Sets]]

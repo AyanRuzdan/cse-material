@@ -48,5 +48,5 @@ As the question demands right side view of the binary tree, the initial approach
 
 Time Complexity: $O(n)$, where $n$ is the number of nodes in the tree
 Space Complexity: $O(w)$, where $w$ is the maximum width of a level
-Tags: [[Trees]]
+Tags: [[Binary Trees]]
 
