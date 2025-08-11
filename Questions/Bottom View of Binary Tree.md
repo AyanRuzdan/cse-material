@@ -15,25 +15,30 @@ For a given node only using `x` value and rewriting upon it does not guarantee a
 ## Code
 ```cpp
   void traverse(Node* root, map<int, pair<int, int>>& mp, int depth, int hDist) {
-	// for reaching null node i.e. base case
-	if (root == nullptr) return;
-	// check for that x value a node already exists or the current depth is lesser than new depth
-	if (mp.find(hDist) == mp.end() || depth >= mp[hDist].first)
-	 // assign that node to new x and depth value 
-		mp[hDist] = {depth, root->data};
-	// go left with more depth and less horizontal dist
-	traverse(root->left, mp, depth + 1, hDist - 1); 
-	// go right with more depth and more horizontal dist
-	traverse(root->right, mp, depth + 1, hDist + 1); 
+    // Base case: stop when reaching a null node
+    if (root == nullptr) return;
+    // If no node is recorded for this horizontal distance OR
+    // if the current node is deeper than the recorded one, update the map
+    if (mp.find(hDist) == mp.end() || depth >= mp[hDist].first)
+        // Store the node's depth and value for this horizontal distance
+        mp[hDist] = {depth, root->data};
+    // Recurse to the left child: increase depth, decrease horizontal distance
+    traverse(root->left, mp, depth + 1, hDist - 1);
+    // Recurse to the right child: increase depth, increase horizontal distance
+    traverse(root->right, mp, depth + 1, hDist + 1);
 }
 vector<int> bottomView(Node *root) {
-	map<int, pair<int, int>> mp; // make a map with {node: {x, y}}
-	traverse(root, mp, 0, 0); // recursive function
-	vector<int> res; // resultant list  
-	for (auto item : mp) {
-		res.push_back(item.second.second); // insert only root->data into the vector
-	}
-	return res;
+    // Map of horizontal distance → {depth, node value}
+    map<int, pair<int, int>> mp;
+    // Fill the map using DFS traversal
+    traverse(root, mp, 0, 0);
+    // Resultant list of node values for the bottom view
+    vector<int> res;
+    // Extract only the node values in order of horizontal distance
+    for (auto item : mp) {
+        res.push_back(item.second.second);
+    }
+    return res;
 }
 ```
 Tags: [[Binary Trees]], [[Recursion]]

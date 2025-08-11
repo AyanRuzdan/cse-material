@@ -21,7 +21,7 @@ Keep on adding new nodes that contain the value of the first digit of the sum. m
 ## Code
 
 ```cpp
- ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+  ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         # Dummy header
         ListNode* dummy = new ListNode(0);
         # Current copy starting from dummy
@@ -31,8 +31,8 @@ Keep on adding new nodes that contain the value of the first digit of the sum. m
         while (l1 != nullptr || l2 != NULL || carry != 0) {
          /* if l1 is not null then take value 
          else take zero*/
-            int x = l1 ? l1->val : 0;
-         /* Similarly if l3 is not null then take 
+         int x = l1 ? l1->val : 0;
+         /* Similarly if l2 is not null then take 
          value else take zero */
          int y = l2 ? l2->val : 0;
             /* Take sum as addition of the numbers

@@ -15,7 +15,7 @@ Example 2:
 ## Approach
 
 ### Sorting
-Best way to find the minimum and maximum element is by sorting the array and then picking the first and the last element.
+Simplest way to find the minimum and maximum element is by sorting the array and then picking the first and the last element.
 ### Code
 ```cpp
 int sumOfMaxMin(int arr[], int n){
@@ -26,7 +26,7 @@ int sumOfMaxMin(int arr[], int n){
 Time Complexity: $O(nlogn)$
 Space Complexity: $O(1)$
 ### Traversal of Array
-As sorting takes $nlogn$ time complexity, we can simply traverse the array in $O(n)$ to find the minimum and maximum element, and then give the final result.
+As sorting takes $nlogn$ time complexity, better approach will be to traverse the array in $O(n)$ to find the minimum and maximum element, and then give the final result.
 
 ### Code
 ```cpp
