@@ -1,3 +1,3 @@
 Questions:
-1. [[Find Pairs with a given sum in a DLL]]
+1. [[Find pairs with given sum in doubly linked list]]
 2. [[Reverse the Array]]
