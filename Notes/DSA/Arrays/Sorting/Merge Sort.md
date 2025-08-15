@@ -33,7 +33,7 @@ void merge(vector<int>& arr, int low, int mid, int high){
 		temp.push_back(arr[right++]);
 	// copy elements back into the original array
 	for(int i = low; i <= high; i++)
-		arr[i] = temp[i - low];
+		arr[i] = temp[i - low]; // as we are not returning temp, we fill in back into arr
 }	
 
 void mergeSort(int arr[], int begin, int end)
