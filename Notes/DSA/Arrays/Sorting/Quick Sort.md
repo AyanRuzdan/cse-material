@@ -70,7 +70,7 @@ void quickSort(int arr[], int low, int high)
 {
     if (low >= high)
         return;
-    int pivot = partition(arr, low, high);
+    int pivot = partition(arr, low, high); // pivot index is used for further recursive calls
     quickSort(arr, low, pivot - 1);  // Recursively sort the left sub-array
     quickSort(arr, pivot + 1, high); // Recursively sort the right sub-array
 }
