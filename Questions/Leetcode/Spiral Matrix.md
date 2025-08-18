@@ -11,7 +11,7 @@ Given an `m x n` `matrix`, return _all elements of the_ `matrix` _in spiral
 >Input: matrix = \[[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 >Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ## Approach
-In order to traverse the matrix in a spiral order, we need to use four different pointers namely left, right, top and bottom. These pointers will be used to traverse the top row, the last column, the bottom row right to left and the first column from bottom to top. Once a layer of the matrix is traversed, the pointers will be moved inwards to traverse the second layer of the spiral.
+In order to traverse the matrix in a spiral order, we need to use four different pointers namely left, right, top and bottom. These pointers will be used to traverse the top row, the last column, the bottom row right to left and the first column from bottom to top. Once a layer of the matrix is traversed, the pointers will be moved inwards to traverse the second layer of the spiral. There is also supposed to be a check inside the while loop that the pointers do not cross each other.
 ## Code
 ```cpp
 class Solution {
