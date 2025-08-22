@@ -18,27 +18,19 @@ Return _the minimum integer_ `k` _such that she can eat all the bananas withi
 The aim is to find the minimum value of k such that it divides all piles in such a way that the sum is less than required hours. We have to perform a binary search on answer, where k is defined between 1 and the maximum value of the array. If the sum of time taken is less than `h` then we will store that value in final answer and search for an even smaller integer, otherwise we increase the lower limit of k.
 ## Code
 ```cpp
-class Solution {
-public:
     int minEatingSpeed(vector<int>& piles, int h) {
         int low = 1, high = *max_element(piles.begin(), piles.end());
-        int ans = -1;
         while (low <= high) {
-            int k = (low + high) / 2;
-            long long sum = 0; 
-            for (auto pile : piles) {
-                sum +=
-                    (pile + k - 1) / k; 
-            }
-            if (sum <= h) {
-                ans = k;
-                high = k - 1;
-            } else {
-                low = k + 1;
-            }
+            int mid = (high - low) / 2 + low;
+            long long sum = 0;
+            for (auto pile : piles)
+                sum += ceil((pile * 1.0) / mid); // don't do 1LL, that is still int
+            if (sum > h) {
+                low = mid + 1; // too much time to eat, increase low
+            } else
+                high = mid - 1; // eating too quickly, decrease high
         }
-        return ans;
+        return low; // low will always be answer
     }
-};
 ```
 Tags: [[Arrays]], [[Binary Search]]
