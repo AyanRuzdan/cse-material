@@ -41,4 +41,4 @@ public:
     }
 };
 ```
-Tags: [[Arrays]]. [[Binary Search]]
+Tags: [[Arrays]], [[Binary Search]]
