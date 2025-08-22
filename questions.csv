@@ -1,5 +1,4 @@
 File Path,Size (Bytes),Timestamp
-Questions/DFS of Graph,0.0,
 Questions/Flood Fill,0.0,
 Questions/GCD,0.0,
 Questions/Gray Code,0.0,
@@ -49,6 +48,7 @@ Questions/Leetcode/Meeting Rooms II,480.0,
 Questions/Longest Subarray with Sum 0,492.0,
 Questions/Rearrange Array Elements by Sign,493.0,
 Questions/Leetcode/Permutations,507.0,
+Questions/N-th Root of a Number,597.0,
 Questions/Find Peak Element,645.0,
 Questions/Next Permutation,663.0,
 Questions/Misc/Reverse the Array,664.0,
@@ -130,4 +130,4 @@ Questions/Leetcode/Valid Sudoku,3284.0,
 Questions/Leetcode/Evaluate Reverse Polish Notation,3319.0,
 Questions/Leetcode/3Sum,3939.0,
 Questions/Leetcode/Word Search,5591.0,
-,,2025-08-22 10:14:56
+,,2025-08-22 11:12:54
