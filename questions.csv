@@ -50,6 +50,7 @@ Questions/Rearrange Array Elements by Sign,493.0,
 Questions/Leetcode/Permutations,507.0,
 Questions/N-th Root of a Number,597.0,
 Questions/Find Peak Element,645.0,
+Questions/Remove Outermost Parentheses,657.0,
 Questions/Next Permutation,663.0,
 Questions/Misc/Reverse the Array,664.0,
 Questions/Search In Rotated Sorted Array I,671.0,
@@ -130,4 +131,4 @@ Questions/Leetcode/Valid Sudoku,3284.0,
 Questions/Leetcode/Evaluate Reverse Polish Notation,3319.0,
 Questions/Leetcode/3Sum,3939.0,
 Questions/Leetcode/Word Search,5591.0,
-,,2025-08-22 16:53:27
+,,2025-08-24 07:30:42
