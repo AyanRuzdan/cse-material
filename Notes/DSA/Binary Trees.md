@@ -39,7 +39,7 @@
 [[Introduction to Trie]]
 [[Insert, Search, Delete Operations]]
 [[Prefix Matching in Trie]]
-[[Longest Common Prefix Using Trie]]
+[[Longest Common Prefix]]
 [[Auto-Complete Feature Using Trie]]
 [[Suffix Trees]]
 [[Binary Lifting (Lowest Common Ancestor in Logarithmic Time)]]
