@@ -1,3 +1,4 @@
+## Recursive
 ```cpp
 void preorder(vector<int> &res, TreeNode *root)
 {
@@ -15,4 +16,8 @@ vector<int> preorderTraversal(TreeNode *root)
     preorder(res, root);
     return res;
 }
+```
+## Iterative
+```cpp
+
 ```
