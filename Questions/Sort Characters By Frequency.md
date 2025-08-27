@@ -12,7 +12,7 @@ string frequencySort(string s)
     {
         vp.push_back({item.second, item.first});
     }
-    sort(vp.rbegin(), vp.rend());
+    sort(vp.rbegin(), vp.rend()); // sort by decreasing frequency
     for (auto p : vp)
     {
         while (p.first--)
