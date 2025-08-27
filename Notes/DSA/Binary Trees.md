@@ -44,3 +44,4 @@
 [[Suffix Trees]]
 [[Binary Lifting (Lowest Common Ancestor in Logarithmic Time)]]
 [[Spanning Trees (Minimum Spanning Tree)]]
+[[Representation of a Binary Tree in C++]]
