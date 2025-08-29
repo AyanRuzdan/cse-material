@@ -1,0 +1,1 @@
+[[Deletion at the end of Singly LL]]
