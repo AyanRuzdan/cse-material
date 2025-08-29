@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.backlinks
+      - file.size
+    sort:
+      - property: file.size
+        direction: ASC
+    columnSize: {}
