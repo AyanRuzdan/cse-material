@@ -3,10 +3,10 @@ views:
     name: Table
     order:
       - file.name
-      - file.backlinks
       - file.size
       - file.folder
     sort:
       - property: file.size
         direction: ASC
-    columnSize: {}
+    columnSize:
+      file.backlinks: 221
