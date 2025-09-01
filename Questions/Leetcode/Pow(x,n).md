@@ -14,31 +14,25 @@ Output: 9.26100
 >Output: 0.25000
 >Explanation: 2-2 = 1/22 = 1/4 = 0.25
 ## Approach
-Using a recursive approach, the power of a number can be calculated by halving the power until it reaches a base case, meanwhile handling the case of odd and even powers. In CPP the integer limit sometimes causes issues, hence the conversion to `long double` is necessary to deal with larger powers and bases.
+Using a recursive approach, the power of a number can be calculated by halving the power until it reaches a base case, meanwhile handling the case of odd and even powers. In C++ the integer limit sometimes causes issues, hence the conversion to `long long` is necessary to deal with larger powers and bases.
 ## Code
 ```cpp
-class Solution {
-public:
-    long double helper(double x, long long n) {
-        if (n == 0) {
-            return 1.0; //  do not return x but 1 as x^0 = 1 not x
-        }
-        long double ans = helper(x, n / 2); // store x^(n/2) into a new variable
-        ans = ans * ans; // square the variable
-        if (n % 2) // if n is odd, an extra time the number is to be multiplied
-            ans = ans * x;
-        return ans; // otherwise return the squared value
+double myPow(double a, int b)
+{
+    long long exp = b;
+    if (exp < 0)
+    {
+        a = 1 / a;
+        exp = -exp;
     }
-    double myPow(double x, int n) {
-        long long val;
-        if (n < 0)
-            val = -1.0 * n; // if there is a negative power
-        long double ans = helper(x, val); // call helper power function
-        if (n < 0) { // if power is negative, move number into reciprocal
-            ans = 1.0 / ans;
-        }
-        return ans;
-    }
-};
+    if (exp == 0)
+        return 1;
+    if (exp == 1)
+        return a;
+    if (exp % 2)
+        return a * myPow(a, exp - 1);
+    else
+        return myPow(a * a, exp / 2);
+}
 ```
 Tags: [[Recursion]], [[Math]]
