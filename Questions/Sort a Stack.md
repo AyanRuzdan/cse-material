@@ -15,10 +15,10 @@ void insertElement(stack<int>& st, int temp){
 		return;
 	}
 	else{
-		int temp = st.top();
+		int topVal = st.top();
 		st.pop();
 		insertEle(st,temp);
-		st.push(temp);
+		st.push(topVal);
 	}
 }
 void SortedStack::sort(){
