@@ -23,26 +23,36 @@ The test cases are generated such that the number of unique combinations that su
 ## Approach
 In this question we can use the same number any number of times until the given sum is reached. In order to achieve that using inclusion-exclusion approach, we will recur with the addition of the number in the `nums`, but not continuing with the index. Meanwhile in the next case we will `pop_back` the included number and continue with the number coming next in the list. Finally when we reach the end of the list, we return.
 ```cpp
-void help(vector<int>& candidates, int target, vector<vector<int>>& res,
-              vector<int>& temp, int idx, int n) {
-        if (target == 0) {
+void helper(vector<vector<int>> &res, vector<int> &temp,
+            vector<int> &candidates, int target, int idx)
+{
+    if (idx == candidates.size())
+    {
+        if (target == 0)
+        {
             res.push_back(temp);
             return;
         }
-        if (idx == n)
+        else
+        {
             return;
-        if (candidates[idx] <= target) {
-            temp.push_back(candidates[idx]);
-            help(candidates, target - candidates[idx], res, temp, idx, n);
-            temp.pop_back();
         }
-        help(candidates, target, res, temp, idx + 1, n);
     }
-    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        vector<vector<int>> res;
-        vector<int> temp;
-        help(candidates, target, res, temp, 0, candidates.size());
-        return res;
+    if (candidates[idx] <= target)
+    {
+        temp.push_back(candidates[idx]);
+        helper(res, temp, candidates, target - candidates[idx], idx);
+        temp.pop_back();
     }
+    helper(res, temp, candidates, target, idx + 1);
+}
+vector<vector<int>> combinationSum(vector<int> &candidates, int target)
+{
+    vector<vector<int>> res;
+    vector<int> temp;
+    int idx = 0;
+    helper(res, temp, candidates, target, idx);
+    return res;
+}
 ```
 TagsL [[Recursion]]
