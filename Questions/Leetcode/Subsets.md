@@ -64,5 +64,27 @@ public:
 };
 ```
 ## Approach 3 (Bit Masking)
+The bits of the digits from zero to $2^n$ contains set bits that when indexed with the indices of the given set, can be used to generate the subsets. The ones and zeroes of the bits in the digits range zero to $2^n$ tell which index of given set to pick and which to not pick.
+```cpp
+vector<vector<int>> subsets(vector<int> &nums)
+{
+    int n = nums.size();
+    int maxi = 1 << n;
+    vector<vector<int>> res;
+    for (int i = 0; i < maxi; i++)
+    {
+        vector<int> temp;
+        for (int k = 0; k < n; k++)
+        {
+            if (i & (1 << k))
+            {
+                temp.push_back(nums[k]);
+            }
+        }
+        res.push_back(temp);
+    }
+    return res;
+}
+```
 
 Tags: [[Recursion]], [[Backtracking]], [[Bit Manipulation]], [[Bit Masking]]
