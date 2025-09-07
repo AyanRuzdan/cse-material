@@ -1,11 +1,8 @@
 ## Question Statement
 
 You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in **reverse order**, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
-
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-
 ## Examples
-
  **Example 1:**
 > Input: l1 = [2,4,3], l2 = [5,6,4]
 > Output: [7,0,8]
@@ -13,13 +10,9 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 **Example 2:**
 >Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
 >Output: [8,9,9,9,0,0,0,1]
-
-## Approach
-
+## Approach (Iterative)
 Keep on adding new nodes that contain the value of the first digit of the sum. meanwhile carry the "carry" forward. After adding the sum, move the pointers forward. Return NULL if there is no next node. This might occur if one number is much larger than the other.
-
 ## Code
-
 ```cpp
   ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         # Dummy header
@@ -58,4 +51,32 @@ Keep on adding new nodes that contain the value of the first digit of the sum. m
     }
 ```
 
-Tags: [[Linked Lists]]
+## Approach (Recursive)
+In the recursive approach for adding two numbers represented as linked lists, the idea is to process one digit at a time while carrying the overflow to the next recursive call. At each step, we add the current digits from both lists along with the carry. From this sum, a new node is created containing the digit value `sum % 10`, while the carry `sum / 10` is passed forward to the next recursion. The function then calls itself recursively on the next pointers of both lists, attaching the result to the next of the newly created node. The recursion continues until both lists are fully traversed and no carry remains, at which point the base case returns `NULL`. This way, the linked list is built naturally through recursive calls, and the carry is seamlessly propagated until the very end.
+## Code
+```cpp
+ListNode *add(ListNode *l1, ListNode *l2, int carry)
+{
+    if (!l1 && !l2 && carry == 0)
+        return NULL;
+    int sum = carry;
+    if (l1)
+    {
+        sum += l1->val;
+        l1 = l1->next;
+    }
+    if (l2)
+    {
+        sum += l2->val;
+        l2 = l2->next;
+    }
+    ListNode *newNode = new ListNode(sum % 10);
+    newNode->next = add(l1, l2, sum / 10);
+    return newNode;
+}
+ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
+{
+    return add(l1, l2, 0);
+}
+```
+Tags: [[Linked Lists]], [[Recursion]]
