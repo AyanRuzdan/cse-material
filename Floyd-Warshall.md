@@ -1,1 +1,1 @@
-Shortest between each node to every other node
+Finds all shortest paths between nodes in a single run
