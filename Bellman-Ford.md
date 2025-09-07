@@ -1,0 +1,2 @@
+### Detection of negative cycle
+Generally the algorithm runs for (n-1) iterations. But when we run it for n iterations and observe that the distances changed, then we can infer that there is a negative cycle which causes the distance to change in the final iteration
