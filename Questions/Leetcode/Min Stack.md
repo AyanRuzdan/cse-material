@@ -50,4 +50,6 @@ public:
     int getMin() { return minstack.top(); }
 };
 ```
+## Approach 2
+Stack will contain pair<int,int> where the values in the pair are <current_val, min_so_far>
 Tags: [[Stacks]]
