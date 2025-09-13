@@ -52,4 +52,6 @@ public:
 ```
 ## Approach 2
 Stack will contain pair<int,int> where the values in the pair are <current_val, min_so_far>
+## Approach 3
+Instead of using two stacks, we can maintain a min variable and modified values inserted into the top of the stack using 2\*val - prev_min = new_val 
 Tags: [[Stacks]]
