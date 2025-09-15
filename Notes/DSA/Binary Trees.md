@@ -11,7 +11,7 @@
 - [[Maximum Depth of Binary Tree]]
 - [[Height of a Binary Tree]]
 - [[Level-order Traversal (BFS)]]
-- [[zig zag level order traversal]]
+- [[Binary Tree Zigzag Level Order Traversal]]
 - [[Preorder Tree Traversal]]
 [[Morris Traversal (In-order)]]
 [[Binary Tree Properties]]
