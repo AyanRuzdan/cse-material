@@ -36,4 +36,4 @@
 4. [[Find Minimum In Rotated Sorted Array]]
 5. [[Search In Rotated Sorted Array I]] 
 6. [[Time Based Key Value Store]] (Not done)
-7. [[Median of Two Sorted Arrays]] (Not done)
+7. [[Median of Two Sorted Arrays]]
