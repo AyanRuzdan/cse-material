@@ -1,6 +1,9 @@
 views:
   - type: table
     name: Table
+    filters:
+      and:
+        - file.folder.contains("Notes")
     order:
       - file.name
       - file.size
