@@ -1,3 +1,5 @@
+formulas:
+  frequency: duration("Hello")
 views:
   - type: table
     name: Table
@@ -8,6 +10,7 @@ views:
       - file.name
       - file.size
       - file.folder
+      - formula.frequency
     sort:
       - property: file.size
         direction: ASC
