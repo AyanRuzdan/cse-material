@@ -16,3 +16,9 @@ views:
         direction: ASC
     columnSize:
       file.backlinks: 221
+  - type: cards
+    name: View
+    image: note.cover
+    cardSize: 290
+    imageFit: contain
+    imageAspectRatio: 0.7
