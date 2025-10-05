@@ -3,21 +3,19 @@ formulas:
 views:
   - type: table
     name: Table
-    filters:
-      and:
-        - file.folder.contains("Notes")
     order:
       - file.name
       - file.size
       - file.folder
       - formula.frequency
-    sort:
-      - property: file.size
-        direction: ASC
+    sort: []
     columnSize:
       file.backlinks: 221
   - type: cards
     name: View
+    sort:
+      - property: file.ctime
+        direction: DESC
     image: note.cover
     cardSize: 290
     imageFit: contain
