@@ -1,16 +1,28 @@
 formulas:
-  frequency: duration("Hello")
+  frequency: ""
+  custom_formula: (date(today())-date(file.ctime)).days.floor()
+properties:
+  file.mtime:
+    displayName: modified_time
 views:
   - type: table
     name: Table
+    filters:
+      and:
+        - file.folder.contains("Notes")
     order:
       - file.name
       - file.size
       - file.folder
-      - formula.frequency
-    sort: []
+      - file.mtime
+      - formula.custom_formula
+    sort:
+      - property: file.size
+        direction: ASC
+      - property: formula.custom_formula
+        direction: ASC
     columnSize:
-      file.backlinks: 221
+      file.mtime: 243
   - type: cards
     name: View
     sort:
