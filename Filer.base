@@ -1,6 +1,6 @@
 formulas:
   frequency: ""
-  custom_formula: (date(today())-date(file.ctime)).days.floor()
+  custom_formula: (date(today())-date(file.ctime)).days
 properties:
   file.mtime:
     displayName: modified_time
@@ -8,20 +8,19 @@ views:
   - type: table
     name: Table
     filters:
-      and:
-        - file.folder.contains("Notes")
+      or:
+        - file.folder.contains("Questions")
     order:
       - file.name
       - file.size
       - file.folder
-      - file.mtime
-      - formula.custom_formula
     sort:
       - property: file.size
         direction: ASC
-      - property: formula.custom_formula
+      - property: file.ctime
         direction: ASC
     columnSize:
+      file.ctime: 230
       file.mtime: 243
   - type: cards
     name: View
