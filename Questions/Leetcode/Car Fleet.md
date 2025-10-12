@@ -37,6 +37,8 @@ public:
         for (auto& p : vp) {
             st.push_back((double)(target - p.first) / p.second);
             if (st.size() >= 2 && st.back() <= st[st.size() - 2]) {
+             // if st.size() >= 2 i.e 2,3,4 then st.size() - 2 is 0,1,2
+             // which points to the start of the stack vector
                 st.pop_back();
             }
         }
