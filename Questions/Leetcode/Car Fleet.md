@@ -25,25 +25,22 @@ Example 3:
 In the problem we have been provided with the position and the speed of the cars. Also it is given that cars cannot overtake each other and form fleets if they meet, even if they meet at the end. In order to make fleets, faster travelling cars must meet and **not** overtake slow cars. And in order to keep faster cars before and slower cars together, we can use `position` and `speed` arrays and sort them in descending order. Then we can calculate the time taken by each car and then use a stack to find which cars will form fleets and which will reach the end point individually.
 ## Code
 ```cpp
-class Solution {
-public:
-    int carFleet(int target, vector<int>& position, vector<int>& speed) {
-        vector<pair<int, int>> vp;
-        for (int i = 0; i < position.size(); i++) {
-            vp.push_back({position[i], speed[i]});
-        }
-        sort(vp.rbegin(), vp.rend());
-        vector<double> st;
-        for (auto& p : vp) {
-            st.push_back((double)(target - p.first) / p.second);
-            if (st.size() >= 2 && st.back() <= st[st.size() - 2]) {
-             // if st.size() >= 2 i.e 2,3,4 then st.size() - 2 is 0,1,2
-             // which points to the start of the stack vector
-                st.pop_back();
-            }
-        }
-        return st.size();
+int carFleet(int target, vector<int> &position, vector<int> &speed)
+{
+    vector<pair<int, int>> vp;
+    for (int i = 0; i < position.size(); i++)
+    {
+        vp.push_back({position[i], speed[i]});
     }
-};
+    sort(vp.rbegin(), vp.rend());
+    stack<double> st;
+    for (auto &p : vp)
+    {
+        double time = double((target - p.first)) / p.second;
+        if (st.empty() || time > st.top()) // found slower
+            st.push(time);
+    }
+    return st.size();
+}
 ```
 Tags: [[Arrays]], [[Stacks]]
