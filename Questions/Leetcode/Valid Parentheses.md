@@ -20,7 +20,7 @@ An input string is valid if:
 > **Input:** s = "(]"
 > **Output:** false
 
-## Approach
+## Approach 1
 This code uses a stack for the given approach. For each character in the string, if it an opening bracket, then it is pushed into the stack. If the character is a closing bracket, then it is checked if the stack is empty or not. If the stack is empty then the brackets are not balanced and the code returns false. Otherwise, the code pops off the top character and checks if the given character was a matching character for the current closing bracket. If it is true, then we continue iterating over the entire string, else the brackets are not balanced and we return false again.
 ## Code
 ```cpp
@@ -50,4 +50,37 @@ public:
     }
 };
 ```
+## Approach 2
+Use a hashmap
+## Code
+```cpp
+class Solution
+{
+public:
+    bool isValid(string s)
+    {
+        map<char, char> mp = {
+            {')', '('},
+            {']', '['},
+            {'}', '{'}};
+        vector<char> st;
+        for (char c : s)
+        {
+            if (mp.count(c))
+            {
+                if (!st.empty() && st.back() == mp[c])
+                    st.pop_back();
+                else
+                    return false;
+            }
+            else
+            {
+                st.push_back(c);
+            }
+        }
+        return st.empty();
+    }
+};
+```
+
 Tags: [[Stacks]]
