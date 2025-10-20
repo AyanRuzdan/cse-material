@@ -52,6 +52,32 @@ public:
 ```
 ## Approach 2
 Stack will contain pair<int,int> where the values in the pair are <current_val, min_so_far>
+```cpp
+class MinStack
+{
+public:
+    vector<pair<int, int>> vp;
+    MinStack() {}
+
+    void push(int val)
+    {
+        if (vp.empty())
+        {
+            vp.push_back({val, val});
+        }
+        else
+        {
+            vp.push_back({val, min(val, vp.back().second)});
+        }
+    }
+
+    void pop() { vp.pop_back(); }
+
+    int top() { return vp.back().first; }
+
+    int getMin() { return vp.back().second; }
+};
+```
 ## Approach 3
 Instead of using two stacks, we can maintain a min variable and modified values inserted into the top of the stack using 2\*val - prev_min = new_val 
 Tags: [[Stacks]]
