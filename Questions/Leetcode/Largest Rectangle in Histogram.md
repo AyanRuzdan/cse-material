@@ -13,6 +13,7 @@ Given an array of integers `heights` representing the histogram's bar height w
 >Output: 4
 ## Approach
 In order to find the maximum area, the best approach is to use a monotonic stack. The stack is made by iterating over the heights and then adding the indices of the heights in a monotonic matter. Whenever a shorter bar is encountered(`heights[st.top()] <= heights[i]`) or the iteration reaches the end (`i` goes till `<=n`), we pop elements from the stack, and simultaneously calculate the height. The width is determined by the difference of the current index and the index of the new top of the stack after popping. If the stack is empty the width extends from the beginning. The iteration continues until all elements have been processed. Finally we return the maximum area that we calculated during each iteration of the while loop.
+>Note: If we take it as `NSE` and `PSE`, then for `stack.top()`, the `NSE` is `heights[i]` and `PSE` for `stack.top()` is the element just below it, which is obtained by popping once. For the current height `heights[st.top()]`, the distance of `(NSE-PSE-1)` is actually `i - st.top() - 1` (after popping) and using that the area is calculated in single pass.
 ## Code
 ```cpp
     int largestRectangleArea(vector<int>& heights) {
