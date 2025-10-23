@@ -13,7 +13,7 @@
 2. [[Two Sum II - Input Array Is Sorted]]
 3. [[3Sum]]
 4. [[Container with Most Water]]
-5. [[Trapping Rain Water]] (Revisit)
+5. [[Trapping Rain Water]]
 # Sliding Window
 1. [[Best Time to Buy and Sell Stock]]
 2. [[Longest Substring Without Repeating Characters]] (Revisit)
@@ -27,8 +27,8 @@
 3. [[Evaluate Reverse Polish Notation]]
 4. [[Generate Parentheses]]
 5. [[Daily Temperatures]]
-6. [[Car Fleet]] (Not done)
-7. [[Largest Rectangle in Histogram]] (Not done)
+6. [[Car Fleet]]
+7. [[Largest Rectangle in Histogram]]
 # Binary Search
 1. [[Binary Search]]
 2. [[Search a 2D Matrix]]
