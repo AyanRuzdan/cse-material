@@ -22,3 +22,29 @@ timeMap.get("foo", 3);         // return "bar", since there is no value correspo
 timeMap.set("foo", "bar2", 4); // store the key "foo" and value "bar2" along with timestamp = 4.
 timeMap.get("foo", 4);         // return "bar2"
 timeMap.get("foo", 5);         // return "bar2"
+```cpp
+class TimeMap {
+public:
+    map<string, vector<pair<int, string>>> mp;
+    TimeMap() {}
+
+    void set(string key, string value, int timestamp) {
+        mp[key].push_back({timestamp, value});
+    }
+
+    string get(string key, int timestamp) {
+        auto& values = mp[key];
+        int l = 0, r = values.size() - 1;
+        string res = "";
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (values[mid].first <= timestamp) {
+                res = values[mid].second;
+                l = mid + 1;
+            } else
+                r = mid - 1;
+        }
+        return res;
+    }
+};
+```
