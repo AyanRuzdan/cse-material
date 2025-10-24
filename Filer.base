@@ -24,10 +24,8 @@ views:
       file.mtime: 243
   - type: cards
     name: View
-    sort:
-      - property: file.ctime
-        direction: DESC
+    sort: []
     image: note.cover
-    cardSize: 290
+    cardSize: 240
     imageFit: contain
-    imageAspectRatio: 0.7
+    imageAspectRatio: 0.85
