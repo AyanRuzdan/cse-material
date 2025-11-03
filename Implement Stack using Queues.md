@@ -29,5 +29,27 @@ myStack.pop(); // return 2
 myStack.empty(); // return False
 ## Code
 ```cpp
-
+class MyStack
+{
+public:
+    queue<int> dq;
+    MyStack() {}
+    void push(int x) { dq.push(x); }
+    int pop()
+    {
+        int n = dq.size();
+        n--;
+        while (n--)
+        {
+            auto x = dq.front();
+            dq.pop();
+            dq.push(x);
+        }
+        auto z = dq.front();
+        dq.pop();
+        return z;
+    }
+    int top() { return dq.back(); }
+    bool empty() { return dq.empty(); }
+};
 ```
