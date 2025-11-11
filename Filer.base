@@ -9,7 +9,7 @@ views:
     name: Table
     filters:
       or:
-        - file.folder.contains("Notes")
+        - file.folder.contains("Questions")
     order:
       - file.name
       - file.size
