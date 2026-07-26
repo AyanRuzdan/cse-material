@@ -7,15 +7,14 @@ properties:
 views:
   - type: table
     name: Table
-    filters:
-      or:
-        - file.folder.contains("Questions")
     order:
       - file.name
       - file.size
       - file.folder
     sort:
       - property: file.size
+        direction: ASC
+      - property: file.fullname
         direction: ASC
       - property: file.ctime
         direction: ASC

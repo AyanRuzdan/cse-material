@@ -1,21 +1,5 @@
-edit distance with remove, insert or modify dp
-counting tilings dp
-intro to heap
-insert into heap
-heapify up
-deletion from heap
-heapify down 
-building heap from given array
-hash table collision handling chaining
-linear probing
-quadratic probing
-double hashing
-LC 17
-merge two sorted lists
-1. [[longest mountain in array]]
-DFS iter
-DFS recur
-2. permutations of a string
+# Permutations
+
 ```cpp
 class Solution {
 public:
@@ -37,5 +21,3 @@ public:
     }
 };
 ```
-Fibonacci DP
-Dijkstra's Algo
